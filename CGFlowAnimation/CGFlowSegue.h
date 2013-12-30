@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CGFlowAnimation.h"
 
 @interface CGFlowSegue : UIStoryboardSegue
 @property (assign) BOOL dismiss;
@@ -15,14 +16,20 @@
 @interface CGFlowSegueNoAnimation : CGFlowSegue
 @end
 
-@interface CGFlowSegueFlipUp : CGFlowSegue
+@interface CGFlowSegueSlideUp : CGFlowSegue
 @end
 
-@interface CGFlowSegueFlipDown : CGFlowSegue
+@interface CGFlowSegueSlideDown : CGFlowSegue
 @end
 
 @interface CGFlowSegueSlideLeft : CGFlowSegue
 @end
 
 @interface CGFlowSegueSlideRight : CGFlowSegue
+@end
+
+@interface CGFlowSegueFlipUp : CGFlowSegue
+@end
+
+@interface CGFlowSegueFlipDown : CGFlowSegue
 @end

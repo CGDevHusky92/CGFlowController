@@ -10,6 +10,7 @@ Add better delegate support
 Add better gesture support
 Add more animations
 Update segues as animations are finished
+Clear frame transitions?
 Navigation Panel?
 
 

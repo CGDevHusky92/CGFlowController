@@ -9,6 +9,8 @@
 #import "CGFlowSegue.h"
 #import "CGFlowAnimation.h"
 
+#define DEFAULT_DURATION    0.4
+
 @interface CGFlowSegue()
 @property (nonatomic, assign) CGFloat duration;
 @end
@@ -19,7 +21,7 @@
 	self = [super initWithIdentifier:identifier source:source destination:destination];
 	if (self) {
         self.dismiss = false;
-        self.duration = 0.4;
+        self.duration = DEFAULT_DURATION;
     }
 	return self;
 }
@@ -48,32 +50,56 @@
 
 @end
 
-@implementation CGFlowSegueFlipUp
+@implementation CGFlowSegueSlideUp
 
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    
     [dst.view removeFromSuperview];
     
-    [CGFlowAnimations flowFlipUpFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window  initialFrame:src.view.frame andDuration:self.duration completion:^{
-        
-    }];
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    kCGFlowAnimationType type = kCGFlowAnimationNone;
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideDown : kCGFlowAnimationSlideUp;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideUp : kCGFlowAnimationSlideDown;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideRight : kCGFlowAnimationSlideLeft;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideLeft : kCGFlowAnimationSlideRight;
+    }
+    
+    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
 }
 
 @end
 
-@implementation CGFlowSegueFlipDown
+@implementation CGFlowSegueSlideDown
 
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    
     [dst.view removeFromSuperview];
     
-    [CGFlowAnimations flowFlipDownFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window  initialFrame:src.view.frame andDuration:self.duration completion:^{
-        
-    }];
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    kCGFlowAnimationType type = kCGFlowAnimationNone;
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideUp : kCGFlowAnimationSlideDown;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideDown : kCGFlowAnimationSlideUp;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideLeft : kCGFlowAnimationSlideRight;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideRight : kCGFlowAnimationSlideLeft;
+    }
+    
+    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
 }
 
 @end
@@ -83,16 +109,24 @@
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    
     [dst.view removeFromSuperview];
     
-    [CGFlowAnimations flowSlideLeftFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window  initialFrame:src.view.frame andDuration:self.duration completion:^{
-        if (!self.dismiss) {
-            [src presentViewController:dst animated:NO completion:^{}];
-        } else {
-            [src dismissViewControllerAnimated:NO completion:^{}];
-        }
-    }];
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    kCGFlowAnimationType type = kCGFlowAnimationNone;
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideRight : kCGFlowAnimationSlideLeft;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideLeft : kCGFlowAnimationSlideRight;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideUp : kCGFlowAnimationSlideDown;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideDown : kCGFlowAnimationSlideUp;
+    }
+    
+    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
 }
 
 @end
@@ -102,18 +136,72 @@
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    
     [dst.view removeFromSuperview];
     
-    [CGFlowAnimations flowSlideRightFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window  initialFrame:src.view.frame andDuration:self.duration completion:^{
-//        [[UIApplication sharedApplication] delegate].window.rootViewController = dst;
-        if (!self.dismiss) {
-            [src presentViewController:dst animated:NO completion:^{}];
-        } else {
-            [src dismissViewControllerAnimated:NO completion:^{}];
-        }
-    }];
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    kCGFlowAnimationType type = kCGFlowAnimationNone;
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideLeft : kCGFlowAnimationSlideRight;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideRight : kCGFlowAnimationSlideLeft;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideDown : kCGFlowAnimationSlideUp;
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        type = (self.dismiss) ? kCGFlowAnimationSlideUp : kCGFlowAnimationSlideDown;
+    }
+    
+    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
 }
 
 @end
 
+@implementation CGFlowSegueFlipUp
+
+-(void)perform {
+    UIViewController *src = (UIViewController *)self.sourceViewController;
+    UIViewController *dst = (UIViewController *)self.destinationViewController;
+    [dst.view removeFromSuperview];
+    
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        [CGFlowAnimations flowFlipUpFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [CGFlowAnimations flowFlipDownFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        
+    }
+}
+
+@end
+
+@implementation CGFlowSegueFlipDown
+
+-(void)perform {
+    UIViewController *src = (UIViewController *)self.sourceViewController;
+    UIViewController *dst = (UIViewController *)self.destinationViewController;
+    [dst.view removeFromSuperview];
+    
+    completion aCompletion = ^{
+        if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
+        else [src dismissViewControllerAnimated:NO completion:^{}]; };
+    
+    if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        [CGFlowAnimations flowFlipDownFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+    } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [CGFlowAnimations flowFlipUpFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+        
+    } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        
+    }
+}
+
+@end

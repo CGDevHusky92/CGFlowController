@@ -20,6 +20,8 @@
 		2E484C49186F811A00137334 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E484C28186F811A00137334 /* UIKit.framework */; };
 		2E484C51186F811A00137334 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E484C4F186F811A00137334 /* InfoPlist.strings */; };
 		2E484C53186F811A00137334 /* CGFlowAnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E484C52186F811A00137334 /* CGFlowAnimationDemoTests.m */; };
+		2EC707D918711A5C00F01BBD /* DestTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC707D818711A5C00F01BBD /* DestTopViewController.m */; };
+		2EC707DC18711A8800F01BBD /* DestBottomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC707DB18711A8800F01BBD /* DestBottomViewController.m */; };
 		2ECFCF9D186F81B300D78535 /* DestLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECFCF98186F81B300D78535 /* DestLeftViewController.m */; };
 		2ECFCF9E186F81B300D78535 /* DestRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECFCF9A186F81B300D78535 /* DestRightViewController.m */; };
 		2ECFCF9F186F81B300D78535 /* SrcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECFCF9C186F81B300D78535 /* SrcViewController.m */; };
@@ -56,6 +58,10 @@
 		2E484C4E186F811A00137334 /* CGFlowAnimationDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGFlowAnimationDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2E484C50186F811A00137334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2E484C52186F811A00137334 /* CGFlowAnimationDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimationDemoTests.m; sourceTree = "<group>"; };
+		2EC707D718711A5C00F01BBD /* DestTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestTopViewController.h; sourceTree = "<group>"; };
+		2EC707D818711A5C00F01BBD /* DestTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestTopViewController.m; sourceTree = "<group>"; };
+		2EC707DA18711A8800F01BBD /* DestBottomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestBottomViewController.h; sourceTree = "<group>"; };
+		2EC707DB18711A8800F01BBD /* DestBottomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestBottomViewController.m; sourceTree = "<group>"; };
 		2ECFCF97186F81B300D78535 /* DestLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestLeftViewController.h; sourceTree = "<group>"; };
 		2ECFCF98186F81B300D78535 /* DestLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestLeftViewController.m; sourceTree = "<group>"; };
 		2ECFCF99186F81B300D78535 /* DestRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestRightViewController.h; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 			children = (
 				2ECFCFA9186F821E00D78535 /* Delegate */,
 				2ECFCFAA186F822500D78535 /* SrcView */,
+				2EC707DD18711AC000F01BBD /* DestTopView */,
+				2EC707DE18711AD000F01BBD /* DestBottonView */,
 				2ECFCFAB186F823E00D78535 /* DestLeftView */,
 				2ECFCFAC186F824500D78535 /* DestRightView */,
 				2ECFCFAD186F825700D78535 /* Interface */,
@@ -165,6 +173,24 @@
 				2E484C4F186F811A00137334 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC707DD18711AC000F01BBD /* DestTopView */ = {
+			isa = PBXGroup;
+			children = (
+				2EC707D718711A5C00F01BBD /* DestTopViewController.h */,
+				2EC707D818711A5C00F01BBD /* DestTopViewController.m */,
+			);
+			name = DestTopView;
+			sourceTree = "<group>";
+		};
+		2EC707DE18711AD000F01BBD /* DestBottonView */ = {
+			isa = PBXGroup;
+			children = (
+				2EC707DA18711A8800F01BBD /* DestBottomViewController.h */,
+				2EC707DB18711A8800F01BBD /* DestBottomViewController.m */,
+			);
+			name = DestBottonView;
 			sourceTree = "<group>";
 		};
 		2ECFCFA8186F81FD00D78535 /* CGFlowAnimation */ = {
@@ -325,6 +351,8 @@
 				2ECFCF9D186F81B300D78535 /* DestLeftViewController.m in Sources */,
 				2ECFCFA6186F81F700D78535 /* CGFlowAnimation.m in Sources */,
 				2ECFCF9E186F81B300D78535 /* DestRightViewController.m in Sources */,
+				2EC707D918711A5C00F01BBD /* DestTopViewController.m in Sources */,
+				2EC707DC18711A8800F01BBD /* DestBottomViewController.m in Sources */,
 				2E484C35186F811A00137334 /* AppDelegate.m in Sources */,
 				2E484C31186F811A00137334 /* main.m in Sources */,
 				2ECFCFA7186F81F700D78535 /* CGFlowSegue.m in Sources */,

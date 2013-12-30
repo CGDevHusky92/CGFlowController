@@ -1,0 +1,561 @@
+TCGFlowAnimationDemo
+v6
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist
+cProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo normal arm64
+cCompileStoryboard /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard
+cCompileStoryboard /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard
+cCopyStringsFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings CGFlowAnimationDemo/en.lproj/InfoPlist.strings
+cCompileAssetCatalog /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets
+cProcessInfoPlistFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
+cGenerateDSYMFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
+cProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision
+cTouch /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
+cCodeSign /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
+c0000000052448D650000000000000110
+t1380224357
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+c00000000524494960000000000000094
+t1380226198
+s148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+c00000000524494960000000000000096
+t1380226198
+s150
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/SDKSettings.plist
+c0000000052449496000000000000036B
+t1380226198
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000052449497000000000000019E
+t1380226199
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005244949900000000004D6390
+t1380226201
+s5071760
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005244949A0000000000A8EAD0
+t1380226202
+s11070160
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005244949E0000000002597C70
+t1380226206
+s39418992
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/include/module.map
+c000000005240FA270000000000000AC9
+t1379990055
+s2761
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m
+c0000000052C0D89900000000000089EC
+t1388370073
+s35308
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m
+c0000000052C0D9110000000000002695
+t1388370193
+s9877
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m
+c0000000052BF499A00000000000007EF
+t1388267930
+s2031
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard
+c0000000052C0DBE1000000000000414C
+t1388370913
+s16716
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
+c0000000052BF499A0000000000000639
+t1388267930
+s1593
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch
+c0000000052BF499A0000000000000158
+t1388267930
+s344
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m
+c0000000052BE531C00000000000004F4
+t1388204828
+s1268
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m
+c0000000052BE519700000000000004F8
+t1388204439
+s1272
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets
+c0000000052BF499A0000000000000088
+t1388267930
+s136
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard
+c0000000052BFD1D60000000000003F50
+t1388302806
+s16208
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m
+c0000000052C0A38C00000000000009B3
+t1388356492
+s2483
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/en.lproj/InfoPlist.strings
+c0000000052BF499A000000000000002D
+t1388267930
+s45
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m
+c0000000052BF499A0000000000000169
+t1388267930
+s361
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
+t1388370935
+s448
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o
+t1388370933
+s69316
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o
+t1388370934
+s202376
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimationDemo.LinkFileList
+c0000000052C0DBF500000000000004E3
+t1388370933
+s1251
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o
+t1388370934
+s92468
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o
+t1388370933
+s46272
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o
+t1388370933
+s46292
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o
+t1388370933
+s51848
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o
+t1388370933
+s4360
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_dependencies.txt
+t1388370935
+s453
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist
+t1388370935
+s525
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+t1388370935
+s408
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM
+t2
+s0
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Base.lproj/Main_iPad.storyboardc
+t1388370935
+s306
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
+t1388370934
+s159276
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist
+t1388370935
+s1607
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Main_iPhone.storyboardc
+t1388370935
+s306
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/PkgInfo
+t1388370935
+s8
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist
+t1388370933
+s150
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision
+t1388370935
+s8230
+
+N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings
+t1388370934
+s42
+
+N/Users/nbvikingsidiot001/Library/MobileDevice/Provisioning Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision
+c00000000529A99660000000000002026
+t1385863526
+s8230
+
+N/var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch
+t1388370933
+s110616
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesd2feb7751371b841^bb9cc2751371b841^---0#1#1#--18"Check dependencies36"AC69BE3B-A228-4E8A-A67F-7C87193B78A6-
+
+CCodeSign /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+s410063735.770163
+e410063736.564824
+r1
+xCodeSign
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app6938c5771371b841^919890781371b841^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/0000000000000000^1142"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Charles Gorectke (Y9B4849LK9)" and provisioning profile "iOS Team Provisioning Profile: *" (0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0)    codesign --force --sign CE58A89D54C20F9756013E55B25F8D052DC6781C --resource-rules=/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist --entitlements /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"F04F11CA-4FC9-4B5E-9B91-06403EC6D942-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileAssetCatalog /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets
+s410063734.166900
+e410063735.257808
+r1
+xCompileAssetCatalog
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets
+o/* com.apple.actool.compilation-results */
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/LaunchImage-700-568h@2x.png
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Assets.car
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"CompileAssetCatalog build/Debug-iphoneos/CGFlowAnimationDemo.app CGFlowAnimationDemo/Images.xcassets100"CompileAssetCatalog build/Debug-iphoneos/CGFlowAnimationDemo.app CGFlowAnimationDemo/Images.xcassets5ef72a761371b841^f8ff41771371b841^-481"/* com.apple.actool.compilation-results *//Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/LaunchImage-700-568h@2x.png/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Assets.car/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@110"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets/0000000000000000^1262"CompileAssetCatalog build/Debug-iphoneos/CGFlowAnimationDemo.app CGFlowAnimationDemo/Images.xcassets    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphoneos --minimum-deployment-target 7.0 --target-device iphone --target-device ipad --compress-pngs --compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets36"B13732E9-3D95-4938-9A18-BE3FE9ABC656-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.901783
+e410063733.995947
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m219"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o CGFlowAnimationDemo/AppDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler94f6e6751371b841^94f6fe751371b841^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m0000000000000000^4061"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o CGFlowAnimationDemo/AppDelegate.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o36"B20E4159-4102-44FB-8B7C-35E9210E222E-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.803446
+e410063734.128284
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m223"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o CGFlowAnimation/CGFlowAnimation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler32c8cd751371b841^aed720761371b841^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m0000000000000000^4077"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o CGFlowAnimation/CGFlowAnimation.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o36"53F2ADF6-C94B-4EA7-88E5-BB7ACF99F8AB-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.919168
+e410063734.047325
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m215"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o CGFlowAnimation/CGFlowSegue.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler6d6feb751371b841^9f1d0c761371b841^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m0000000000000000^4053"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o CGFlowAnimation/CGFlowSegue.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o36"B5A75BE4-5E91-4B12-B847-55960397E751-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.803125
+e410063733.901456
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m241"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o CGFlowAnimationDemo/DestLeftViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compilere1b3cd751371b841^54e2e6751371b841^---0#0#1#-19%DVTDocumentLocation2@118"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m0000000000000000^4127"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o CGFlowAnimationDemo/DestLeftViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestLeftViewController.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o36"54E85CB7-980A-40B4-B99D-4A53AB987CF5-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.804556
+e410063733.917906
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m243"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o CGFlowAnimationDemo/DestRightViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler2311ce751371b841^44fdea751371b841^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m0000000000000000^4133"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o CGFlowAnimationDemo/DestRightViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o36"B7F71631-7375-4444-8514-D249AA6C3763-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.802804
+e410063733.911837
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowAnimation.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/DestRightViewController.h
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimation/CGFlowSegue.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m231"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o CGFlowAnimationDemo/SrcViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler069ccd751371b841^022de9751371b841^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m0000000000000000^4097"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o CGFlowAnimationDemo/SrcViewController.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/SrcViewController.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o36"445D16F5-DB1E-4E93-B6D8-C7559F121937-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.913108
+e410063733.950776
+r1
+xCompileC
+xbuild/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m205"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o CGFlowAnimationDemo/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7ee1e9751371b841^9566f3751371b841^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m0000000000000000^4019"CompileC build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o CGFlowAnimationDemo/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.dia -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/main.m -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o36"96542D57-D90A-4D83-A620-2E25F5B12B94-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileStoryboard /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard
+s410063734.165830
+e410063735.743562
+r1
+xCompileStoryboard
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard
+o/* com.apple.ibtool.document.warnings */
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard:W5Z-nj-CDK: warning: Frame for "Button - Dest Left" will be different at run time. [16]
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard:n5a-WC-YYs: warning: Frame for "Button - Dest Right" will be different at run time. [16]
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"CompileStoryboard CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard69"CompileStoryboard CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard89982a761371b841^da57be771371b841^-446"/* com.apple.ibtool.document.warnings *//Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard:W5Z-nj-CDK: warning: Frame for "Button - Dest Left" will be different at run time./Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard:n5a-WC-YYs: warning: Frame for "Button - Dest Right" will be different at run time.2(21%IDEActivityLogMessage2@61"Frame for "Button - Dest Left" will be different at run time.-410063735#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@125"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#14"Misplaced View--2@62"Frame for "Button - Dest Right" will be different at run time.-410063735#18446744073709551615#0#-1#-3@125"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#14"Misplaced View--0#0#1#-19%DVTDocumentLocation4@125"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard0000000000000000^906"CompileStoryboard CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Base.lproj/Main_iPad.storyboardc /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Base.lproj/Main_iPad.storyboard36"6CACCC17-0215-408B-88EE-42F3FAD12D37-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCompileStoryboard /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard
+s410063734.165629
+e410063735.294958
+r1
+xCompileStoryboard
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"CompileStoryboard CGFlowAnimationDemo/Main_iPhone.storyboard60"CompileStoryboard CGFlowAnimationDemo/Main_iPhone.storyboardfa7a2a761371b841^f5824b771371b841^---0#0#1#-19%DVTDocumentLocation2@116"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard0000000000000000^879"CompileStoryboard CGFlowAnimationDemo/Main_iPhone.storyboard    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Main_iPhone.storyboardc /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Main_iPhone.storyboard36"E8F6648A-DCB9-4C88-858D-FFE14C3DA9CB-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCopyStringsFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings CGFlowAnimationDemo/en.lproj/InfoPlist.strings
+s410063734.166038
+e410063734.169378
+r1
+xCopyStringsFile
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings
+xCGFlowAnimationDemo/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy CGFlowAnimationDemo/en.lproj/InfoPlist.strings134"CopyStringsFile build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings CGFlowAnimationDemo/en.lproj/InfoPlist.stringsf2d12a761371b841^5f5f2b761371b841^---0#0#1#-19%DVTDocumentLocation2@120"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/en.lproj/InfoPlist.strings0000000000000000^658"CopyStringsFile build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj/InfoPlist.strings CGFlowAnimationDemo/en.lproj/InfoPlist.strings    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/en.lproj -- CGFlowAnimationDemo/en.lproj/InfoPlist.strings36"F579082F-F243-4AD3-9C2C-6AF30E527182-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist
+s410063733.760812
+e410063733.761687
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+xbuild/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist197"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist3ed0c2751371b841^7b4dc3751371b841^---0#0#1#-19%DVTDocumentLocation2@138"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist003448e1dcffdf42^806"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"A30A81E0-9380-4AC5-AC44-3079098FAF1C-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CGenerateDSYMFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
+s410063735.746214
+e410063735.766329
+r1
+xGenerateDSYMFile
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Generate /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM131"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo5111bf771371b841^0e2fc4771371b841^---0#0#1#-19%DVTDocumentLocation2@123"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM003448e1dcffdf42^746"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM36"9AACB295-40C8-40CA-909A-142BB3EAB1F0-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CLd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo normal arm64
+s410063734.129343
+e410063734.164809
+r1
+xLd
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
+xnormal
+xarm64
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimationDemo.LinkFileList
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/SrcViewController.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestLeftViewController.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimation.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/DestRightViewController.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/main.o
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowSegue.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Link /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo80"Ld build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo normal arm641b2b21761371b841^a5312a761371b841^---0#0#1#--1494"Ld build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo normal arm64    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -L/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos -filelist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimationDemo.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimationDemo_dependency_info.dat -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo36"EE93EF21-A568-4CD8-B41F-7825D8A98E64-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CProcessInfoPlistFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
+s410063735.744056
+e410063735.745882
+r1
+xProcessInfoPlistFile
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Process /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist127"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist0189be771371b841^a6f2be771371b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist0000000000000000^1198"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist -genpkginfo /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist -additionalcontentfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist36"3DA6D0D0-B396-493C-8C7D-F6466E5F3FA8-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CProcessPCH /Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/CGFlowAnimationDemo-aqqbrpetiekzcuasuhvuxctedewz/Index/PrecompiledHeaders/CGFlowAnimationDemo-Prefix-cieahgoyrmogvfcvjzmqqxllasgw_ast/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410063733.762204
+e410063733.802126
+r1
+xProcessPCH
+x/var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch
+xCGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch
+xnormal
+xarm64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Precompile CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch340"ProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler0532c3751371b841^6458cd751371b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch0000000000000000^4092"ProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch arm64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources/arm64 -I/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos --serialize-diagnostics /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.d -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch -o /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowAnimationDemo-Prefix-fqdawkbyxdlrwybmfjxqpdiuxxyy/CGFlowAnimationDemo-Prefix.pch.pch36"AD8BDD7A-F246-49E2-A95D-4160327EFBC6-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
+s410063735.769108
+e410063735.769915
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcentd9ecc4771371b841^ac19c5771371b841^---0#0#1#-19%DVTDocumentLocation2@172"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent003448e1dcffdf42^858"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent36"1170C775-A51D-4DDE-AA93-D84C346ADEA2-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision
+s410063735.766758
+e410063735.768546
+r1
+xProcessProductPackaging
+x/Users/nbvikingsidiot001/Library/MobileDevice/Provisioning Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision
+x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection215"ProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision215"ProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision3f56c4771371b841^f4bfc4771371b841^---0#0#1#-19%DVTDocumentLocation2@143"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision003448e1dcffdf42^776"ProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision36"9C3EC6EE-F405-473E-BD6E-9C2E630D9FFB-
+b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+
+CTouch /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
+r0
+
