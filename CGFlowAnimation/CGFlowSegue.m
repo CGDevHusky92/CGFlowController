@@ -136,7 +136,6 @@
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    [dst.view removeFromSuperview];
     
     completion aCompletion = ^{
         if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
@@ -153,7 +152,8 @@
         type = (self.dismiss) ? kCGFlowAnimationSlideUp : kCGFlowAnimationSlideDown;
     }
     
-    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+//    [dst willRotateToInterfaceOrientation:src.interfaceOrientation duration:0.0];
+    [CGFlowAnimations flowAnimation:type fromSource:src toDestination:dst withInContainer:src.view.superview andDuration:self.duration completion:aCompletion];
 }
 
 @end
@@ -163,7 +163,6 @@
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    [dst.view removeFromSuperview];
     
     completion aCompletion = ^{
         if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
@@ -187,16 +186,15 @@
 -(void)perform {
     UIViewController *src = (UIViewController *)self.sourceViewController;
     UIViewController *dst = (UIViewController *)self.destinationViewController;
-    [dst.view removeFromSuperview];
     
     completion aCompletion = ^{
         if (!self.dismiss) [src presentViewController:dst animated:NO completion:^{}];
         else [src dismissViewControllerAnimated:NO completion:^{}]; };
     
     if (src.interfaceOrientation == UIInterfaceOrientationPortrait) {
-        [CGFlowAnimations flowFlipDownFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+        [CGFlowAnimations flowFlipDownFromSource:src toDestination:dst withInContainer:src.view.superview andDuration:self.duration completion:aCompletion];
     } else if (src.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        [CGFlowAnimations flowFlipUpFromSource:src toDestination:dst withInContainer:[[UIApplication sharedApplication] delegate].window andDuration:self.duration completion:aCompletion];
+        [CGFlowAnimations flowFlipUpFromSource:src toDestination:dst withInContainer:src.view.superview andDuration:self.duration completion:aCompletion];
     } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
         
     } else if (src.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {

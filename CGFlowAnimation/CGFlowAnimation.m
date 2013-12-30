@@ -555,18 +555,30 @@
         }];
     } else if (_animationType == kCGFlowAnimationFlipUp) {
         [CGFlowAnimations flowFlipUpFromSource:fromVC toDestination:toVC withInContainer:containerView andDuration:[self transitionDuration:transitionContext] completion:^{
+            if ([transitionContext transitionWasCancelled]) {
+                [self cancelledTransitionFromViewController:fromVC];
+            }
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else if (_animationType == kCGFlowAnimationFlipDown) {
         [CGFlowAnimations flowFlipDownFromSource:fromVC toDestination:toVC withInContainer:containerView andDuration:[self transitionDuration:transitionContext] completion:^{
+            if ([transitionContext transitionWasCancelled]) {
+                [self cancelledTransitionFromViewController:fromVC];
+            }
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else if (_animationType == kCGFlowAnimationFlipLeft) {
         [CGFlowAnimations flowFlipLeftFromSource:fromVC toDestination:toVC withInContainer:containerView andDuration:[self transitionDuration:transitionContext] completion:^{
+            if ([transitionContext transitionWasCancelled]) {
+                [self cancelledTransitionFromViewController:fromVC];
+            }
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else if (_animationType == kCGFlowAnimationFlipRight) {
         [CGFlowAnimations flowFlipRightFromSource:fromVC toDestination:toVC withInContainer:containerView andDuration:[self transitionDuration:transitionContext] completion:^{
+            if ([transitionContext transitionWasCancelled]) {
+                [self cancelledTransitionFromViewController:fromVC];
+            }
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else {
@@ -632,6 +644,8 @@
              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
     // Add the toView to the container
     [toView removeFromSuperview];
@@ -656,6 +670,8 @@
                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
     // Add the toView to the container
     [toView removeFromSuperview];
@@ -680,6 +696,8 @@
                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
 
     // Add the toView to the container
     [toView removeFromSuperview];
@@ -704,6 +722,8 @@
                 withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
     // Add the toView to the container
     [toView removeFromSuperview];
@@ -728,17 +748,20 @@
             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
     // Add the toView to the container
+    [toView removeFromSuperview];
     [containerView addSubview:toView];
     
     // Set the frames
-    fromView.frame = containerView.frame;
-    toView.frame = containerView.frame;
+    fromView.frame = containerView.bounds;
+    toView.frame = containerView.bounds;
     
     // Start building the transform - 3D so need perspective
     CATransform3D transform = CATransform3DIdentity;
-    transform.m34 = -1 / CGRectGetHeight(containerView.frame);
+    transform.m34 = -1 / CGRectGetHeight(containerView.bounds);
     containerView.layer.sublayerTransform = transform;
     
     toView.layer.transform = CATransform3DMakeRotation(-1.0 * M_PI_2, 1, 0, 0);
@@ -761,17 +784,20 @@
               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
     // Add the toView to the container
+    [toView removeFromSuperview];
     [containerView addSubview:toView];
     
     // Set the frames
-    fromView.frame = containerView.frame;
-    toView.frame = containerView.frame;
+    fromView.frame = containerView.bounds;
+    toView.frame = containerView.bounds;
     
     // Start building the transform - 3D so need perspective
     CATransform3D transform = CATransform3DIdentity;
-    transform.m34 = -1 / CGRectGetHeight(containerView.frame);
+    transform.m34 = -1 / CGRectGetHeight(containerView.bounds);
     containerView.layer.sublayerTransform = transform;
     
     toView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 0, 0);
@@ -792,7 +818,38 @@
 
 +(void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
+    // Add the toView to the container
+    [toView removeFromSuperview];
+    [containerView addSubview:toView];
+    
+    // Set the frames
+    fromView.frame = containerView.bounds;
+    toView.frame = containerView.bounds;
+    
+    // Start building the transform - 3D so need perspective
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = -1 / CGRectGetWidth(containerView.bounds);
+    containerView.layer.sublayerTransform = transform;
+    
+    toView.layer.transform = CATransform3DMakeRotation(-1.0 * M_PI_2, 1, 0, 0);
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:0 animations:^{
+        // First half is rotating in
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
+            fromView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 0, 0);
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+            toView.layer.transform = CATransform3DMakeRotation(0, 1, 0, 0);
+        }];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            complete();
+        }
+    }];
 }
 
 +(void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController

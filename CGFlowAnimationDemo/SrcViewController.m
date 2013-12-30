@@ -42,10 +42,10 @@
         [self.unloadInteractor setAnimationType:kCGFlowAnimationSlideRight];
         [self performSegueWithIdentifier:@"srcLeftSegue" sender:self];
     } else if (type == kCGFlowInteractionSwipeUp) {
-        [self.unloadInteractor setAnimationType:kCGFlowAnimationSlideUp];
+        [self.unloadInteractor setAnimationType:kCGFlowAnimationFlipUp];
         [self performSegueWithIdentifier:@"srcBottomSegue" sender:self];
     } else if (type == kCGFlowInteractionSwipeDown) {
-        [self.unloadInteractor setAnimationType:kCGFlowAnimationSlideDown];
+        [self.unloadInteractor setAnimationType:kCGFlowAnimationFlipDown];
         [self performSegueWithIdentifier:@"srcTopSegue" sender:self];
     }
 }
@@ -63,19 +63,20 @@
 
 -(UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier {
     if ([identifier isEqualToString:@"srcRightUnwind"]) {
-        CGFlowSegueSlideLeft *segue = [[CGFlowSegueSlideLeft alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+        CGFlowSegue *segue = [[CGFlowSegueSlideLeft alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
         [segue setDismiss:YES];
+        toViewController.modalPresentationStyle = UIModalPresentationFullScreen;
         return segue;
     } else if ([identifier isEqualToString:@"srcLeftUnwind"]) {
-        CGFlowSegueSlideRight *segue = [[CGFlowSegueSlideRight alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+        CGFlowSegue *segue = [[CGFlowSegueSlideRight alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
         [segue setDismiss:YES];
         return segue;
     } else if ([identifier isEqualToString:@"srcTopUnwind"]) {
-        CGFlowSegueSlideDown *segue = [[CGFlowSegueSlideDown alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+        CGFlowSegue *segue = [[CGFlowSegueFlipUp alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
         [segue setDismiss:YES];
         return segue;
     } else if ([identifier isEqualToString:@"srcBottomUnwind"]) {
-        CGFlowSegueSlideUp *segue = [[CGFlowSegueSlideUp alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+        CGFlowSegue *segue = [[CGFlowSegueFlipDown alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
         [segue setDismiss:YES];
         return segue;
     }
