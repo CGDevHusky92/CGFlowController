@@ -306,9 +306,9 @@ t1388447918
 s29332
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
-c0000000052BF499A0000000000000639
-t1388267930
-s1593
+c0000000052C21298000000000000063D
+t1388450456
+s1597
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch
 c0000000052BF499A0000000000000158
@@ -386,7 +386,7 @@ t1388267930
 s361
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
-t1388370935
+t1388450459
 s448
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/AppDelegate.o
@@ -480,11 +480,11 @@ t1388370935
 s525
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
-t1388449888
+t1388450459
 s442
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM
-t1388449476
+t1388449888
 s102
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Base.lproj/Main_iPad.storyboardc
@@ -492,19 +492,19 @@ t1388447920
 s442
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
-t1388449888
-s206132
+t1388449889
+s217344
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist
-t1388370935
-s1607
+t1388450459
+s1617
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Main_iPhone.storyboardc
 t1388446626
 s442
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/PkgInfo
-t1388370935
+t1388450459
 s8
 
 N/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist
@@ -561,16 +561,17 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc18be2df4772b841^0f42e4df4772b841^---0#1#1#--18"Check dependencies36"43260E67-64E3-4C3B-9901-F13E5409410E-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies5a63441b4a72b841^fad5501b4a72b841^---0#1#1#--18"Check dependencies36"42B369F3-F048-46FA-A8E4-7CDB7A5FEA2F-
 
 CCodeSign /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
-s410142688.157966
-e410142689.081529
+s410143259.362846
+e410143260.638420
 r1
 xCodeSign
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.apped7f28e04772b841^cedf14e14772b841^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/0000000000000000^1142"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Charles Gorectke (Y9B4849LK9)" and provisioning profile "iOS Team Provisioning Profile: *" (0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0)    codesign --force --sign CE58A89D54C20F9756013E55B25F8D052DC6781C --resource-rules=/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist --entitlements /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"024EF28A-E693-4308-AF60-26F43046C05F-
-bB9076FDB-9610-421C-AEBC-7B6901DC9FBD
+o/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app: replacing existing signature
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app53"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app0dfc5c1b4a72b841^0470a31c4a72b841^-142"/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app: replacing existing signature-0#0#1#-19%DVTDocumentLocation2@119"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/0000000000000000^1142"CodeSign build/Debug-iphoneos/CGFlowAnimationDemo.app    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Charles Gorectke (Y9B4849LK9)" and provisioning profile "iOS Team Provisioning Profile: *" (0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0)    codesign --force --sign CE58A89D54C20F9756013E55B25F8D052DC6781C --resource-rules=/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist --entitlements /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"5CAE2DCF-A97C-4BE4-AB88-D0D9725EB6C5-
+bFBC123A5-9C9C-447E-A57C-33F42EDE95D9
 
 CCompileAssetCatalog /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/Images.xcassets
 s410063734.166900
@@ -966,14 +967,14 @@ CCreateUniversalBinary /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlow
 r0
 
 CGenerateDSYMFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
-s410142688.129342
-e410142688.156603
+s410143259.324041
+e410143259.355674
 r1
 xGenerateDSYMFile
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Generate /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM131"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemoa62a21e04772b841^db1728e04772b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM/0000000000000000^746"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM36"3DCC7816-1792-4906-A8BE-EA2907804979-
-bB9076FDB-9610-421C-AEBC-7B6901DC9FBD
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Generate /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM131"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo9701531b4a72b841^fa0d5b1b4a72b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM/0000000000000000^746"GenerateDSYMFile build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/CGFlowAnimationDemo -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app.dSYM36"DC420D56-E5ED-46F5-82FC-3707D4549184-
+bFBC123A5-9C9C-447E-A57C-33F42EDE95D9
 
 CLd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/Objects-normal/arm64/CGFlowAnimationDemo normal arm64
 r0
@@ -1112,14 +1113,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Link /
 bACE9040F-0E45-49AB-BDF0-067B80D55B29
 
 CProcessInfoPlistFile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
-s410063735.744056
-e410063735.745882
+s410143259.321587
+e410143259.323605
 r1
 xProcessInfoPlistFile
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Process /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist127"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist0189be771371b841^a6f2be771371b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist0000000000000000^1198"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist -genpkginfo /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist -additionalcontentfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist36"3DA6D0D0-B396-493C-8C7D-F6466E5F3FA8-
-b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Process /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist127"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plistd464521b4a72b841^ce00531b4a72b841^---0#0#1#-19%DVTDocumentLocation2@124"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist0000000000000000^1198"ProcessInfoPlistFile build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/CGFlowAnimationDemo/CGFlowAnimationDemo-Info.plist -genpkginfo /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/ResourceRules.plist -additionalcontentfile /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/assetcatalog_generated_info.plist -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/Info.plist36"1A865A8D-AA04-4C1B-903B-F12B2114BA8E-
+bFBC123A5-9C9C-447E-A57C-33F42EDE95D9
 
 CProcessPCH /Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/CGFlowAnimationDemo-aqqbrpetiekzcuasuhvuxctedewz/Index/PrecompiledHeaders/CGFlowAnimationDemo-Prefix-cieahgoyrmogvfcvjzmqqxllasgw_ast/CGFlowAnimationDemo-Prefix.pch.pch CGFlowAnimationDemo/CGFlowAnimationDemo-Prefix.pch normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
@@ -1152,14 +1153,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Precomp
 b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
 
 CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
-s410063735.769108
-e410063735.769915
+s410143259.361589
+e410143259.362514
 r1
 xProcessProductPackaging
 x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcentd9ecc4771371b841^ac19c5771371b841^---0#0#1#-19%DVTDocumentLocation2@172"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent003448e1dcffdf42^858"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent36"1170C775-A51D-4DDE-AA93-D84C346ADEA2-
-b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent243"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent889e5c1b4a72b841^e6ce5c1b4a72b841^---0#0#1#-19%DVTDocumentLocation2@172"file:///Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent0000000000000000^858"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/CGFlowAnimationDemo.build/Debug-iphoneos/CGFlowAnimationDemo.build/CGFlowAnimationDemo.xcent36"8485AF99-9FB9-4406-8911-4F5BB4CC7BB3-
+bFBC123A5-9C9C-447E-A57C-33F42EDE95D9
 
 CProcessProductPackaging /Users/nbvikingsidiot001/Library/MobileDevice/Provisioning\ Profiles/0F277CD3-60F8-41B6-ADC7-E10BEBC4D9C0.mobileprovision /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app/embedded.mobileprovision
 s410063735.766758
@@ -1172,11 +1173,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection215"Proces
 b60B5BCCE-0EF9-4FEC-B73E-0F13FC849877
 
 CTouch /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
-s410140720.285611
-e410140720.291804
+s410143259.356437
+e410143259.361185
 r1
 xTouch
 x/Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Touch /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app50"Touch build/Debug-iphoneos/CGFlowAnimationDemo.app842e49304072b841^b1c14a304072b841^---0#0#1#--447"Touch build/Debug-iphoneos/CGFlowAnimationDemo.app    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"DCDC7087-CC2A-44A0-9AEB-E3ED59AEAB76-
-bC0707A4B-5BFF-4BD9-8DAB-25140E8474FA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Touch /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app50"Touch build/Debug-iphoneos/CGFlowAnimationDemo.app514b5b1b4a72b841^68775c1b4a72b841^---0#0#1#--447"Touch build/Debug-iphoneos/CGFlowAnimationDemo.app    cd /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nbvikingsidiot001/Desktop/SourceApps/Github/CGFlowAnimation/build/Debug-iphoneos/CGFlowAnimationDemo.app36"C17D949D-2280-4DBF-B4FD-6D8466AD6311-
+bFBC123A5-9C9C-447E-A57C-33F42EDE95D9
 
