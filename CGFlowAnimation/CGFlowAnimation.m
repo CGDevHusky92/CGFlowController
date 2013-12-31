@@ -31,6 +31,12 @@
 @end
 
 @implementation CGFlowAnimation {
+    struct {
+        unsigned int didBegin:1;
+        unsigned int didCancel:1;
+        unsigned int didPresent:1;
+        unsigned int shouldBegin:1;
+    } delegateRespondsTo;
     CGPoint _firstPoint;
 }
 @synthesize duration=_duration;
@@ -46,6 +52,13 @@
 
 -(void)setDelegate:(UIViewController<CGFlowInteractiveDelegate> *)delegate withOptions:(kCGFlowInteractionMainType)type {
     _delegate = delegate;
+    if (_delegate) {
+        delegateRespondsTo.didBegin = [delegate respondsToSelector:@selector(transitionDidBeginPresentation:)];
+        delegateRespondsTo.didCancel = [delegate respondsToSelector:@selector(transitionDidCancelPresentation:)];
+        delegateRespondsTo.didPresent = [delegate respondsToSelector:@selector(transitionDidPresent:)];
+        delegateRespondsTo.shouldBegin = [delegate respondsToSelector:@selector(transitionShouldBegin:)];
+    }
+    
     if (type == kCGFlowInteractionMainEdge) {
         if (![_delegate.view.window.gestureRecognizers containsObject:self.edgeGesture]) {
             [_delegate.view.window addGestureRecognizer:self.edgeGesture];
@@ -187,7 +200,7 @@
     }
     
     BOOL shouldBegin = YES;
-    if ([self.delegate respondsToSelector:@selector(transitionShouldBegin:)]) {
+    if (delegateRespondsTo.shouldBegin) {
         shouldBegin = [self.delegate transitionShouldBegin:self];
     }
     if (!shouldBegin) {
@@ -204,7 +217,7 @@
             self.animationController.orientation = [self.delegate interfaceOrientation];
             self.animationController.wasCancelled = NO;
             self.animationController.yOffset = 64-_firstPoint.y;
-            if ([self.delegate respondsToSelector:@selector(transitionDidBeginPresentation:)]) {
+            if (delegateRespondsTo.didBegin) {
                 [self.delegate transitionDidBeginPresentation:self];
             }
             [self.delegate proceedToNextViewControllerWithTransition:_interactorType];
@@ -219,14 +232,14 @@
                 self.completionSpeed = 0.5f;
                 self.animationController.wasCancelled = YES;
                 [self cancelInteractiveTransition];
-                if ([self.delegate respondsToSelector:@selector(transitionDidCancelPresentation:)]) {
+                if (delegateRespondsTo.didCancel) {
                     [self.delegate transitionDidCancelPresentation:self];
                 }
             } else {
                 self.completionSpeed = 1.0f;
                 self.animationController.wasCancelled = NO;
                 [self finishInteractiveTransition];
-                if ([self.delegate respondsToSelector:@selector(transitionDidPresent:)]) {
+                if (delegateRespondsTo.didPresent) {
                     [self.delegate transitionDidPresent:self];
                 }
             }
@@ -620,7 +633,7 @@
 @implementation CGFlowAnimations
 
 +(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-     withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+     withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     if (animationType == kCGFlowAnimationSlideUp) {
         [self flowSlideUpFromSource:srcController toDestination:destController withInContainer:containerView andDuration:duration completion:complete];
     } else if (animationType == kCGFlowAnimationSlideDown) {
@@ -641,7 +654,7 @@
 }
 
 +(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -667,7 +680,7 @@
 }
 
 +(void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -693,7 +706,7 @@
 }
 
 +(void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -719,7 +732,7 @@
 }
 
 +(void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -745,7 +758,7 @@
 }
 
 +(void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -781,7 +794,7 @@
 }
 
 +(void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -817,7 +830,7 @@
 }
 
 +(void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     destController.view.transform = srcController.view.transform;
@@ -836,14 +849,14 @@
     transform.m34 = -1 / CGRectGetWidth(containerView.bounds);
     containerView.layer.sublayerTransform = transform;
     
-    toView.layer.transform = CATransform3DMakeRotation(-1.0 * M_PI_2, 1, 0, 0);
+    toView.layer.transform = CATransform3DMakeRotation(M_PI_2, 0, 1, 0);
     [UIView animateKeyframesWithDuration:duration delay:0.0 options:0 animations:^{
         // First half is rotating in
         [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
-            fromView.layer.transform = CATransform3DMakeRotation(M_PI_2, 1, 0, 0);
+            fromView.layer.transform = CATransform3DMakeRotation(-1.0 * M_PI_2, 0, 1, 0);
         }];
         [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
-            toView.layer.transform = CATransform3DMakeRotation(0, 1, 0, 0);
+            toView.layer.transform = CATransform3DMakeRotation(0, 0, 1, 0);
         }];
     } completion:^(BOOL finished) {
         if (finished) {
@@ -853,8 +866,39 @@
 }
 
 +(void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete {
+               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    destController.view.transform = srcController.view.transform;
+    destController.view.bounds = srcController.view.bounds;
     
+    // Add the toView to the container
+    [toView removeFromSuperview];
+    [containerView addSubview:toView];
+    
+    // Set the frames
+    fromView.frame = containerView.bounds;
+    toView.frame = containerView.bounds;
+    
+    // Start building the transform - 3D so need perspective
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = -1 / CGRectGetWidth(containerView.bounds);
+    containerView.layer.sublayerTransform = transform;
+    
+    toView.layer.transform = CATransform3DMakeRotation(-1.0 * M_PI_2, 0, 1, 0);
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:0 animations:^{
+        // First half is rotating in
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
+            fromView.layer.transform = CATransform3DMakeRotation(M_PI_2, 0, 1, 0);
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+            toView.layer.transform = CATransform3DMakeRotation(0, 0, 1, 0);
+        }];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            complete();
+        }
+    }];
 }
 
 +(kCGFlowAnimationType)oppositeType:(kCGFlowAnimationType)type {
@@ -870,6 +914,10 @@
         return kCGFlowAnimationFlipDown;
     } else if (type == kCGFlowAnimationFlipDown) {
         return kCGFlowAnimationFlipUp;
+    } else if (type == kCGFlowAnimationFlipLeft) {
+        return kCGFlowAnimationFlipRight;
+    } else if (type == kCGFlowAnimationFlipRight) {
+        return kCGFlowAnimationFlipLeft;
     }
     return kCGFlowAnimationNone;
 }

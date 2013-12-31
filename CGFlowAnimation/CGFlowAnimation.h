@@ -67,7 +67,7 @@ typedef enum kCGFlowAnimationType {
     kCGFlowAnimationNone
 } kCGFlowAnimationType;
 
-typedef void(^completion)(void);
+typedef void(^Completion)(void);
 
 @class CGFlowAnimation;
 @protocol CGFlowInteractiveDelegate <NSObject>
@@ -135,31 +135,31 @@ typedef void(^completion)(void);
 @interface CGFlowAnimations : NSObject
 
 +(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+             withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+               withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+                withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+              withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController
-            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(completion)complete;
+            withInContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(kCGFlowAnimationType)oppositeType:(kCGFlowAnimationType)type;
 

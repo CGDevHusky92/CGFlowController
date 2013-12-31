@@ -33,3 +33,9 @@
 
 @interface CGFlowSegueFlipDown : CGFlowSegue
 @end
+
+@interface CGFlowSegueFlipLeft : CGFlowSegue
+@end
+
+@interface CGFlowSegueFlipRight : CGFlowSegue
+@end

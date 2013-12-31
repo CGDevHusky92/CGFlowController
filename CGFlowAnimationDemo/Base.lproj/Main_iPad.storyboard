@@ -92,7 +92,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Fyv-JF-jqi" kind="custom" identifier="srcRightCustomSegue" customClass="CGFlowSegueSlideLeft" id="tnd-kb-du4"/>
+                                    <segue destination="Fyv-JF-jqi" kind="custom" identifier="srcRightCustomSegue" customClass="CGFlowSegueFlipLeft" id="tnd-kb-du4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5Z-nj-CDK">
@@ -107,7 +107,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lxA-Xc-cku" kind="custom" identifier="srcLeftCustomSegue" customClass="CGFlowSegueSlideRight" id="avb-8T-7ct"/>
+                                    <segue destination="lxA-Xc-cku" kind="custom" identifier="srcLeftCustomSegue" customClass="CGFlowSegueFlipRight" id="avb-8T-7ct"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q82-bu-NrR">
@@ -121,7 +121,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qhi-1k-1v7" kind="custom" identifier="srcTopCustomSegue" customClass="CGFlowSegueSlideDown" id="ibQ-ri-ju3"/>
+                                    <segue destination="qhi-1k-1v7" kind="custom" identifier="srcTopCustomSegue" customClass="CGFlowSegueFlipDown" id="ibQ-ri-ju3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-4G-oQw">
@@ -135,7 +135,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KOI-z7-x42" kind="custom" identifier="srcBottomCustomSegue" customClass="CGFlowSegueSlideUp" id="1Xv-UR-UKW"/>
+                                    <segue destination="KOI-z7-x42" kind="custom" identifier="srcBottomCustomSegue" customClass="CGFlowSegueFlipUp" id="1Xv-UR-UKW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,7 +333,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="1Xv-UR-UKW"/>
         <segue reference="avb-8T-7ct"/>
+        <segue reference="tnd-kb-du4"/>
         <segue reference="ibQ-ri-ju3"/>
-        <segue reference="9kr-I1-Wd6"/>
     </inferredMetricsTieBreakers>
 </document>
