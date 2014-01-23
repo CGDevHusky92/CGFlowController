@@ -1,0 +1,1092 @@
+TCGFlowTest
+v6
+r1
+cCheck dependencies
+cProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch CGFlowTest/CGFlowTest-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest normal x86_64
+cCompileStoryboard /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard
+cCompileStoryboard /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard
+cCopyStringsFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings CGFlowTest/en.lproj/InfoPlist.strings
+cCompileAssetCatalog /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets
+cProcessInfoPlistFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Info.plist /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist
+cGenerateDSYMFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest
+cTouch /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
+c0000000052448D680000000000000176
+t1380224360
+s374
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
+c00000000524494BC00000000000003B5
+t1380226236
+s949
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000524494CE000000000000019E
+t1380226254
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c00000000524494D20000000000583810
+t1380226258
+s5781520
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c00000000524494D300000000005B82A0
+t1380226259
+s5997216
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000524494D30000000000445830
+t1380226259
+s4479024
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+c00000000524494D30000000000355270
+t1380226259
+s3494512
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+c00000000524494D400000000002F4800
+t1380226260
+s3098624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c00000000524494D4000000000004B000
+t1380226260
+s307200
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000524494D5000000000088B570
+t1380226261
+s8959344
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c00000000524494D80000000000037620
+t1380226264
+s226848
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000524494D90000000000484860
+t1380226265
+s4737120
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+c00000000524494D90000000000127E10
+t1380226265
+s1211920
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000524494DC0000000001DB1C90
+t1380226268
+s31136912
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+c00000000524494F300000000002B9E80
+t1380226291
+s2858624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+c00000000524495030000000000002338
+t1380226307
+s9016
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+c0000000052449503000000000008D300
+t1380226307
+s578304
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+c0000000052449503000000000038ACB0
+t1380226307
+s3714224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+c00000000524E81EB00000000000141F0
+t1380876779
+s82416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+c00000000524495030000000000013500
+t1380226307
+s79104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+c00000000524495030000000000033BA0
+t1380226307
+s211872
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+c0000000052449503000000000001CFB0
+t1380226307
+s118704
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+c0000000052449503000000000001B2B0
+t1380226307
+s111280
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+c000000005244950300000000000632B0
+t1380226307
+s406192
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+c00000000524495030000000000008880
+t1380226307
+s34944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+c00000000524495030000000000015080
+t1380226307
+s86144
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+c000000005244950300000000000230E0
+t1380226307
+s143584
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+c0000000052449503000000000000E380
+t1380226307
+s58240
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+c00000000524495040000000000087200
+t1380226308
+s553472
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+c000000005244950300000000000171A0
+t1380226307
+s94624
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+c00000000524495030000000000039C10
+t1380226307
+s236560
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+c0000000052449503000000000000B0B0
+t1380226307
+s45232
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+c00000000524495040000000000167FE0
+t1380226308
+s1474528
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+c000000005244950400000000000106A0
+t1380226308
+s67232
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+c0000000052449504000000000001CE40
+t1380226308
+s118336
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+c00000000524495040000000000071040
+t1380226308
+s462912
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+c00000000524495040000000000067A10
+t1380226308
+s424464
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+c0000000052449504000000000001BAD0
+t1380226308
+s113360
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+c00000000524495040000000000088BA0
+t1380226308
+s560032
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/include/module.map
+c000000005240FA270000000000000AC9
+t1379990055
+s2761
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+c000000005244948C0000000000005004
+t1380226188
+s20484
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m
+c0000000052E1845A000000000000395F
+t1390511194
+s14687
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m
+c0000000052D9F4D40000000000005D19
+t1390015700
+s23833
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m
+c0000000052E1845A000000000000337D
+t1390511194
+s13181
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.h
+c0000000052C85EF60000000000000121
+t1388863222
+s289
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m
+c0000000052CDC44E00000000000007E3
+t1389216846
+s2019
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard
+c0000000052D05BA90000000000009A29
+t1389386665
+s39465
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard
+c0000000052E050D50000000000007141
+t1390432469
+s28993
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m
+c0000000052E183170000000000003A9D
+t1390510871
+s15005
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.h
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m
+c0000000052E182E500000000000043D5
+t1390510821
+s17365
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m
+c0000000052E0516D0000000000003369
+t1390432621
+s13161
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist
+c0000000052DAF8150000000000000639
+t1390082069
+s1593
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Prefix.pch
+c0000000052C85EF60000000000000158
+t1388863222
+s344
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.h
+c0000000052CCD1BC00000000000000FD
+t1389154748
+s253
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m
+c0000000052D0319000000000000005C4
+t1389375888
+s1476
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.h
+c0000000052CCD1BC00000000000000FB
+t1389154748
+s251
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m
+c0000000052CCD1BC00000000000005BE
+t1389154748
+s1470
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.h
+c0000000052BE531C00000000000000FC
+t1388204828
+s252
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m
+c0000000052D02CD800000000000005C4
+t1389374680
+s1476
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.h
+c0000000052CCD1BC00000000000000FA
+t1389154748
+s250
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m
+c0000000052D0319000000000000005B5
+t1389375888
+s1461
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.h
+c0000000052CEF7060000000000000199
+t1389295366
+s409
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m
+c0000000052D04FEF0000000000000E28
+t1389383663
+s3624
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets
+c0000000052D1BB1F0000000000000088
+t1389476639
+s136
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.h
+c0000000052CEF4D70000000000000155
+t1389294807
+s341
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m
+c0000000052CEF4D70000000000000C0F
+t1389294807
+s3087
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+c0000000052C9A9E1000000000000010F
+t1388947937
+s271
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m
+c0000000052DAF84800000000000019F8
+t1390082120
+s6648
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/en.lproj/InfoPlist.strings
+c0000000052C85EF6000000000000002D
+t1388863222
+s45
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m
+c0000000052C85EF6000000000000015D
+t1388863222
+s349
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o
+t1389723188
+s71488
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o
+t1390511194
+s99272
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o
+t1390511194
+s162180
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o
+t1390511194
+s74600
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowTest.LinkFileList
+c0000000052DAF7C500000000000006F8
+t1390081989
+s1784
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o
+t1390511194
+s50100
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o
+t1390511194
+s50024
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o
+t1390511194
+s50064
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o
+t1390511194
+s49988
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o
+t1390511194
+s66668
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o
+t1390511194
+s65844
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o
+t1390511194
+s61424
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o
+t1389723188
+s3908
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_dependencies.txt
+t1389723189
+s369
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_generated_info.plist
+t1389723189
+s525
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app
+t1390511194
+s306
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM
+t1390510871
+s102
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Base.lproj/Main_iPad.storyboardc
+t1389723190
+s578
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Base.lproj/Main_iPhone.storyboardc
+t1390510166
+s476
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest
+t1390511194
+s190164
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Info.plist
+t1390432158
+s1295
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/PkgInfo
+t1390432158
+s8
+
+N/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings
+t1389723188
+s42
+
+N/usr/lib/libSystem.B.dylib
+c00000000524E81DD000000000000E6D0
+t1380876765
+s59088
+
+N/usr/lib/system/libcache.dylib
+c00000000524E81EB0000000000012A00
+t1380876779
+s76288
+
+N/usr/lib/system/libcommonCrypto.dylib
+c00000000524E81D1000000000002E320
+t1380876753
+s189216
+
+N/usr/lib/system/libcompiler_rt.dylib
+c00000000524E81DD0000000000021860
+t1380876765
+s137312
+
+N/usr/lib/system/libcopyfile.dylib
+c00000000524E81EA000000000001B620
+t1380876778
+s112160
+
+N/usr/lib/system/libcorecrypto.dylib
+c00000000524E81EA00000000000BD920
+t1380876778
+s776480
+
+N/usr/lib/system/libkeymgr.dylib
+c00000000524E81EB000000000000A120
+t1380876779
+s41248
+
+N/usr/lib/system/liblaunch.dylib
+c0000000052B72BB3000000000001D550
+t1387735987
+s120144
+
+N/usr/lib/system/libmacho.dylib
+c00000000524E81EA0000000000014EE0
+t1380876778
+s85728
+
+N/usr/lib/system/libquarantine.dylib
+c00000000524E81EC0000000000010380
+t1380876780
+s66432
+
+N/usr/lib/system/libremovefile.dylib
+c00000000524E81EC000000000000C4C0
+t1380876780
+s50368
+
+N/usr/lib/system/libsystem_asl.dylib
+c00000000524E81EB00000000000357A0
+t1380876779
+s219040
+
+N/usr/lib/system/libsystem_blocks.dylib
+c00000000524E81EB000000000000C070
+t1380876779
+s49264
+
+N/usr/lib/system/libsystem_c.dylib
+c0000000052B72B6D0000000000168D00
+t1387735917
+s1477888
+
+N/usr/lib/system/libsystem_configuration.dylib
+c0000000052B72BAE0000000000010630
+t1387735982
+s67120
+
+N/usr/lib/system/libsystem_dnssd.dylib
+c0000000052B72BB3000000000001DF10
+t1387735987
+s122640
+
+N/usr/lib/system/libsystem_info.dylib
+c00000000524E81DD0000000000075B00
+t1380876765
+s482048
+
+N/usr/lib/system/libsystem_kernel.dylib
+c0000000052B72B6D000000000007CCE0
+t1387735917
+s511200
+
+N/usr/lib/system/libsystem_m.dylib
+c00000000524E81DD00000000000766C0
+t1380876765
+s485056
+
+N/usr/lib/system/libsystem_malloc.dylib
+c0000000052B72BB30000000000044DC0
+t1387735987
+s282048
+
+N/usr/lib/system/libsystem_notify.dylib
+c00000000524E81DD0000000000021FA0
+t1380876765
+s139168
+
+N/usr/lib/system/libsystem_platform.dylib
+c0000000052B72BB3000000000002D920
+t1387735987
+s186656
+
+N/usr/lib/system/libsystem_pthread.dylib
+c00000000524E81EB000000000001E570
+t1380876779
+s124272
+
+N/usr/lib/system/libsystem_sandbox.dylib
+c0000000052B72B99000000000000CC70
+t1387735961
+s52336
+
+N/usr/lib/system/libsystem_stats.dylib
+c0000000052B72BA400000000000099B0
+t1387735972
+s39344
+
+N/usr/lib/system/libunc.dylib
+c00000000524E81E6000000000000C3F0
+t1380876774
+s50160
+
+N/usr/lib/system/libunwind.dylib
+c00000000524E81EB00000000000199F0
+t1380876779
+s104944
+
+N/var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch
+t1389723187
+s115120
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m
+r0
+
+CBuild AST from /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesab2307dabb91b841^7b8812dabb91b841^---0#1#1#--18"Check dependencies36"6E630F9F-1B6D-43A9-A744-4C1A0DB91109-
+
+CCompileAssetCatalog /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets
+s411415988.392916
+e411415989.473537
+r1
+xCompileAssetCatalog
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets
+o/* com.apple.actool.compilation-results */
+o/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/LaunchImage-700-568h@2x.png
+o/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Assets.car
+o/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"CompileAssetCatalog build/Debug-iphonesimulator/CGFlowTest.app CGFlowTest/Images.xcassets89"CompileAssetCatalog build/Debug-iphonesimulator/CGFlowTest.app CGFlowTest/Images.xcassetsd33365b4b585b841^fc3979b5b585b841^-397"/* com.apple.actool.compilation-results *//Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/LaunchImage-700-568h@2x.png/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Assets.car/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@78"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets/0000000000000000^1162"CompileAssetCatalog build/Debug-iphonesimulator/CGFlowTest.app CGFlowTest/Images.xcassets    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 7.0 --target-device iphone --target-device ipad --compress-pngs --compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Images.xcassets36"665D1CCF-A693-4398-A960-1FDB108C2A39-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411415988.077938
+e411415988.177441
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m201"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o CGFlowTest/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler3c1114b4b585b841^098c2db4b585b841^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m0000000000000000^3697"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o CGFlowTest/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o36"7755150D-1E59-4D07-BB95-2B1387D5D5F0-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.170007
+e412203994.354286
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m247"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler16a62bdabb91b841^d49b61dabb91b841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m0000000000000000^3755"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowAnimations.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o36"0DFB11B3-4033-48FB-8522-0D84EF36A1AF-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203671.017410
+e412203671.089858
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m211"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o CGFlowTest/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera4a70497ba91b841^c9011797ba91b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m0000000000000000^3727"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o CGFlowTest/CGFlowAnimations.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowAnimations.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o36"236725CE-9C10-4F76-8649-5F0678007703-
+bF1ACAB22-FF63-45C9-822B-1CC68A3F2F53
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.166722
+e412203994.444791
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m247"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler51112bdabb91b841^2cf174dabb91b841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m0000000000000000^3755"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o36"5D3D2E90-3CC4-433B-A519-730A64018C20-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203621.156757
+e412203621.276442
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m211"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o CGFlowTest/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerba492865ba91b841^e3c54665ba91b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m0000000000000000^3727"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o CGFlowTest/CGFlowController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o36"C0305A3A-4E34-4913-B5B4-89802EA3707F-
+b8C04BB14-D46D-4A30-980A-902C3777577D
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.204404
+e412203994.360226
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m251"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler9c6f34dabb91b841^2fa661dabb91b841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m0000000000000000^3767"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowInteractions.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o36"314BF5C8-9304-48D8-ABE7-9794F8800BA7-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412202964.186898
+e412202964.567087
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m215"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o CGFlowTest/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler140730d4b791b841^053491d4b791b841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m0000000000000000^3739"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o CGFlowTest/CGFlowInteractions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowInteractions.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o36"1064A3F8-9F1C-4CA6-80D9-CCDE7EB2561C-
+bA9124F0F-FAAB-4F47-9851-9DDE94236FC5
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.073250
+e412203994.166411
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m227"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o CGFlowTest/DestBottomViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler69e112dabb91b841^edb72adabb91b841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m0000000000000000^3775"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o CGFlowTest/DestBottomViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestBottomViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o36"F1AA7ED0-1E43-44D1-B9E0-E0C626292918-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.073508
+e412203994.174437
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m223"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o CGFlowTest/DestLeftViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerb7ee12dabb91b841^e7a72cdabb91b841^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m0000000000000000^3763"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o CGFlowTest/DestLeftViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestLeftViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o36"D0E0DF27-7D05-4957-BDF0-0EAD8C34E4EC-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.355820
+e412203994.441301
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m225"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o CGFlowTest/DestRightViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera9335bdabb91b841^75e474dabb91b841^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m0000000000000000^3769"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o CGFlowTest/DestRightViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestRightViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o36"85C31D0D-5516-4DEE-9A16-40B6488FCCE2-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.175690
+e412203994.306692
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m221"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o CGFlowTest/DestTopViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc2142ddabb91b841^d5ea4fdabb91b841^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m0000000000000000^3757"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o CGFlowTest/DestTopViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DestTopViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o36"D63CB046-EADB-429D-B5A3-EAF44D80A51F-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.306959
+e412203994.417068
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m219"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o CGFlowTest/DetailViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera3b14edabb91b841^7adf74dabb91b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m0000000000000000^3751"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o CGFlowTest/DetailViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o36"1CB10266-58B0-4127-A035-397FA2080251-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.074164
+e412203994.204188
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/DetailViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m219"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o CGFlowTest/MasterViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler902d13dabb91b841^5e4d36dabb91b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m0000000000000000^3751"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o CGFlowTest/MasterViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/MasterViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o36"9A84D799-CD5E-4877-9674-48FCFB214C53-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s412203994.075074
+e412203994.169586
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.h
+d/Users/nbvikingsidiot001/Desktop/CGFlowLibrary/CGFlowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m213"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o CGFlowTest/SrcViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera05013dabb91b841^f7722bdabb91b841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m0000000000000000^3733"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o CGFlowTest/SrcViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/SrcViewController.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o36"ED3A36A9-701F-4C65-AE5A-BEFBA8D24B6F-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CCompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411415988.275796
+e411415988.315889
+r1
+xCompileC
+xbuild/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m187"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o CGFlowTest/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler28ba46b4b585b841^e5ed50b4b585b841^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m0000000000000000^3655"CompileC build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o CGFlowTest/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -include /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch -MMD -MT dependencies -MF /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.dia -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/main.m -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o36"07BB5C55-C394-4E81-9F14-E2669E96D25A-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CCompileStoryboard /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard
+s411415988.389901
+e411415990.696456
+r1
+xCompileStoryboard
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"CompileStoryboard CGFlowTest/Base.lproj/Main_iPad.storyboard60"CompileStoryboard CGFlowTest/Base.lproj/Main_iPad.storyboarda12c64b4b585b841^5e4db2b6b585b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard0000000000000000^869"CompileStoryboard CGFlowTest/Base.lproj/Main_iPad.storyboard    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Base.lproj/Main_iPad.storyboardc /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPad.storyboard36"ECB1307D-B0AC-492B-9B98-94660C0A1AD7-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CCompileStoryboard /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard
+s412202964.736796
+e412202966.149781
+r1
+xCompileStoryboard
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"CompileStoryboard CGFlowTest/Base.lproj/Main_iPhone.storyboard62"CompileStoryboard CGFlowTest/Base.lproj/Main_iPhone.storyboard43aebcd4b791b841^825826d6b791b841^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard0000000000000000^875"CompileStoryboard CGFlowTest/Base.lproj/Main_iPhone.storyboard    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Base.lproj/Main_iPhone.storyboardc /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/Base.lproj/Main_iPhone.storyboard36"4ED7D17D-6451-4765-867B-D623ED145A87-
+bA9124F0F-FAAB-4F47-9851-9DDE94236FC5
+
+CCopyStringsFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings CGFlowTest/en.lproj/InfoPlist.strings
+s411415988.390493
+e411415988.396762
+r1
+xCopyStringsFile
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings
+xCGFlowTest/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy CGFlowTest/en.lproj/InfoPlist.strings123"CopyStringsFile build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings CGFlowTest/en.lproj/InfoPlist.strings8c1264b4b585b841^da9265b4b585b841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/en.lproj/InfoPlist.strings0000000000000000^597"CopyStringsFile build/Debug-iphonesimulator/CGFlowTest.app/en.lproj/InfoPlist.strings CGFlowTest/en.lproj/InfoPlist.strings    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/en.lproj -- CGFlowTest/en.lproj/InfoPlist.strings36"9CFCDCEC-850E-41DC-92D6-6C56001061BB-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CGenerateDSYMFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest
+s412203994.496080
+e412203994.533602
+r1
+xGenerateDSYMFile
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Generate /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM118"GenerateDSYMFile build/Debug-iphonesimulator/CGFlowTest.app.dSYM build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest2b127fdabb91b841^8d628ddabb91b841^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM/0000000000000000^658"GenerateDSYMFile build/Debug-iphonesimulator/CGFlowTest.app.dSYM build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app.dSYM36"904DF541-AE99-48E1-98EC-BD397F88B528-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CLd /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest normal x86_64
+s412203994.448466
+e412203994.493802
+r1
+xLd
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest
+xnormal
+xx86_64
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowTest.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestBottomViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestLeftViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/MasterViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/SrcViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowAnimations.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/AppDelegate.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestTopViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowInteractions.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DetailViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/DestRightViewController.o
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/main.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libsystem_stats.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest70"Ld build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest normal x86_64e7e372dabb91b841^0c5684dabb91b841^---0#0#1#--1393"Ld build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest normal x86_64    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator -filelist /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowTest.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/Objects-normal/x86_64/CGFlowTest_dependency_info.dat -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/CGFlowTest36"6FB56784-D948-4DDB-ADB1-E2079111A05D-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
+CProcessInfoPlistFile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Info.plist /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist
+s412124958.146584
+e412124958.148569
+r1
+xProcessInfoPlistFile
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Info.plist
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Process /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist107"ProcessInfoPlistFile build/Debug-iphonesimulator/CGFlowTest.app/Info.plist CGFlowTest/CGFlowTest-Info.plist9a99251e8790b841^d108261e8790b841^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist0000000000000000^893"ProcessInfoPlistFile build/Debug-iphonesimulator/CGFlowTest.app/Info.plist CGFlowTest/CGFlowTest-Info.plist    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Info.plist -genpkginfo /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/assetcatalog_generated_info.plist -o /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app/Info.plist36"A155C81B-7235-4EF0-ADB2-A909568D7418-
+bC9708F6C-F958-4DEA-8845-E69C04A5AEFC
+
+CProcessPCH /Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/CGFlowTest-dexsyyykuarnvgdsvnyjrnlxgpyf/Index/PrecompiledHeaders/CGFlowTest-Prefix-bzsboydlrrpxqhdfsktqaidnpqhu_ast/CGFlowTest-Prefix.pch.pch CGFlowTest/CGFlowTest-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch CGFlowTest/CGFlowTest-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411415987.938004
+e411415987.977665
+r1
+xProcessPCH
+x/var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch
+xCGFlowTest/CGFlowTest-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile CGFlowTest/CGFlowTest-Prefix.pch305"ProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch CGFlowTest/CGFlowTest-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerd53ff0b3b585b841^6248fab3b585b841^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Prefix.pch0000000000000000^3765"ProcessPCH /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch CGFlowTest/CGFlowTest-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/nbvikingsidiot001/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-generated-files.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-own-target-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-all-target-headers.hmap -iquote /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/CGFlowTest-project-headers.hmap -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources/x86_64 -I/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/CGFlowTest.build/Debug-iphonesimulator/CGFlowTest.build/DerivedSources -F/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator --serialize-diagnostics /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.d -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/CGFlowTest/CGFlowTest-Prefix.pch -o /var/folders/3m/0g6xsb392xsgg7cvwpf46x5w0000gn/C/com.apple.DeveloperTools/5.0.1-5A2034a/Xcode/SharedPrecompiledHeaders/CGFlowTest-Prefix-azzitsdvkwqzhzdabpduhgidlykw/CGFlowTest-Prefix.pch.pch36"B2BC6E5A-8751-4449-B142-B9538D9B7CC1-
+bD66B5EF8-585E-4D76-A4C3-ABA2C9B774D8
+
+CTouch /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app
+s412203994.534302
+e412203994.539723
+r1
+xTouch
+x/Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Touch /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app48"Touch build/Debug-iphonesimulator/CGFlowTest.appa1d688dabb91b841^e8688ddabb91b841^---0#0#1#--404"Touch build/Debug-iphonesimulator/CGFlowTest.app    cd /Users/nbvikingsidiot001/Desktop/CGFlowTest    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nbvikingsidiot001/Desktop/CGFlowTest/build/Debug-iphonesimulator/CGFlowTest.app36"D1A947E7-7AE1-48A8-9AD6-84A6C5312A36-
+bC794023E-C66B-41C6-80F1-E2042F5AC641
+
