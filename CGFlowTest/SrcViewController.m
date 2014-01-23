@@ -24,51 +24,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     if (self.transitioning) {
         [super viewWillAppear:animated];
-//        BOOL anTruth = NO;
-//        if (self.isBeingPresented) {
-//            anTruth = YES;
-//            NSLog(@"viewWillAppear - isBeingPresented");
-//        }
-//        if (self.isBeingDismissed) {
-//            anTruth = YES;
-//            NSLog(@"viewWillAppear - isBeingDismissed");
-//        }
-//        if (self.isMovingToParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewWillAppear - isMovingToParentViewController");
-//        }
-//        if (self.isMovingFromParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewWillAppear - isMovingFromParentViewController");
-//        }
-//        if (!anTruth) {
-            NSLog(@"viewWillAppear");
-//        }
+        NSLog(@"viewWillAppear");
     }
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     if (self.transitioning) {
-//        BOOL anTruth = NO;
-//        if (self.isBeingPresented) {
-//            anTruth = YES;
-//            NSLog(@"viewDidAppear - isBeingPresented");
-//        }
-//        if (self.isBeingDismissed) {
-//            anTruth = YES;
-//            NSLog(@"viewDidAppear - isBeingDismissed");
-//        }
-//        if (self.isMovingToParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewDidAppear - isMovingToParentViewController");
-//        }
-//        if (self.isMovingFromParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewDidAppear - isMovingFromParentViewController");
-//        }
-//        if (!anTruth) {
-            NSLog(@"viewDidAppear");
-//        }
+        NSLog(@"viewDidAppear");
         [super viewDidAppear:animated];
     }
 }
@@ -76,51 +38,13 @@
 -(void)viewWillDisappear:(BOOL)animated {
     if (self.transitioning) {
         [super viewWillDisappear:animated];
-//        BOOL anTruth = NO;
-//        if (self.isBeingPresented) {
-//            anTruth = YES;
-//            NSLog(@"viewWillDisappear - isBeingPresented");
-//        }
-//        if (self.isBeingDismissed) {
-//            anTruth = YES;
-//            NSLog(@"viewWillDisappear - isBeingDismissed");
-//        }
-//        if (self.isMovingToParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewWillDisappear - isMovingToParentViewController");
-//        }
-//        if (self.isMovingFromParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewWillDisappear - isMovingFromParentViewController");
-//        }
-//        if (!anTruth) {
-            NSLog(@"viewWillDisappear");
-//        }
+        NSLog(@"viewWillDisappear");
     }
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     if (self.transitioning) {
-//        BOOL anTruth = NO;
-//        if (self.isBeingPresented) {
-//            anTruth = YES;
-//            NSLog(@"viewDidDisappear - isBeingPresented");
-//        }
-//        if (self.isBeingDismissed) {
-//            anTruth = YES;
-//            NSLog(@"viewDidDisappear - isBeingDismissed");
-//        }
-//        if (self.isMovingToParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewDidDisappear - isMovingToParentViewController");
-//        }
-//        if (self.isMovingFromParentViewController) {
-//            anTruth = YES;
-//            NSLog(@"viewDidDisappear - isMovingFromParentViewController");
-//        }
-//        if (!anTruth) {
-            NSLog(@"viewDidDisappear");
-//        }
+        NSLog(@"viewDidDisappear");
         [super viewDidDisappear:animated];
     }
 }
@@ -129,12 +53,12 @@
 
 -(IBAction)moveToDestTop:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destTopController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationSlideDown completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipDown completion:^(BOOL finished){}];
 }
 
 -(IBAction)moveToDestBottom:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destBottomController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationSlideUp completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipUp completion:^(BOOL finished){}];
 }
 
 -(IBAction)moveToDestLeft:(id)sender {

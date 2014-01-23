@@ -1,6 +1,5 @@
 //
 //  CGFlowController.h
-//  CGFlowTest
 //
 //  Created by Charles Gorectke on 1/4/14.
 //  Copyright (c) 2014 Charles Gorectke. All rights reserved.
@@ -53,6 +52,8 @@ typedef enum kCGFlowAnimationType {
     kCGFlowAnimationFlipDown,
     kCGFlowAnimationFlipLeft,
     kCGFlowAnimationFlipRight,
+    kCGFlowAnimationModalPresent,
+    kCGFlowAnimationModalDismiss,
     kCGFlowAnimationNone
 } kCGFlowAnimationType;
 
@@ -66,6 +67,8 @@ typedef void(^Completion)(BOOL finished);
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
 -(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
 -(void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
+-(void)flowModalViewController:(UIViewController *)viewController completion:(Completion)completion;
+-(void)flowDismissModalViewControllerWithCompletion:(Completion)completion;
 @end
 
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
