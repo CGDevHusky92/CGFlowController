@@ -15,6 +15,7 @@
 @interface CGFlowController()
 @property (nonatomic, weak) UIViewController *statusController;
 @property (nonatomic, weak) UIViewController *modalController;
+@property (assign) CGPoint modalScale;
 @property (nonatomic, strong) CGFlowInteractor *interactor;
 @property (nonatomic, assign) Completion currentCompletion;
 @property (nonatomic, assign) kCGFlowAnimationType animationType;
@@ -32,6 +33,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     _started = false;
+    _modalScale = CGPointZero;
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.definesPresentationContext = YES;
     self.providesPresentationContextTransitionStyle = YES;
@@ -143,7 +145,7 @@
     [self.flowedController presentViewController:tempController animated:animated completion:^{}];
 }
 
--(void)flowModalViewController:(UIViewController *)viewController completion:(Completion)completion {
+-(void)flowModalViewController:(UIViewController *)viewController withScale:(CGPoint)scale completion:(Completion)completion {
     self.flowedController.view.userInteractionEnabled = NO;
     
     viewController.transitioning = YES;
@@ -155,6 +157,7 @@
     _animationType = kCGFlowAnimationModalPresent;
     self.interactive = NO;
     
+    _modalScale = scale;
     _currentCompletion = completion;
     [self presentViewController:viewController animated:YES completion:^{}];
 }
@@ -260,6 +263,7 @@
         [self.modalController.view removeFromSuperview];
         [self.modalController removeFromParentViewController];
         self.modalController = nil;
+        _modalScale = CGPointZero;
     }
 }
 
@@ -344,7 +348,7 @@
         [containerView addSubview:toVC.view];
     }
     
-    [CGFlowAnimations flowAnimation:self.animationType fromSource:fromVC toDestination:toVC withContainer:containerView andDuration:[self transitionDuration:transitionContext] withOrientation:[fromVC interfaceOrientation] interactively:_interactive completion:^(BOOL finished) {
+    [CGFlowAnimations flowAnimation:self.animationType fromSource:fromVC toDestination:toVC withContainer:containerView andDuration:[self transitionDuration:transitionContext] interactively:_interactive withScale:self.flowController.modalScale completion:^(BOOL finished) {
         if (finished) {
             [transitionContext completeTransition:YES];
             if ([transitionContext transitionWasCancelled]) {

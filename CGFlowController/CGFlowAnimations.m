@@ -27,12 +27,12 @@
 
 @implementation CGFlowAnimations
 
-+(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration withOrientation:(UIInterfaceOrientation)orientation interactively:(BOOL)interactive completion:(Completion)complete {
++(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete {
     kCGFlowAnimationType correctedType;
     if (interactive && ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
         correctedType = animationType;
     } else {
-        correctedType = [self correctForOrientation:orientation withAnimation:animationType];
+        correctedType = [self correctForOrientation:srcController.interfaceOrientation withAnimation:animationType];
     }
     
     if (correctedType == kCGFlowAnimationSlideUp) {
@@ -52,9 +52,9 @@
     } else if (correctedType == kCGFlowAnimationFlipRight) {
         [self flowFlipRightFromSource:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
     } else if (correctedType == kCGFlowAnimationModalPresent) {
-        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:YES andScale:CGPointMake(0, 0) completion:complete];
+        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:YES andScale:scale completion:complete];
     } else if (correctedType == kCGFlowAnimationModalDismiss) {
-        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:NO andScale:CGPointMake(0, 0) completion:complete];
+        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:NO andScale:scale completion:complete];
     }
 }
 
@@ -67,10 +67,16 @@
         // Round the corners
         toView.layer.cornerRadius = 8;
         toView.layer.masksToBounds = YES;
-        // Point to rect percentage determination using scale
-        CGRect toFrame = CGRectMake(15, 184, 290, 200);
         
+        // Point to rect percentage determination using scale
+        // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
         CGRect bounds = containerView.bounds;
+        CGFloat width = (scale.x * bounds.size.width);
+        CGFloat height = (scale.y * bounds.size.height);
+        CGFloat x = (bounds.size.width - width) / 2;
+        CGFloat y = (bounds.size.height - height) / 2;
+        CGRect toFrame = CGRectMake(x, y, width, height);
+        
         srcController.view.frame = bounds;
         [destController.view setFrame:CGRectOffset(toFrame, 0, bounds.size.height)];
         [containerView addSubview:toView];

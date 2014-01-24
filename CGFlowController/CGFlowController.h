@@ -67,7 +67,7 @@ typedef void(^Completion)(BOOL finished);
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
 -(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
 -(void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
--(void)flowModalViewController:(UIViewController *)viewController completion:(Completion)completion;
+-(void)flowModalViewController:(UIViewController *)viewController withScale:(CGPoint)scale completion:(Completion)completion;
 -(void)flowDismissModalViewControllerWithCompletion:(Completion)completion;
 @end
 
@@ -83,7 +83,7 @@ typedef void(^Completion)(BOOL finished);
 @end
 
 @interface CGFlowAnimations : NSObject
-+(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration withOrientation:(UIInterfaceOrientation)orientation interactively:(BOOL)interactive completion:(Completion)complete;
++(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete;
 @end
 
 @interface CGFlowInteractions : NSObject
