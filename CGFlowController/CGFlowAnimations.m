@@ -9,7 +9,13 @@
 
 @interface CGFlowAnimations()
 
-+(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration isAppearence:(BOOL)appearing andScale:(CGPoint)scale completion:(Completion)complete;
++(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++(void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++(void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++(void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
+
++(void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++(void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
 +(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 +(void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
@@ -51,47 +57,150 @@
         [self flowFlipLeftFromSource:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
     } else if (correctedType == kCGFlowAnimationFlipRight) {
         [self flowFlipRightFromSource:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
-    } else if (correctedType == kCGFlowAnimationModalPresent) {
-        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:YES andScale:scale completion:complete];
-    } else if (correctedType == kCGFlowAnimationModalDismiss) {
-        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration isAppearence:NO andScale:scale completion:complete];
+    } else if (correctedType == kCGFlowModalPresentSlideUp) {
+        [self flowModalSlideUp:srcController toDestination:destController withContainer:containerView andDuration:duration andScale:scale completion:complete];
+    } else if (correctedType == kCGFlowModalPresentSlideDown) {
+        [self flowModalSlideDown:srcController toDestination:destController withContainer:containerView andDuration:duration andScale:scale completion:complete];
+    } else if (correctedType == kCGFlowModalPresentSlideLeft) {
+        [self flowModalSlideLeft:srcController toDestination:destController withContainer:containerView andDuration:duration andScale:scale completion:complete];
+    } else if (correctedType == kCGFlowModalPresentSlideRight) {
+        [self flowModalSlideRight:srcController toDestination:destController withContainer:containerView andDuration:duration andScale:scale completion:complete];
+    } else if (correctedType == kCGFlowModalDismissDisappearCenter) {
+        [self flowModalDismissCenterDisappear:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
+    } else if (correctedType == kCGFlowModalDismissDisappearPoint) {
+        [self flowModalDismissDisappearAtPoint:scale withSrc:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
     }
 }
 
-+(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration isAppearence:(BOOL)appearing andScale:(CGPoint)scale completion:(Completion)complete {
++(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     
-    // Presenting
-    if (appearing) {
-        // Round the corners
-        toView.layer.cornerRadius = 8;
-        toView.layer.masksToBounds = YES;
-        
-        // Point to rect percentage determination using scale
-        // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
-        CGRect bounds = containerView.bounds;
-        CGFloat width = (scale.x * bounds.size.width);
-        CGFloat height = (scale.y * bounds.size.height);
-        CGFloat x = (bounds.size.width - width) / 2;
-        CGFloat y = (bounds.size.height - height) / 2;
-        CGRect toFrame = CGRectMake(x, y, width, height);
-        
-        srcController.view.frame = bounds;
-        [destController.view setFrame:CGRectOffset(toFrame, 0, bounds.size.height)];
-        [containerView addSubview:toView];
-        
-        // Scale up to 90%
-        [UIView animateWithDuration:duration animations: ^{
-            toView.frame = toFrame;
-            fromView.alpha = 0.5;
-        } completion:complete];
-    } else {
-        [UIView animateWithDuration:duration animations: ^{
-            fromView.transform = CGAffineTransformMakeScale(0.0, 0.0);
-            toView.alpha = 1.0;
-        } completion:complete];
-    }
+    // Round the corners
+    toView.layer.cornerRadius = 8;
+    toView.layer.masksToBounds = YES;
+    
+    // Point to rect percentage determination using scale
+    // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
+    CGRect bounds = containerView.bounds;
+    CGFloat width = (scale.x * bounds.size.width);
+    CGFloat height = (scale.y * bounds.size.height);
+    CGFloat x = (bounds.size.width - width) / 2;
+    CGFloat y = (bounds.size.height - height) / 2;
+    CGRect toFrame = CGRectMake(x, y, width, height);
+    
+    srcController.view.frame = bounds;
+    [destController.view setFrame:CGRectOffset(toFrame, 0, bounds.size.height)];
+    [containerView addSubview:toView];
+    
+    // Scale up to 90%
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = toFrame;
+        fromView.alpha = 0.5;
+    } completion:complete];
+}
+
++(void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    
+    // Round the corners
+    toView.layer.cornerRadius = 8;
+    toView.layer.masksToBounds = YES;
+    
+    // Point to rect percentage determination using scale
+    // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
+    CGRect bounds = containerView.bounds;
+    CGFloat width = (scale.x * bounds.size.width);
+    CGFloat height = (scale.y * bounds.size.height);
+    CGFloat x = (bounds.size.width - width) / 2;
+    CGFloat y = (bounds.size.height - height) / 2;
+    CGRect toFrame = CGRectMake(x, y, width, height);
+    
+    srcController.view.frame = bounds;
+    [destController.view setFrame:CGRectOffset(toFrame, 0, -bounds.size.height)];
+    [containerView addSubview:toView];
+    
+    // Scale up to 90%
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = toFrame;
+        fromView.alpha = 0.5;
+    } completion:complete];
+}
+
++(void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    
+    // Round the corners
+    toView.layer.cornerRadius = 8;
+    toView.layer.masksToBounds = YES;
+    
+    // Point to rect percentage determination using scale
+    // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
+    CGRect bounds = containerView.bounds;
+    CGFloat width = (scale.x * bounds.size.width);
+    CGFloat height = (scale.y * bounds.size.height);
+    CGFloat x = (bounds.size.width - width) / 2;
+    CGFloat y = (bounds.size.height - height) / 2;
+    CGRect toFrame = CGRectMake(x, y, width, height);
+    
+    srcController.view.frame = bounds;
+    [destController.view setFrame:CGRectOffset(toFrame, bounds.size.width, 0)];
+    [containerView addSubview:toView];
+    
+    // Scale up to 90%
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = toFrame;
+        fromView.alpha = 0.5;
+    } completion:complete];
+}
+
++(void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    
+    // Round the corners
+    toView.layer.cornerRadius = 8;
+    toView.layer.masksToBounds = YES;
+    
+    // Point to rect percentage determination using scale
+    // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
+    CGRect bounds = containerView.bounds;
+    CGFloat width = (scale.x * bounds.size.width);
+    CGFloat height = (scale.y * bounds.size.height);
+    CGFloat x = (bounds.size.width - width) / 2;
+    CGFloat y = (bounds.size.height - height) / 2;
+    CGRect toFrame = CGRectMake(x, y, width, height);
+    
+    srcController.view.frame = bounds;
+    [destController.view setFrame:CGRectOffset(toFrame, -bounds.size.width, 0)];
+    [containerView addSubview:toView];
+    
+    // Scale up to 90%
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = toFrame;
+        fromView.alpha = 0.5;
+    } completion:complete];
+}
+
++(void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    [UIView animateWithDuration:duration animations: ^{
+        fromView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        toView.alpha = 1.0;
+    } completion:complete];
+}
+
++(void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    [UIView animateWithDuration:duration animations: ^{
+        [fromView setCenter:point];
+        fromView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        toView.alpha = 1.0;
+    } completion:complete];
 }
 
 +(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
@@ -215,7 +324,7 @@
 }
 
 +(kCGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(kCGFlowAnimationType)animation {
-    if (animation == kCGFlowAnimationModalPresent || animation == kCGFlowAnimationModalDismiss) {
+    if (animation == kCGFlowModalPresent || animation == kCGFlowModalDismiss) {
         return animation;
     }
     

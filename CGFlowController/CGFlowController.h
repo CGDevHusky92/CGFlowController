@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kCGFlowModalPresent     (kCGFlowModalPresentSlideUp || kCGFlowModalPresentSlideDown || kCGFlowModalPresentSlideLeft || kCGFlowModalPresentSlideRight)
+#define kCGFlowModalDismiss     (kCGFlowModalDismissDisappearCenter || kCGFlowModalDismissDisappearPoint)
+
 typedef enum {
     kCGFlowInteractionSwipeUp,
     kCGFlowInteractionSwipeDown,
@@ -52,8 +55,12 @@ typedef enum kCGFlowAnimationType {
     kCGFlowAnimationFlipDown,
     kCGFlowAnimationFlipLeft,
     kCGFlowAnimationFlipRight,
-    kCGFlowAnimationModalPresent,
-    kCGFlowAnimationModalDismiss,
+    kCGFlowModalPresentSlideUp,
+    kCGFlowModalPresentSlideDown,
+    kCGFlowModalPresentSlideLeft,
+    kCGFlowModalPresentSlideRight,
+    kCGFlowModalDismissDisappearCenter,
+    kCGFlowModalDismissDisappearPoint,
     kCGFlowAnimationNone
 } kCGFlowAnimationType;
 
@@ -65,10 +72,23 @@ typedef void(^Completion)(BOOL finished);
 
 @interface CGFlowController : UIViewController <UIViewControllerTransitioningDelegate>
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
--(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
+
+/* Standard Dynamic Flow Interactively or Not */
+-(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
 -(void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
--(void)flowModalViewController:(UIViewController *)viewController withScale:(CGPoint)scale completion:(Completion)completion;
--(void)flowDismissModalViewControllerWithCompletion:(Completion)completion;
+
+-(void)flowModalViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion;
+-(void)flowDismissModalViewControllerWithAnimation:(kCGFlowAnimationType)animation andCompletion:(Completion)completion;
+
+-(void)flowModalTapOutWithAnimation:(kCGFlowAnimationType)animation withCompletion:(Completion)completion;
+-(void)flowEnableModalTapOut;
+-(void)flowDisableModalTapOut;
+
+-(void)flowModalViewWillAppear:(BOOL)animated;
+-(void)flowModalViewDidAppear:(BOOL)animated;
+-(void)flowModalViewWillDisappear:(BOOL)animated;
+-(void)flowModalViewDidDisappear:(BOOL)animated;
+
 @end
 
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
@@ -76,6 +96,7 @@ typedef void(^Completion)(BOOL finished);
 @property (weak) UIViewController *presentedController;
 @property (nonatomic, assign) kCGFlowAnimationType animationType;
 @property (nonatomic, assign) BOOL interactive;
+@property (assign) CGFloat duration;
 @end
 
 @interface CGFlowInteractor : UIPercentDrivenInteractiveTransition

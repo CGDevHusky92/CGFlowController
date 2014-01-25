@@ -29,7 +29,7 @@
 
 -(IBAction)moveToSrc:(id)sender {
     UIViewController *srcController = [self.storyboard instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
-    [self.flowController flowToViewController:srcController withAnimation:kCGFlowAnimationFlipLeft completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:srcController withAnimation:kCGFlowAnimationFlipLeft andDuration:0.4 completion:^(BOOL finished){}];
 }
 
 #pragma mark - CGInteractiveTransitionDelegate methods

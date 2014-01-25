@@ -53,22 +53,22 @@
 
 -(IBAction)moveToDestTop:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destTopController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipDown completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipDown andDuration:0.4 completion:^(BOOL finished){}];
 }
 
 -(IBAction)moveToDestBottom:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destBottomController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipUp completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipUp andDuration:0.4 completion:^(BOOL finished){}];
 }
 
 -(IBAction)moveToDestLeft:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destLeftController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipRight completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipRight andDuration:0.4 completion:^(BOOL finished){}];
 }
 
 -(IBAction)moveToDestRight:(id)sender {
     UIViewController *destController = [self.storyboard instantiateViewControllerWithIdentifier:@"destRightController"];
-    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipLeft completion:^(BOOL finished){}];
+    [self.flowController flowToViewController:destController withAnimation:kCGFlowAnimationFlipLeft andDuration:0.4 completion:^(BOOL finished){}];
 }
 
 #pragma mark - CGInteractiveTransitionDelegate methods

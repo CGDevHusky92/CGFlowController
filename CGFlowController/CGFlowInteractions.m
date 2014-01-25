@@ -172,18 +172,14 @@
     CGFloat yVel = velocity.y;
     if (fabs(xVel) > fabs(yVel)) {
         if (xVel > 0) {
-            NSLog(@"Edge Right");
             return kCGFlowInteractionEdgeRight;
         } else {
-            NSLog(@"Edge Left");
             return kCGFlowInteractionEdgeLeft;
         }
     } else {
         if (yVel > 0) {
-            NSLog(@"Edge Top");
             return kCGFlowInteractionEdgeTop;
         } else {
-            NSLog(@"Edge Bottom");
             return kCGFlowInteractionEdgeBottom;
         }
     }
@@ -242,13 +238,10 @@
 
 +(kCGFlowInteractionType)determinePressType:(UILongPressGestureRecognizer *)pressGesture {
     if ([pressGesture numberOfTouches] == 1) {
-        NSLog(@"single long press");
         return kCGFlowInteractionLongPress;
     } else if ([pressGesture numberOfTouches] == 2) {
-        NSLog(@"double long press");
         return kCGFlowInteractionLongPressDouble;
     } else if ([pressGesture numberOfTouches] == 3) {
-        NSLog(@"triple long press");
         return kCGFlowInteractionLongPressTriple;
     }
     return kCGFlowInteractionNone;
@@ -273,35 +266,26 @@
 +(kCGFlowInteractionType)determineTapType:(UITapGestureRecognizer *)tapGesture {
     if ([tapGesture numberOfTouches] == 1) {
         if ([tapGesture numberOfTapsRequired] == 1) {
-            NSLog(@"single detected");
             return kCGFlowInteractionSingleTap;
         } else if ([tapGesture numberOfTapsRequired] == 2) {
-            NSLog(@"double detected");
             return kCGFlowInteractionDoubleTap;
         } else if ([tapGesture numberOfTapsRequired] == 3) {
-            NSLog(@"triple detected");
             return kCGFlowInteractionTripleTap;
         }
     } else if ([tapGesture numberOfTouches] == 2) {
         if ([tapGesture numberOfTapsRequired] == 1) {
-            NSLog(@"single two detected");
             return kCGFlowInteractionSingleTapDouble;
         } else if ([tapGesture numberOfTapsRequired] == 2) {
-            NSLog(@"double two detected");
             return kCGFlowInteractionDoubleTapDouble;
         } else if ([tapGesture numberOfTapsRequired] == 3) {
-            NSLog(@"triple two detected");
             return kCGFlowInteractionTripleTapDouble;
         }
     } else if ([tapGesture numberOfTouches] == 3) {
         if ([tapGesture numberOfTapsRequired] == 1) {
-            NSLog(@"single three detected");
             return kCGFlowInteractionSingleTapTriple;
         } else if ([tapGesture numberOfTapsRequired] == 2) {
-            NSLog(@"double three detected");
             return kCGFlowInteractionDoubleTapTriple;
         } else if ([tapGesture numberOfTapsRequired] == 3) {
-            NSLog(@"triple three detected");
             return kCGFlowInteractionTripleTapTriple;
         }
     }
