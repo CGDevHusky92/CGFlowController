@@ -12,39 +12,43 @@
 #define willDidMove
 #define appearanceTransition
 
-@interface CGFlowController()
+@interface CGFlowController ()
+
 @property (nonatomic, weak) UIViewController *statusController;
 @property (nonatomic, weak) UIViewController *modalController;
+
+@property (nonatomic, strong) NSMutableDictionary *liveControllerDic;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
-@property (nonatomic, assign) kCGFlowAnimationType modalTapDismissAnimation;
-@property (nonatomic, assign) Completion modalTapCompletion;
-@property (assign) CGPoint modalScale;
-
 @property (nonatomic, strong) CGFlowInteractor *interactor;
+@property (nonatomic, assign) CGFlowAnimationType animationType;
+@property (nonatomic, assign) CGFlowAnimationType modalTapDismissAnimation;
+@property (nonatomic, assign) Completion modalTapCompletion;
 @property (nonatomic, assign) Completion currentCompletion;
-@property (assign) CGFloat duration;
 
-@property (nonatomic, assign) kCGFlowAnimationType animationType;
+@property (assign) CGPoint modalScale;
+@property (assign) CGFloat duration;
 @property (nonatomic, assign) BOOL interactive;
 @property (nonatomic, assign) BOOL started;
+
 @end
 
 @implementation CGFlowController
 
--(void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self prefersStatusBarHidden];
-    [self setNeedsStatusBarAppearanceUpdate];
-    
+    _duration = 0.4;
     _started = false;
     _modalScale = CGPointZero;
-    _duration = 0.4;
+    
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.definesPresentationContext = YES;
     self.providesPresentationContextTransitionStyle = YES;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.interactor = [CGFlowInteractor new];
     [self.interactor setFlowController:self];
     
@@ -61,10 +65,14 @@
         [self.flowedController didMoveToParentViewController:self];
         _flowedController.flowController = self;
         _statusController = _flowedController;
+        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 
--(void)viewWillAppear:(BOOL)animated {
+#pragma mark - View Appearence Calls
+
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     if (!_started) {
         self.flowedController.transitioning = YES;
@@ -78,7 +86,8 @@
     }
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated
+{
     if (!_started) {
         _started = true;
         self.flowedController.transitioning = YES;
@@ -93,7 +102,8 @@
     [super viewDidAppear:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     if (_modalController) {
         self.modalController.transitioning = YES;
@@ -102,7 +112,8 @@
     }
 }
 
--(void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated
+{
     if (_modalController) {
         self.modalController.transitioning = YES;
         [self.modalController endAppearanceTransition];
@@ -111,8 +122,54 @@
     [super viewDidDisappear:animated];
 }
 
+- (void)flowModalViewWillAppear:(BOOL)animated
+{
+    if (_modalController) {
+        if ([_modalController isKindOfClass:[UINavigationController class]]) {
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
+            [((UINavigationController *)self.modalController).topViewController viewWillAppear:animated];
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
+        }
+    }
+}
 
--(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion {
+- (void)flowModalViewDidAppear:(BOOL)animated
+{
+    if (_modalController) {
+        if ([_modalController isKindOfClass:[UINavigationController class]]) {
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
+            [((UINavigationController *)self.modalController).topViewController viewDidAppear:animated];
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
+        }
+    }
+}
+
+- (void)flowModalViewWillDisappear:(BOOL)animated
+{
+    if (_modalController) {
+        if ([_modalController isKindOfClass:[UINavigationController class]]) {
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
+            [((UINavigationController *)self.modalController).topViewController viewWillDisappear:animated];
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
+        }
+    }
+}
+
+- (void)flowModalViewDidDisappear:(BOOL)animated
+{
+    if (_modalController) {
+        if ([_modalController isKindOfClass:[UINavigationController class]]) {
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
+            [((UINavigationController *)self.modalController).topViewController viewDidDisappear:animated];
+            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
+        }
+    }
+}
+
+#pragma mark - Flow To Base Controller Transitions
+
+- (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion
+{
     BOOL animated = YES;
     if (animation == kCGFlowAnimationNone) {
         animated = NO;
@@ -127,11 +184,11 @@
     }
     
     tempController.transitioning = YES;
-    [tempController viewWillAppear:animated];
+    [self viewWillAppearCall:tempController animated:animated];
     tempController.transitioning = NO;
     
     self.flowedController.transitioning = YES;
-    [self.flowedController beginAppearanceTransition:NO animated:animated];
+    [self viewWillDisappearCall:self.flowedController animated:animated];
     self.flowedController.transitioning = NO;
     
     tempController.transitioningDelegate = self;
@@ -143,7 +200,44 @@
     [self.flowedController presentViewController:tempController animated:animated completion:^{}];
 }
 
--(void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion {
+- (void)viewWillAppearCall:(UIViewController *)controller animated:(BOOL)animated
+{
+    if ([controller isKindOfClass:[UINavigationController class]]) {
+        [((UINavigationController *)controller).topViewController viewWillAppear:animated];
+    } else {
+        [controller viewWillAppear:animated];
+    }
+}
+
+- (void)viewWillDisappearCall:(UIViewController *)controller animated:(BOOL)animated
+{
+    if ([controller isKindOfClass:[UINavigationController class]]) {
+        [((UINavigationController *)controller).topViewController viewWillDisappear:animated];
+    } else {
+        [controller viewWillDisappear:animated];
+    }
+}
+
+- (void)viewDidAppearCall:(UIViewController *)controller animated:(BOOL)animated
+{
+    if ([controller isKindOfClass:[UINavigationController class]]) {
+        [((UINavigationController *)controller).topViewController viewDidAppear:animated];
+    } else {
+        [controller viewDidAppear:animated];
+    }
+}
+
+- (void)viewDidDisappearCall:(UIViewController *)controller animated:(BOOL)animated
+{
+    if ([controller isKindOfClass:[UINavigationController class]]) {
+        [((UINavigationController *)controller).topViewController viewDidDisappear:animated];
+    } else {
+        [controller viewDidDisappear:animated];
+    }
+}
+
+- (void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion
+{
     BOOL animated = YES;
     if (animation == kCGFlowAnimationNone) {
         animated = NO;
@@ -170,85 +264,16 @@
     _animationType = animation;
     self.interactive = YES;
     _currentCompletion = completion;
-    
     [self.flowedController presentViewController:tempController animated:animated completion:^{}];
 }
 
--(void)flowModalViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion {
-#warning add NSAssert on enums
-    self.flowedController.view.userInteractionEnabled = NO;
-    
-    viewController.transitioning = YES;
-    [viewController viewWillAppear:YES];
-    viewController.transitioning = NO;
-    
-    viewController.transitioningDelegate = self;
-    viewController.modalPresentationStyle = UIModalPresentationCustom;
-    _animationType = animation;
-    self.interactive = NO;
-    
-    _modalScale = scale;
-    _currentCompletion = completion;
-    [self presentViewController:viewController animated:YES completion:^{}];
-}
-
--(void)flowDismissModalViewControllerWithAnimation:(kCGFlowAnimationType)animation andCompletion:(Completion)completion {
-    if (self.modalController) {
-#warning add NSAssert on enums
-        
-        _modalController.transitioning = YES;
-        [_modalController viewWillDisappear:YES];
-        _modalController.transitioning = NO;
-        
-        _modalController.transitioningDelegate = self;
-        _modalController.modalPresentationStyle = UIModalPresentationCustom;
-        _animationType = animation;
-        self.interactive = NO;
-        
-        _currentCompletion = completion;
-        [self dismissViewControllerAnimated:YES completion:^{}];
-    }
-}
-
--(void)flowModalTapOutWithAnimation:(kCGFlowAnimationType)animation withCompletion:(Completion)completion {
-    if (_modalController) {
-        _modalTapDismissAnimation = animation;
-        _modalTapCompletion = completion;
-        
-        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
-        [_tapGesture setNumberOfTapsRequired:1];
-        [_tapGesture setCancelsTouchesInView:NO];
-        [_modalController.presentingViewController.view addGestureRecognizer:_tapGesture];
-    }
-}
-
--(void)flowEnableModalTapOut {
-    if (_modalController && _tapGesture) {
-        if (![_modalController.presentingViewController.view.gestureRecognizers containsObject:_tapGesture]) {
-            [_modalController.presentingViewController.view addGestureRecognizer:_tapGesture];
-        }
-    }
-}
-
--(void)flowDisableModalTapOut {
-    if (_modalController && _tapGesture) {
-        if ([_modalController.presentingViewController.view.gestureRecognizers containsObject:_tapGesture]) {
-            [_modalController.presentingViewController.view removeGestureRecognizer:_tapGesture];
-        }
-    }
-}
-
--(void)setFlowedController:(UIViewController<CGFlowInteractiveDelegate> *)flowedController {
-    _flowedController = flowedController;
-    [self.flowedController setFlowController:self];
-    _flowedController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-}
-
--(void)startTransition:(UIViewController *)vc {
+- (void)startTransition:(UIViewController *)vc
+{
     [self.flowedController willMoveToParentViewController:nil];
 }
 
--(void)cancelTransition:(UIViewController *)vc {
+- (void)cancelTransition:(UIViewController *)vc
+{
     _statusController = _flowedController;
     [self prefersStatusBarHidden];
     [self setNeedsStatusBarAppearanceUpdate];
@@ -258,16 +283,18 @@
     [self.flowedController dismissViewControllerAnimated:NO completion:^{
         [vc.view removeFromSuperview];
         [vc removeFromParentViewController];
+        _currentCompletion(NO);
     }];
 }
 
--(void)finishTransition:(UIViewController *)vc {
+- (void)finishTransition:(UIViewController *)vc
+{
     vc.transitioning = YES;
-    [vc viewDidAppear:YES];
+    [self viewDidAppearCall:vc animated:YES];
     vc.transitioning = NO;
     
     self.interactive = NO;
-    __weak __block UIViewController *tempVc; // = vc;
+    __weak __block UIViewController *tempVc;
     if ([vc isKindOfClass:[UISplitHackController class]]) {
         tempVc = ((UISplitHackController *)vc).splitController;
     } else {
@@ -287,7 +314,7 @@
         [safeSelf.flowedController.view removeFromSuperview];
         
         safeSelf.flowedController.transitioning = YES;
-        [safeSelf.flowedController viewDidDisappear:YES];
+        [safeSelf viewDidDisappearCall:safeSelf.flowedController animated:YES];
         safeSelf.flowedController.transitioning = NO;
         
         [safeSelf.flowedController removeFromParentViewController];
@@ -304,96 +331,216 @@
             [safeSelf.flowedController.view setBounds:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
             [safeSelf.view setFrame:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
             [safeSelf.flowedController.view setFrame:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
+            _currentCompletion(YES);
         }];
     }];
 }
 
--(void)finishTransitionModal:(UIViewController *)vc appearing:(BOOL)appearing {
+#pragma mark - Flow To Modal Transitions
+
+- (void)flowModalViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion
+{
+#warning add NSAssert on enums
+    self.flowedController.view.userInteractionEnabled = NO;
+    
+    viewController.transitioning = YES;
+    [viewController viewWillAppear:YES];
+    viewController.transitioning = NO;
+    
+    viewController.transitioningDelegate = self;
+    viewController.modalPresentationStyle = UIModalPresentationCustom;
+    _animationType = animation;
+    self.interactive = NO;
+    
+    _modalScale = scale;
+    _currentCompletion = completion;
+    [self presentViewController:viewController animated:YES completion:^{}];
+}
+
+- (void)flowDismissModalViewControllerWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion
+{
+    if (self.modalController) {
+#warning add NSAssert on enums
+        
+        _modalController.transitioning = YES;
+        [_modalController viewWillDisappear:YES];
+        _modalController.transitioning = NO;
+        
+        _modalController.transitioningDelegate = self;
+        _modalController.modalPresentationStyle = UIModalPresentationCustom;
+        _animationType = animation;
+        self.interactive = NO;
+        
+        _currentCompletion = completion;
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
+}
+
+- (void)finishTransitionModal:(UIViewController *)vc appearing:(BOOL)appearing
+{
     if (appearing) {
         self.interactive = NO;
         self.modalController = vc;
         self.modalController.flowController = self;
-        
-//        [self addChildViewController:_modalController];
         self.modalController.transitioning = YES;
         [self.modalController viewDidAppear:YES];
         self.modalController.transitioning = NO;
-        
         [self.modalController didMoveToParentViewController:self];
+        _currentCompletion(YES);
     } else {
         [self.flowedController.view setUserInteractionEnabled:YES];
         [self.modalController.view removeFromSuperview];
         [self.modalController removeFromParentViewController];
         self.modalController = nil;
         _modalScale = CGPointZero;
+        _currentCompletion(YES);
     }
 }
 
--(void)flowModalViewWillAppear:(BOOL)animated {
+#pragma mark - Modal Tap Out Recognizers
+
+- (void)flowModalTapOutWithAnimation:(CGFlowAnimationType)animation withCompletion:(Completion)completion
+{
     if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [self.modalController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewWillAppear:animated];
-            [self.modalController setTransitioning:NO];
+        _modalTapDismissAnimation = animation;
+        _modalTapCompletion = completion;
+        
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
+        [_tapGesture setNumberOfTapsRequired:1];
+        [_tapGesture setCancelsTouchesInView:NO];
+        [_modalController.presentingViewController.view addGestureRecognizer:_tapGesture];
+    }
+}
+
+- (void)flowEnableModalTapOut
+{
+    if (_modalController && _tapGesture) {
+        if (![_modalController.presentingViewController.view.gestureRecognizers containsObject:_tapGesture]) {
+            [_modalController.presentingViewController.view addGestureRecognizer:_tapGesture];
         }
     }
 }
 
--(void)flowModalViewDidAppear:(BOOL)animated {
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [self.modalController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewDidAppear:animated];
-            [self.modalController setTransitioning:NO];
+- (void)flowDisableModalTapOut
+{
+    if (_modalController && _tapGesture) {
+        if ([_modalController.presentingViewController.view.gestureRecognizers containsObject:_tapGesture]) {
+            [_modalController.presentingViewController.view removeGestureRecognizer:_tapGesture];
         }
     }
 }
 
--(void)flowModalViewWillDisappear:(BOOL)animated {
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [self.modalController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewWillDisappear:animated];
-            [self.modalController setTransitioning:NO];
-        }
-    }
-}
-
--(void)flowModalViewDidDisappear:(BOOL)animated {
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [self.modalController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewDidDisappear:animated];
-            [self.modalController setTransitioning:NO];
-        }
-    }
-}
-
--(void)proceedToNextViewControllerWithTransition:(kCGFlowInteractionType)type {
-    [self.flowedController proceedToNextViewControllerWithTransition:type];
-}
-
--(BOOL)shouldAutomaticallyForwardAppearanceMethods {
-    return YES;
-}
-
-#pragma mark - Tap Dismiss
-
--(void)tapView:(id)sender {
+- (void)tapView:(id)sender
+{
     [self.presentingViewController.view removeGestureRecognizer:_tapGesture];
     _tapGesture = nil;
     [self flowDismissModalViewControllerWithAnimation:_modalTapDismissAnimation andCompletion:_modalTapCompletion];
 }
 
+#pragma mark - Live Memory Protocol
+
+- (UIViewController *)retrieveControllerForIdentifier:(NSString *)identifier
+{
+    if (_liveControllerDic) {
+        BOOL exists = NO;
+        for (NSString *key in [_liveControllerDic allKeys]) {
+            if ([key isEqualToString:identifier]) {
+                exists = YES;
+                break;
+            }
+        }
+        if (exists) {
+            return [_liveControllerDic objectForKey:identifier];
+        }
+    }
+    return [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+}
+
+- (void)flowKeepControllerMemoryLiveForIdentifier:(NSString *)identifier
+{
+    if (!_liveControllerDic) {
+        _liveControllerDic = [[NSMutableDictionary alloc] init];
+    }
+    BOOL exists = NO;
+    for (NSString *key in [_liveControllerDic allKeys]) {
+        if ([key isEqualToString:identifier]) {
+            exists = YES;
+            break;
+        }
+    }
+    if (!exists) {
+        [_liveControllerDic setObject:self.flowedController forKey:identifier];
+    }
+}
+
+- (void)flowKeepModalMemoryLiveForIdentifier:(NSString *)identifier
+{
+    if (!_liveControllerDic) {
+        _liveControllerDic = [[NSMutableDictionary alloc] init];
+    }
+    BOOL exists = NO;
+    for (NSString *key in [_liveControllerDic allKeys]) {
+        if ([key isEqualToString:identifier]) {
+            exists = YES;
+            break;
+        }
+    }
+    if (!exists) {
+        [_liveControllerDic setObject:self.modalController forKey:identifier];
+    }
+}
+
+- (void)flowRemoveLiveMemoryForIdentifier:(NSString *)identifier
+{
+    if (_liveControllerDic) {
+        for (NSString *key in [_liveControllerDic allKeys]) {
+            if ([key isEqualToString:identifier]) {
+                [_liveControllerDic removeObjectForKey:identifier];
+            }
+        }
+    }
+}
+
+- (void)flowClearLiveMemoryControllers
+{
+    [_liveControllerDic removeAllObjects];
+    _liveControllerDic = nil;
+}
+
+#pragma mark - Flowed Controller Delegate Method
+
+- (void)proceedToNextViewControllerWithTransition:(CGFlowInteractionType)type
+{
+    [self.flowedController proceedToNextViewControllerWithTransition:type];
+}
+
+#pragma mark - Flow Controller Getters and Setters
+
+- (void)setFlowedController:(UIViewController<CGFlowInteractiveDelegate> *)flowedController
+{
+    _flowedController = flowedController;
+    [self.flowedController setFlowController:self];
+    _flowedController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+}
+
+#pragma mark - Appearence Callback Forwarding ??? Doesn't seem to work
+
+- (BOOL)shouldAutomaticallyForwardAppearanceMethods
+{
+    return YES;
+}
+
 #pragma mark - UIStatusBar
 
--(UIViewController *)childViewControllerForStatusBarHidden {
+- (UIViewController *)childViewControllerForStatusBarHidden
+{
     return _statusController;
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
     CGFlowAnimation *animator = [CGFlowAnimation new];
     animator.animationType = _animationType;
     animator.duration = _duration;
@@ -405,7 +552,8 @@
     return animator;
 }
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
     CGFlowAnimation *animator = [CGFlowAnimation new];
     animator.animationType = _animationType;
     animator.interactive = _interactive;
@@ -417,14 +565,16 @@
     return animator;
 }
 
--(id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator {
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
+{
     if (_interactive) {
         return self.interactor;
     }
     return nil;
 }
 
--(id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
+{
     if (_interactive) {
         return self.interactor;
     }
@@ -433,14 +583,15 @@
 
 #pragma mark - Memory Methods
 
--(void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 @end
 
-@interface CGFlowAnimation()
+@interface CGFlowAnimation ()
 
 @end
 
@@ -449,13 +600,15 @@
 @synthesize interactive=_interactive;
 @synthesize duration=_duration;
 
--(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
+{
     return _duration;
 }
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 
--(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
+{
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
@@ -490,136 +643,103 @@
 @end
 
 @interface CGFlowInteractor() <UIGestureRecognizerDelegate>
-@property (nonatomic, assign) kCGFlowInteractionType interactorType;
+
+@property (nonatomic, assign) CGFlowInteractionType interactorType;
+
 @end
 
 @implementation CGFlowInteractor
 
--(void)setFlowController:(CGFlowController *)flowController {
+- (void)setFlowController:(CGFlowController *)flowController
+{
     _flowController = flowController;
     _interactorType = kCGFlowInteractionNone;
     
-//    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UILongPressGestureRecognizer *longDoubleGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UILongPressGestureRecognizer *longTripleGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UIScreenEdgePanGestureRecognizer *edgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *singleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *tripleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *singleDoubleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *doubleDoubleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *tripleDoubleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *singleTripleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *doubleTripleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
-//    UITapGestureRecognizer *tripleTripleTapGesture = [[UITapGestureRecognizer alloc]  initWithTarget:self action:@selector(handleGesture:)];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+//    UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
     
-//    [longGesture setCancelsTouchesInView:NO];
-//    [longDoubleGesture setCancelsTouchesInView:NO];
-//    [longTripleGesture setCancelsTouchesInView:NO];
     [panGesture setCancelsTouchesInView:NO];
-//    [edgeGesture setCancelsTouchesInView:NO];
-//    [pinchGesture setCancelsTouchesInView:NO];
+    [pinchGesture setCancelsTouchesInView:NO];
 //    [rotationGesture setCancelsTouchesInView:NO];
     
-//    [singleTapGesture setCancelsTouchesInView:NO];
-//    [doubleTapGesture setCancelsTouchesInView:NO];
-//    [tripleTapGesture setCancelsTouchesInView:NO];
-//    [singleDoubleTapGesture setCancelsTouchesInView:NO];
-//    [doubleDoubleTapGesture setCancelsTouchesInView:NO];
-//    [tripleDoubleTapGesture setCancelsTouchesInView:NO];
-//    [singleTripleTapGesture setCancelsTouchesInView:NO];
-//    [doubleTripleTapGesture setCancelsTouchesInView:NO];
-//    [tripleTripleTapGesture setCancelsTouchesInView:NO];
+    [panGesture setDelegate:self];
+    [pinchGesture setDelegate:self];
+//    [rotationGesture setDelegate:self];
     
-//    [longGesture setMinimumPressDuration:1.5];
-//    [longDoubleGesture setMinimumPressDuration:1.5];
-//    [longTripleGesture setMinimumPressDuration:1.5];
+//    [_pinchGesture requireGestureRecognizerToFail:rotationGesture];
     
-//    [singleTapGesture setNumberOfTapsRequired:1];
-//    [singleTapGesture setNumberOfTouchesRequired:1];
-//    [doubleTapGesture setNumberOfTapsRequired:2];
-//    [doubleTapGesture setNumberOfTouchesRequired:1];
-//    [tripleTapGesture setNumberOfTapsRequired:3];
-//    [tripleTapGesture setNumberOfTouchesRequired:1];
-//    [singleDoubleTapGesture setNumberOfTapsRequired:1];
-//    [singleDoubleTapGesture setNumberOfTouchesRequired:2];
-//    [doubleDoubleTapGesture setNumberOfTapsRequired:2];
-//    [doubleDoubleTapGesture setNumberOfTouchesRequired:2];
-//    [tripleDoubleTapGesture setNumberOfTapsRequired:3];
-//    [tripleDoubleTapGesture setNumberOfTouchesRequired:2];
-//    [singleTripleTapGesture setNumberOfTapsRequired:1];
-//    [singleTripleTapGesture setNumberOfTouchesRequired:3];
-//    [doubleTripleTapGesture setNumberOfTapsRequired:2];
-//    [doubleTripleTapGesture setNumberOfTouchesRequired:3];
-//    [tripleTripleTapGesture setNumberOfTapsRequired:3];
-//    [tripleTripleTapGesture setNumberOfTouchesRequired:3];
-    
-//    [edgeGesture requireGestureRecognizerToFail:panGesture];
-//    [longGesture requireGestureRecognizerToFail:longDoubleGesture];
-//    [longGesture requireGestureRecognizerToFail:longTripleGesture];
-//    [longDoubleGesture requireGestureRecognizerToFail:longTripleGesture];
-//    [singleTapGesture requireGestureRecognizerToFail:doubleTapGesture];
-//    [singleTapGesture requireGestureRecognizerToFail:tripleTapGesture];
-//    [doubleTapGesture requireGestureRecognizerToFail:tripleTapGesture];
-//    [singleDoubleTapGesture requireGestureRecognizerToFail:doubleDoubleTapGesture];
-//    [singleDoubleTapGesture requireGestureRecognizerToFail:tripleDoubleTapGesture];
-//    [doubleDoubleTapGesture requireGestureRecognizerToFail:tripleDoubleTapGesture];
-//    [singleTripleTapGesture requireGestureRecognizerToFail:doubleTripleTapGesture];
-//    [singleTripleTapGesture requireGestureRecognizerToFail:tripleTripleTapGesture];
-//    [doubleTripleTapGesture requireGestureRecognizerToFail:tripleTripleTapGesture];
-    
-//    [_flowController.view addGestureRecognizer:longGesture];
-//    [_flowController.view addGestureRecognizer:longDoubleGesture];
-//    [_flowController.view addGestureRecognizer:longTripleGesture];
     [_flowController.view addGestureRecognizer:panGesture];
-//    [_flowController.view addGestureRecognizer:edgeGesture];
-//    [_flowController.view addGestureRecognizer:pinchGesture];
+    [_flowController.view addGestureRecognizer:pinchGesture];
 //    [_flowController.view addGestureRecognizer:rotationGesture];
-//    [_flowController.view addGestureRecognizer:singleTapGesture];
-//    [_flowController.view addGestureRecognizer:doubleTapGesture];
-//    [_flowController.view addGestureRecognizer:tripleTapGesture];
-//    [_flowController.view addGestureRecognizer:singleDoubleTapGesture];
-//    [_flowController.view addGestureRecognizer:doubleDoubleTapGesture];
-//    [_flowController.view addGestureRecognizer:tripleDoubleTapGesture];
-//    [_flowController.view addGestureRecognizer:singleTripleTapGesture];
-//    [_flowController.view addGestureRecognizer:doubleTripleTapGesture];
-//    [_flowController.view addGestureRecognizer:tripleTripleTapGesture];
 }
 
 #pragma mark - Gesture Handler
 
--(void)handleGesture:(UIGestureRecognizer *)gr {
-    CGFloat percentage = [CGFlowInteractions percentageOfGesture:gr withInteractor:_interactorType];
-    switch (gr.state) {
-        case UIGestureRecognizerStateBegan:
-            _interactorType = [CGFlowInteractions determineInteractorType:gr];
-            [self.flowController proceedToNextViewControllerWithTransition:_interactorType];
-            break;
-        case UIGestureRecognizerStateChanged: {
-            if (percentage >= 1.0)
-                percentage = 0.99;
-            [self updateInteractiveTransition:percentage];
-            break;
-        }
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateCancelled:
-            _interactorType = kCGFlowInteractionNone;
-            if (percentage < 0.5) {
-                self.completionSpeed = 0.5f;
-                [self cancelInteractiveTransition];
-            } else {
-                self.completionSpeed = 1.0f;
-                [self finishInteractiveTransition];
+- (void)handlePan:(UIGestureRecognizer *)gr
+{
+    if (_interactorType == kCGFlowInteractionNone || _interactorType == kCGFlowInteractionSwipeUp || _interactorType == kCGFlowInteractionSwipeUpDouble || _interactorType == kCGFlowInteractionSwipeUpTriple || _interactorType == kCGFlowInteractionSwipeDown || _interactorType == kCGFlowInteractionSwipeDownDouble || _interactorType == kCGFlowInteractionSwipeDownTriple || _interactorType == kCGFlowInteractionSwipeLeft || _interactorType == kCGFlowInteractionSwipeLeftDouble || _interactorType == kCGFlowInteractionSwipeLeftTriple || _interactorType == kCGFlowInteractionSwipeRight || _interactorType == kCGFlowInteractionSwipeRightDouble || _interactorType == kCGFlowInteractionSwipeRightTriple || _interactorType == kCGFlowInteractionEdgeTop || _interactorType == kCGFlowInteractionEdgeBottom || _interactorType == kCGFlowInteractionEdgeLeft || _interactorType == kCGFlowInteractionEdgeRight) {
+        CGFloat percentage = [CGFlowInteractions percentageOfGesture:gr withInteractor:_interactorType];
+        switch (gr.state) {
+            case UIGestureRecognizerStateBegan:
+                _interactorType = [CGFlowInteractions determineInteractorType:gr];
+                [self.flowController proceedToNextViewControllerWithTransition:_interactorType];
+                break;
+            case UIGestureRecognizerStateChanged: {
+                if (percentage >= 1.0)
+                    percentage = 0.99;
+                [self updateInteractiveTransition:percentage];
+                break;
             }
-        default:
-            break;
+            case UIGestureRecognizerStateEnded:
+            case UIGestureRecognizerStateCancelled:
+                _interactorType = kCGFlowInteractionNone;
+                if (percentage < 0.5) {
+                    self.completionSpeed = 0.5f;
+                    [self cancelInteractiveTransition];
+                } else {
+                    self.completionSpeed = 1.0f;
+                    [self finishInteractiveTransition];
+                }
+            default:
+                break;
+        }
     }
 }
 
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+- (void)handlePinch:(UIGestureRecognizer *)gr
+{
+    if (_interactorType == kCGFlowInteractionNone || _interactorType == kCGFlowInteractionPinchIn || _interactorType == kCGFlowInteractionPinchOut || _interactorType == kCGFlowInteractionRotateClockwise || _interactorType == kCGFlowInteractionRotateCounterClockwise) {
+        CGFloat percentage = [CGFlowInteractions percentageOfGesture:gr withInteractor:_interactorType];
+        switch (gr.state) {
+            case UIGestureRecognizerStateBegan:
+                _interactorType = [CGFlowInteractions determineInteractorType:gr];
+                [self.flowController proceedToNextViewControllerWithTransition:_interactorType];
+                break;
+            case UIGestureRecognizerStateChanged: {
+                if (percentage >= 1.0)
+                    percentage = 0.99;
+                [self updateInteractiveTransition:percentage];
+                break;
+            }
+            case UIGestureRecognizerStateEnded:
+            case UIGestureRecognizerStateCancelled:
+                _interactorType = kCGFlowInteractionNone;
+                if (percentage < 0.5) {
+                    self.completionSpeed = 0.5f;
+                    [self cancelInteractiveTransition];
+                } else {
+                    self.completionSpeed = 1.0f;
+                    [self finishInteractiveTransition];
+                }
+            default:
+                break;
+        }
+    }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
     return YES;
 }
 
@@ -629,10 +749,13 @@
 
 @implementation UISplitHackController
 @synthesize splitController=_splitController;
--(void)setSplitController:(UISplitViewController *)splitController {
+
+- (void)setSplitController:(UISplitViewController *)splitController
+{
     _splitController = splitController;
     [self.view addSubview:_splitController.view];
 }
+
 @end
 
 #pragma mark - UIViewController(CGFlowAnimation) Category
@@ -646,14 +769,18 @@ static char lowestLevelKey;
     BOOL transitioning;
     BOOL lowestLevel;
 }
+
 @property (nonatomic, weak) CGFlowController *flowController;
+
 @property (nonatomic, assign) BOOL transitioning;
 @property (nonatomic, assign) BOOL lowestLevel;
+
 @end
 
 @implementation UIViewController (CGFlowInteractor)
 
--(void)proceedToNextViewControllerWithTransition:(kCGFlowInteractionType)type {
+- (void)proceedToNextViewControllerWithTransition:(CGFlowInteractionType)type
+{
     UIViewController *tempController = self;
     if (!([tempController isKindOfClass:[UINavigationController class]] || [tempController isKindOfClass:[UITabBarController class]] || [tempController isKindOfClass:[UISplitViewController class]] || [tempController isKindOfClass:[UISplitHackController class]])) {
         // Returns if the method isn't overridden by the bottom controller
@@ -680,14 +807,16 @@ static char lowestLevelKey;
     [tempController proceedToNextViewControllerWithTransition:type];
 }
 
--(void)setFlowController:(CGFlowController *)flowCon {
+- (void)setFlowController:(CGFlowController *)flowCon
+{
     objc_setAssociatedObject(self, &flowKey, flowCon, OBJC_ASSOCIATION_ASSIGN);
     for (UIViewController *childController in self.childViewControllers) {
         [childController setFlowController:flowCon];
     }
 }
 
--(CGFlowController *)flowController {
+- (CGFlowController *)flowController
+{
     CGFlowController *flowCon = objc_getAssociatedObject(self, &flowKey);
     UIViewController *parent = self.parentViewController;
     while (parent && !flowCon) {
@@ -697,7 +826,8 @@ static char lowestLevelKey;
     return flowCon;
 }
 
--(void)setTransitioning:(BOOL)transition {
+- (void)setTransitioning:(BOOL)transition
+{
     NSNumber *number = [NSNumber numberWithBool:transition];
     objc_setAssociatedObject(self, &transitioningKey, number, OBJC_ASSOCIATION_RETAIN);
     if ([self isKindOfClass:[UINavigationController class]]) {
@@ -705,17 +835,20 @@ static char lowestLevelKey;
     }
 }
 
--(BOOL)transitioning {
+- (BOOL)transitioning
+{
     NSNumber *number = objc_getAssociatedObject(self, &transitioningKey);
     return [number boolValue];
 }
 
--(void)setLowestLevel:(BOOL)lowest {
+- (void)setLowestLevel:(BOOL)lowest
+{
     NSNumber *number = [NSNumber numberWithBool:lowest];
     objc_setAssociatedObject(self, &lowestLevelKey, number, OBJC_ASSOCIATION_RETAIN);
 }
 
--(BOOL)lowestLevel {
+- (BOOL)lowestLevel
+{
     NSNumber *number = objc_getAssociatedObject(self, &lowestLevelKey);
     return [number boolValue];
 }

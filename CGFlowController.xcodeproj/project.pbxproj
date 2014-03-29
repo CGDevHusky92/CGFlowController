@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E45783418E60AAA00AE0E96 /* CGFlowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC760B918E6039900FCEBBC /* CGFlowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EC7609318E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
+		2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A018E6021D00FCEBBC /* XCTest.framework */; };
+		2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
+		2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A318E6021D00FCEBBC /* UIKit.framework */; };
+		2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */; };
+		2EC760AD18E6021D00FCEBBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */; };
+		2EC760AF18E6021D00FCEBBC /* CGFlowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */; };
+		2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */; };
+		2EC760BD18E6039900FCEBBC /* CGFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760BA18E6039900FCEBBC /* CGFlowController.m */; };
+		2EC760BE18E6039900FCEBBC /* CGFlowInteractions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */; };
+		2EC760C018E604EF00FCEBBC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EC760A518E6021D00FCEBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EC7608718E6021D00FCEBBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EC7608E18E6021D00FCEBBC;
+			remoteInfo = CGFlowController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2EC7608D18E6021D00FCEBBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC7609218E6021D00FCEBBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EC7609618E6021D00FCEBBC /* CGFlowController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGFlowController-Prefix.pch"; sourceTree = "<group>"; };
+		2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGFlowControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC760A018E6021D00FCEBBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2EC760A318E6021D00FCEBBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2EC760AA18E6021D00FCEBBC /* CGFlowControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGFlowControllerTests-Info.plist"; sourceTree = "<group>"; };
+		2EC760AC18E6021D00FCEBBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowControllerTests.m; sourceTree = "<group>"; };
+		2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimations.m; sourceTree = "<group>"; };
+		2EC760B918E6039900FCEBBC /* CGFlowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFlowController.h; sourceTree = "<group>"; };
+		2EC760BA18E6039900FCEBBC /* CGFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowController.m; sourceTree = "<group>"; };
+		2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowInteractions.m; sourceTree = "<group>"; };
+		2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EC7608C18E6021D00FCEBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC760C018E604EF00FCEBBC /* QuartzCore.framework in Frameworks */,
+				2EC7609318E6021D00FCEBBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC7609C18E6021D00FCEBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */,
+				2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */,
+				2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */,
+				2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EC7608618E6021D00FCEBBC = {
+			isa = PBXGroup;
+			children = (
+				2EC7609418E6021D00FCEBBC /* CGFlowController */,
+				2EC760A818E6021D00FCEBBC /* CGFlowControllerTests */,
+				2EC7609118E6021D00FCEBBC /* Frameworks */,
+				2EC7609018E6021D00FCEBBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EC7609018E6021D00FCEBBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */,
+				2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EC7609118E6021D00FCEBBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */,
+				2EC7609218E6021D00FCEBBC /* Foundation.framework */,
+				2EC760A018E6021D00FCEBBC /* XCTest.framework */,
+				2EC760A318E6021D00FCEBBC /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EC7609418E6021D00FCEBBC /* CGFlowController */ = {
+			isa = PBXGroup;
+			children = (
+				2EC760B918E6039900FCEBBC /* CGFlowController.h */,
+				2EC760BA18E6039900FCEBBC /* CGFlowController.m */,
+				2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */,
+				2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */,
+				2EC7609518E6021D00FCEBBC /* Supporting Files */,
+			);
+			path = CGFlowController;
+			sourceTree = "<group>";
+		};
+		2EC7609518E6021D00FCEBBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC7609618E6021D00FCEBBC /* CGFlowController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EC760A818E6021D00FCEBBC /* CGFlowControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */,
+				2EC760A918E6021D00FCEBBC /* Supporting Files */,
+			);
+			path = CGFlowControllerTests;
+			sourceTree = "<group>";
+		};
+		2EC760A918E6021D00FCEBBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EC760AA18E6021D00FCEBBC /* CGFlowControllerTests-Info.plist */,
+				2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E45783318E60AA800AE0E96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E45783418E60AAA00AE0E96 /* CGFlowController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2EC7608E18E6021D00FCEBBC /* CGFlowController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */;
+			buildPhases = (
+				2EC7608B18E6021D00FCEBBC /* Sources */,
+				2EC7608C18E6021D00FCEBBC /* Frameworks */,
+				2EC7608D18E6021D00FCEBBC /* CopyFiles */,
+				2E45783318E60AA800AE0E96 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGFlowController;
+			productName = CGFlowController;
+			productReference = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EC760B518E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */;
+			buildPhases = (
+				2EC7609B18E6021D00FCEBBC /* Sources */,
+				2EC7609C18E6021D00FCEBBC /* Frameworks */,
+				2EC7609D18E6021D00FCEBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EC760A618E6021D00FCEBBC /* PBXTargetDependency */,
+			);
+			name = CGFlowControllerTests;
+			productName = CGFlowControllerTests;
+			productReference = 2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EC7608718E6021D00FCEBBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Revision Works, LLC";
+			};
+			buildConfigurationList = 2EC7608A18E6021D00FCEBBC /* Build configuration list for PBXProject "CGFlowController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EC7608618E6021D00FCEBBC;
+			productRefGroup = 2EC7609018E6021D00FCEBBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EC7608E18E6021D00FCEBBC /* CGFlowController */,
+				2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EC7609D18E6021D00FCEBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC760AD18E6021D00FCEBBC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EC7608B18E6021D00FCEBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */,
+				2EC760BD18E6039900FCEBBC /* CGFlowController.m in Sources */,
+				2EC760BE18E6039900FCEBBC /* CGFlowInteractions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC7609B18E6021D00FCEBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC760AF18E6021D00FCEBBC /* CGFlowControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EC760A618E6021D00FCEBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EC7608E18E6021D00FCEBBC /* CGFlowController */;
+			targetProxy = 2EC760A518E6021D00FCEBBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EC760AC18E6021D00FCEBBC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EC760B018E6021D00FCEBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2EC760B118E6021D00FCEBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EC760B318E6021D00FCEBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CGFlowController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2EC760B418E6021D00FCEBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CGFlowController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2EC760B618E6021D00FCEBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CGFlowControllerTests/CGFlowControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2EC760B718E6021D00FCEBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
+				INFOPLIST_FILE = "CGFlowControllerTests/CGFlowControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EC7608A18E6021D00FCEBBC /* Build configuration list for PBXProject "CGFlowController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC760B018E6021D00FCEBBC /* Debug */,
+				2EC760B118E6021D00FCEBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC760B318E6021D00FCEBBC /* Debug */,
+				2EC760B418E6021D00FCEBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EC760B518E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC760B618E6021D00FCEBBC /* Debug */,
+				2EC760B718E6021D00FCEBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EC7608718E6021D00FCEBBC /* Project object */;
+}

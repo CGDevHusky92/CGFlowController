@@ -11,56 +11,33 @@
 
 @implementation CGFlowInteractions
 
-+(kCGFlowInteractionType)determineInteractorType:(UIGestureRecognizer *)gr {
-    if ([gr isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]) {
-        return [self determineEdgeType:(UIScreenEdgePanGestureRecognizer *)gr];
-    } else if ([gr isKindOfClass:[UIPanGestureRecognizer class]]) {
++ (CGFlowInteractionType)determineInteractorType:(UIGestureRecognizer *)gr
+{
+    if ([gr isKindOfClass:[UIPanGestureRecognizer class]]) {
         return [self determinePanType:(UIPanGestureRecognizer *)gr];
-    } else if ([gr isKindOfClass:[UILongPressGestureRecognizer class]]) {
-        return [self determinePressType:(UILongPressGestureRecognizer *)gr];
     } else if ([gr isKindOfClass:[UIPinchGestureRecognizer class]]) {
         return [self determinePinchType:(UIPinchGestureRecognizer *)gr];
     } else if ([gr isKindOfClass:[UIRotationGestureRecognizer class]]) {
         return [self determineRotateType:(UIRotationGestureRecognizer *)gr];
-    } else if ([gr isKindOfClass:[UITapGestureRecognizer class]]) {
-        return [self determineTapType:(UITapGestureRecognizer *)gr];
     }
     return kCGFlowInteractionNone;
 }
 
-+(CGFloat)percentageOfGesture:(UIGestureRecognizer *)gr withInteractor:(kCGFlowInteractionType)interactorType {
++ (CGFloat)percentageOfGesture:(UIGestureRecognizer *)gr withInteractor:(CGFlowInteractionType)interactorType
+{
     CGFloat percentage;
     if (interactorType == kCGFlowInteractionNone) {
         percentage = 0.0;
     } else {
-        if ([gr isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]) {
-            if (interactorType == kCGFlowInteractionEdgeTop) {
-                percentage = [self flowEdgeTopPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionEdgeBottom) {
-                percentage = [self flowEdgeBottomPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionEdgeLeft) {
-                percentage = [self flowEdgeLeftPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionEdgeRight) {
-                percentage = [self flowEdgeRightPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)gr];
-            } else {
-                percentage = 0.0;
-            }
-        } else if ([gr isKindOfClass:[UIPanGestureRecognizer class]]) {
-            if (interactorType == kCGFlowInteractionSwipeUp) {
+        if ([gr isKindOfClass:[UIPanGestureRecognizer class]]) {
+            if (interactorType == kCGFlowInteractionSwipeUp || interactorType == kCGFlowInteractionEdgeBottom) {
                 percentage = [self flowPanUpPercentageFromRecognizer:(UIPanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionSwipeDown) {
+            } else if (interactorType == kCGFlowInteractionSwipeDown || interactorType == kCGFlowInteractionEdgeTop) {
                 percentage = [self flowPanDownPercentageFromRecognizer:(UIPanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionSwipeLeft) {
+            } else if (interactorType == kCGFlowInteractionSwipeLeft || interactorType == kCGFlowInteractionEdgeRight) {
                 percentage = [self flowPanLeftPercentageFromRecognizer:(UIPanGestureRecognizer *)gr];
-            } else if (interactorType == kCGFlowInteractionSwipeRight) {
+            } else if (interactorType == kCGFlowInteractionSwipeRight || interactorType == kCGFlowInteractionEdgeLeft) {
                 percentage = [self flowPanRightPercentageFromRecognizer:(UIPanGestureRecognizer *)gr];
-            } else {
-                percentage = 0.0;
-            }
-        } else if ([gr isKindOfClass:[UILongPressGestureRecognizer class]]) {
-            if (interactorType == kCGFlowInteractionLongPress) {
-                CGFloat duration = [((UILongPressGestureRecognizer *)gr) minimumPressDuration];
-                percentage = [self flowPressPercentageFromRecognizer:(UILongPressGestureRecognizer *)gr withDuration:duration];
             } else {
                 percentage = 0.0;
             }
@@ -80,12 +57,6 @@
             } else {
                 percentage = 0.0;
             }
-        } else if ([gr isKindOfClass:[UITapGestureRecognizer class]]) {
-            if (interactorType == kCGFlowInteractionSingleTap) {
-                percentage = [self flowTapPercentageFromRecognizer:(UITapGestureRecognizer *)gr];
-            } else {
-                percentage = 0.0;
-            }
         } else {
             percentage = 0.0;
         }
@@ -94,102 +65,71 @@
     return percentage;
 }
 
-+(CGFloat)flowEdgeTopPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr {
-    CGPoint translation = [sgr translationInView:sgr.view.superview];
-    CGFloat percentage  = translation.y / CGRectGetHeight(sgr.view.bounds);
-    return (percentage * DEFAULT_GESTURE_ENHANCER);
-}
-
-+(CGFloat)flowEdgeBottomPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr {
-    CGPoint translation = [sgr translationInView:sgr.view.superview];
-    CGFloat percentage  = -(translation.y / CGRectGetHeight(sgr.view.bounds));
-    return (percentage * DEFAULT_GESTURE_ENHANCER);
-}
-
-+(CGFloat)flowEdgeLeftPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr {
-    CGPoint translation = [sgr translationInView:sgr.view.superview];
-    CGFloat percentage  = -(translation.x / CGRectGetWidth(sgr.view.bounds));
-    return (percentage * DEFAULT_GESTURE_ENHANCER);
-}
-
-+(CGFloat)flowEdgeRightPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr {
-    CGPoint translation = [sgr translationInView:sgr.view.superview];
-    CGFloat percentage  = translation.x / CGRectGetWidth(sgr.view.bounds);
-    return (percentage * DEFAULT_GESTURE_ENHANCER);
-}
-
-+(CGFloat)flowPanUpPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr {
++ (CGFloat)flowPanUpPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr
+{
     CGPoint translation = [pgr translationInView:pgr.view.superview];
     CGFloat percentage  = -(translation.y / CGRectGetHeight(pgr.view.bounds));
     return (percentage * DEFAULT_GESTURE_ENHANCER);
 }
 
-+(CGFloat)flowPanDownPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr {
++ (CGFloat)flowPanDownPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr
+{
     CGPoint translation = [pgr translationInView:pgr.view.superview];
     CGFloat percentage  = translation.y / CGRectGetHeight(pgr.view.bounds);
     return (percentage * DEFAULT_GESTURE_ENHANCER);
 }
 
-+(CGFloat)flowPanLeftPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr {
++ (CGFloat)flowPanLeftPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr
+{
     CGPoint translation = [pgr translationInView:pgr.view.superview];
     CGFloat percentage  = -(translation.x / CGRectGetWidth(pgr.view.bounds));
     return (percentage * DEFAULT_GESTURE_ENHANCER);
 }
 
-+(CGFloat)flowPanRightPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr {
++ (CGFloat)flowPanRightPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr
+{
     CGPoint translation = [pgr translationInView:pgr.view.superview];
     CGFloat percentage  = translation.x / CGRectGetWidth(pgr.view.bounds);
     return (percentage * DEFAULT_GESTURE_ENHANCER);
 }
 
-+(CGFloat)flowPressPercentageFromRecognizer:(UILongPressGestureRecognizer *)lgr withDuration:(CGFloat)duration {
-    return 1.0;
-}
-
-+(CGFloat)flowPinchInPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr {
++ (CGFloat)flowPinchInPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr
+{
     return (fabs(1.0 - [pgr scale]));
 }
 
-+(CGFloat)flowPinchOutPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr {
++ (CGFloat)flowPinchOutPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr
+{
     return (([pgr scale] / 3.5) - .3);
 }
 
-+(CGFloat)flowRotateClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr {
++ (CGFloat)flowRotateClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr
+{
     return rgr.rotation;
 }
 
-+(CGFloat)flowRotateCounterClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr {
++ (CGFloat)flowRotateCounterClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr
+{
     return fabs(rgr.rotation);
 }
 
-+(CGFloat)flowTapPercentageFromRecognizer:(UITapGestureRecognizer *)tgr {
-    return 1.0;
-}
-
-+(kCGFlowInteractionType)determineEdgeType:(UIScreenEdgePanGestureRecognizer *)edgeGesture {
-    CGPoint velocity = [edgeGesture velocityInView:edgeGesture.view.superview];
-    CGFloat xVel = velocity.x;
-    CGFloat yVel = velocity.y;
-    if (fabs(xVel) > fabs(yVel)) {
-        if (xVel > 0) {
-            return kCGFlowInteractionEdgeRight;
-        } else {
-            return kCGFlowInteractionEdgeLeft;
-        }
-    } else {
-        if (yVel > 0) {
-            return kCGFlowInteractionEdgeTop;
-        } else {
-            return kCGFlowInteractionEdgeBottom;
-        }
-    }
-    return kCGFlowInteractionNone;
-}
-
-+(kCGFlowInteractionType)determinePanType:(UIPanGestureRecognizer *)panGesture {
++ (CGFlowInteractionType)determinePanType:(UIPanGestureRecognizer *)panGesture
+{
+    CGPoint location = [panGesture locationInView:panGesture.view.superview];
     CGPoint velocity = [panGesture velocityInView:panGesture.view.superview];
     CGFloat xVel = velocity.x;
     CGFloat yVel = velocity.y;
+    
+    if ((location.y < (panGesture.view.superview.frame.size.height * 0.1)) && (fabs(xVel) < fabs(yVel)) && (yVel > 0)) {
+        return kCGFlowInteractionEdgeTop;
+    } else if ((location.y > (panGesture.view.superview.frame.size.height * 0.9)) && (fabs(xVel) < fabs(yVel)) && (yVel < 0)) {
+        return kCGFlowInteractionEdgeBottom;
+    } else if ((location.x < (panGesture.view.superview.frame.size.width * 0.1)) && (fabs(xVel) > fabs(yVel)) && (xVel > 0)) {
+        return  kCGFlowInteractionEdgeLeft;
+    } else if ((location.x > (panGesture.view.superview.frame.size.width * 0.9)) && (fabs(xVel) > fabs(yVel)) && (xVel < 0)) {
+        return kCGFlowInteractionEdgeRight;
+    }
+    
     if ([panGesture numberOfTouches] == 1) {
         if (fabs(xVel) > fabs(yVel)) {
             if (xVel > 0) {
@@ -236,18 +176,8 @@
     return kCGFlowInteractionNone;
 }
 
-+(kCGFlowInteractionType)determinePressType:(UILongPressGestureRecognizer *)pressGesture {
-    if ([pressGesture numberOfTouches] == 1) {
-        return kCGFlowInteractionLongPress;
-    } else if ([pressGesture numberOfTouches] == 2) {
-        return kCGFlowInteractionLongPressDouble;
-    } else if ([pressGesture numberOfTouches] == 3) {
-        return kCGFlowInteractionLongPressTriple;
-    }
-    return kCGFlowInteractionNone;
-}
-
-+(kCGFlowInteractionType)determinePinchType:(UIPinchGestureRecognizer *)pinchGesture {
++ (CGFlowInteractionType)determinePinchType:(UIPinchGestureRecognizer *)pinchGesture
+{
     if (pinchGesture.velocity > 0) {
         return kCGFlowInteractionPinchOut;
     } else {
@@ -255,41 +185,13 @@
     }
 }
 
-+(kCGFlowInteractionType)determineRotateType:(UIRotationGestureRecognizer *)rotateGesture {
++ (CGFlowInteractionType)determineRotateType:(UIRotationGestureRecognizer *)rotateGesture
+{
     if (rotateGesture.rotation > 0) {
         return kCGFlowInteractionRotateClockwise;
     } else {
         return kCGFlowInteractionRotateCounterClockwise;
     }
-}
-
-+(kCGFlowInteractionType)determineTapType:(UITapGestureRecognizer *)tapGesture {
-    if ([tapGesture numberOfTouches] == 1) {
-        if ([tapGesture numberOfTapsRequired] == 1) {
-            return kCGFlowInteractionSingleTap;
-        } else if ([tapGesture numberOfTapsRequired] == 2) {
-            return kCGFlowInteractionDoubleTap;
-        } else if ([tapGesture numberOfTapsRequired] == 3) {
-            return kCGFlowInteractionTripleTap;
-        }
-    } else if ([tapGesture numberOfTouches] == 2) {
-        if ([tapGesture numberOfTapsRequired] == 1) {
-            return kCGFlowInteractionSingleTapDouble;
-        } else if ([tapGesture numberOfTapsRequired] == 2) {
-            return kCGFlowInteractionDoubleTapDouble;
-        } else if ([tapGesture numberOfTapsRequired] == 3) {
-            return kCGFlowInteractionTripleTapDouble;
-        }
-    } else if ([tapGesture numberOfTouches] == 3) {
-        if ([tapGesture numberOfTapsRequired] == 1) {
-            return kCGFlowInteractionSingleTapTriple;
-        } else if ([tapGesture numberOfTapsRequired] == 2) {
-            return kCGFlowInteractionDoubleTapTriple;
-        } else if ([tapGesture numberOfTapsRequired] == 3) {
-            return kCGFlowInteractionTripleTapTriple;
-        }
-    }
-    return kCGFlowInteractionNone;
 }
 
 @end

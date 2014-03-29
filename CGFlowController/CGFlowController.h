@@ -27,26 +27,14 @@ typedef enum {
     kCGFlowInteractionSwipeDownTriple,
     kCGFlowInteractionSwipeLeftTriple,
     kCGFlowInteractionSwipeRightTriple,
-    kCGFlowInteractionSingleTap,
-    kCGFlowInteractionDoubleTap,
-    kCGFlowInteractionTripleTap,
-    kCGFlowInteractionSingleTapDouble,
-    kCGFlowInteractionDoubleTapDouble,
-    kCGFlowInteractionTripleTapDouble,
-    kCGFlowInteractionSingleTapTriple,
-    kCGFlowInteractionDoubleTapTriple,
-    kCGFlowInteractionTripleTapTriple,
-    kCGFlowInteractionLongPress,
-    kCGFlowInteractionLongPressDouble,
-    kCGFlowInteractionLongPressTriple,
     kCGFlowInteractionPinchIn,
     kCGFlowInteractionPinchOut,
     kCGFlowInteractionRotateClockwise,
     kCGFlowInteractionRotateCounterClockwise,
     kCGFlowInteractionNone
-} kCGFlowInteractionType;
+} CGFlowInteractionType;
 
-typedef enum kCGFlowAnimationType {
+typedef enum CGFlowAnimationType {
     kCGFlowAnimationSlideUp,
     kCGFlowAnimationSlideDown,
     kCGFlowAnimationSlideLeft,
@@ -62,94 +50,104 @@ typedef enum kCGFlowAnimationType {
     kCGFlowModalDismissDisappearCenter,
     kCGFlowModalDismissDisappearPoint,
     kCGFlowAnimationNone
-} kCGFlowAnimationType;
+} CGFlowAnimationType;
 
 typedef void(^Completion)(BOOL finished);
 
 @protocol CGFlowInteractiveDelegate <NSObject>
--(void)proceedToNextViewControllerWithTransition:(kCGFlowInteractionType)type;
+
+- (void)proceedToNextViewControllerWithTransition:(CGFlowInteractionType)type;
+
 @end
 
 @interface CGFlowController : UIViewController <UIViewControllerTransitioningDelegate>
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
 
+/* Modal Appearence calls? */
+- (void)flowModalViewWillAppear:(BOOL)animated;
+- (void)flowModalViewDidAppear:(BOOL)animated;
+- (void)flowModalViewWillDisappear:(BOOL)animated;
+- (void)flowModalViewDidDisappear:(BOOL)animated;
+
 /* Standard Dynamic Flow Interactively or Not */
--(void)flowToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
--(void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation completion:(Completion)completion;
+- (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
+- (void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
 
--(void)flowModalViewController:(UIViewController *)viewController withAnimation:(kCGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion;
--(void)flowDismissModalViewControllerWithAnimation:(kCGFlowAnimationType)animation andCompletion:(Completion)completion;
+/* Flow Modal Presentation */
+- (void)flowModalViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion;
+- (void)flowDismissModalViewControllerWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion;
 
--(void)flowModalTapOutWithAnimation:(kCGFlowAnimationType)animation withCompletion:(Completion)completion;
--(void)flowEnableModalTapOut;
--(void)flowDisableModalTapOut;
+/* Modal Tap Out Gesture Recognizer */
+- (void)flowModalTapOutWithAnimation:(CGFlowAnimationType)animation withCompletion:(Completion)completion;
+- (void)flowEnableModalTapOut;
+- (void)flowDisableModalTapOut;
 
--(void)flowModalViewWillAppear:(BOOL)animated;
--(void)flowModalViewDidAppear:(BOOL)animated;
--(void)flowModalViewWillDisappear:(BOOL)animated;
--(void)flowModalViewDidDisappear:(BOOL)animated;
+/* Keep Memory Live Protocol */
+- (UIViewController *)retrieveControllerForIdentifier:(NSString *)identifier;
+- (void)flowKeepControllerMemoryLiveForIdentifier:(NSString *)identifier;
+- (void)flowKeepModalMemoryLiveForIdentifier:(NSString *)identifier;
+- (void)flowRemoveLiveMemoryForIdentifier:(NSString *)identifier;
+- (void)flowClearLiveMemoryControllers;
 
 @end
 
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
+
 @property (nonatomic, weak) CGFlowController *flowController;
 @property (weak) UIViewController *presentedController;
-@property (nonatomic, assign) kCGFlowAnimationType animationType;
+@property (nonatomic, assign) CGFlowAnimationType animationType;
 @property (nonatomic, assign) BOOL interactive;
 @property (assign) CGFloat duration;
+
 @end
 
 @interface CGFlowInteractor : UIPercentDrivenInteractiveTransition
+
 @property (nonatomic, weak) CGFlowController *flowController;
+
 @end
 
 @interface CGFlowAnimations : NSObject
-+(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete;
+
++ (void)flowAnimation:(CGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete;
+
 @end
 
 @interface CGFlowInteractions : NSObject
 
-+(kCGFlowInteractionType)determineInteractorType:(UIGestureRecognizer *)gr;
-+(CGFloat)percentageOfGesture:(UIGestureRecognizer *)gr withInteractor:(kCGFlowInteractionType)interactorType;
++ (CGFlowInteractionType)determineInteractorType:(UIGestureRecognizer *)gr;
++ (CGFloat)percentageOfGesture:(UIGestureRecognizer *)gr withInteractor:(CGFlowInteractionType)interactorType;
 
-+(CGFloat)flowEdgeTopPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr;
-+(CGFloat)flowEdgeBottomPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr;
-+(CGFloat)flowEdgeLeftPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr;
-+(CGFloat)flowEdgeRightPercentageFromRecognizer:(UIScreenEdgePanGestureRecognizer *)sgr;
++ (CGFloat)flowPanUpPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
++ (CGFloat)flowPanDownPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
++ (CGFloat)flowPanLeftPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
++ (CGFloat)flowPanRightPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
 
-+(CGFloat)flowPanUpPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
-+(CGFloat)flowPanDownPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
-+(CGFloat)flowPanLeftPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
-+(CGFloat)flowPanRightPercentageFromRecognizer:(UIPanGestureRecognizer *)pgr;
++ (CGFloat)flowPinchInPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr;
++ (CGFloat)flowPinchOutPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr;
 
-+(CGFloat)flowPressPercentageFromRecognizer:(UILongPressGestureRecognizer *)lgr withDuration:(CGFloat)duration;
++ (CGFloat)flowRotateClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr;
++ (CGFloat)flowRotateCounterClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr;
 
-+(CGFloat)flowPinchInPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr;
-+(CGFloat)flowPinchOutPercentageFromRecognizer:(UIPinchGestureRecognizer *)pgr;
-
-+(CGFloat)flowRotateClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr;
-+(CGFloat)flowRotateCounterClockwisePercentageFromRecognizer:(UIRotationGestureRecognizer *)rgr;
-
-+(CGFloat)flowTapPercentageFromRecognizer:(UITapGestureRecognizer *)tgr;
-
-+(kCGFlowInteractionType)determineEdgeType:(UIScreenEdgePanGestureRecognizer *)edgeGesture;
-+(kCGFlowInteractionType)determinePanType:(UIPanGestureRecognizer *)panGesture;
-+(kCGFlowInteractionType)determinePressType:(UILongPressGestureRecognizer *)pressGesture;
-+(kCGFlowInteractionType)determinePinchType:(UIPinchGestureRecognizer *)pinchGesture;
-+(kCGFlowInteractionType)determineRotateType:(UIRotationGestureRecognizer *)rotateGesture;
-+(kCGFlowInteractionType)determineTapType:(UITapGestureRecognizer *)tapGesture;
++ (CGFlowInteractionType)determinePanType:(UIPanGestureRecognizer *)panGesture;
++ (CGFlowInteractionType)determinePinchType:(UIPinchGestureRecognizer *)pinchGesture;
++ (CGFlowInteractionType)determineRotateType:(UIRotationGestureRecognizer *)rotateGesture;
 
 @end
 
 #pragma mark - UISplitHackController to modally transition UISplitViewController
 
 @interface UISplitHackController : UIViewController
+
 @property (nonatomic, strong) UISplitViewController *splitController;
+
 @end
 
 #pragma mark - UIViewController(CGFlowController) Category
 
 @interface UIViewController(CGFlowController) <CGFlowInteractiveDelegate>
+
 @property (nonatomic, weak) CGFlowController *flowController;
 @property (nonatomic, assign) BOOL transitioning;
+
 @end

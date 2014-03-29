@@ -9,32 +9,33 @@
 
 @interface CGFlowAnimations()
 
-+(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
-+(void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
-+(void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
-+(void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++ (void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++ (void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++ (void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
++ (void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
 
-+(void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
-+(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
-+(void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
-+(void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
-+(kCGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(kCGFlowAnimationType)animation;
++ (CGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(CGFlowAnimationType)animation;
 
 @end
 
 @implementation CGFlowAnimations
 
-+(void)flowAnimation:(kCGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete {
-    kCGFlowAnimationType correctedType;
++ (void)flowAnimation:(CGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete
+{
+    CGFlowAnimationType correctedType;
     if (interactive && ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
         correctedType = animationType;
     } else {
@@ -72,13 +73,16 @@
     }
 }
 
-+(void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
++ (void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     
     // Round the corners
-    toView.layer.cornerRadius = 8;
-    toView.layer.masksToBounds = YES;
+    if (scale.x != 1.0 && scale.y != 1.0) {
+        toView.layer.cornerRadius = 8;
+        toView.layer.masksToBounds = YES;
+    }
     
     // Point to rect percentage determination using scale
     // 0.9, 0.35 CGRectMake(15, 184, 290, 200);
@@ -96,11 +100,14 @@
     // Scale up to 90%
     [UIView animateWithDuration:duration animations: ^{
         toView.frame = toFrame;
-        fromView.alpha = 0.5;
+        if (scale.x != 1.0 && scale.y != 1.0) {
+            fromView.alpha = 0.5;
+        }
     } completion:complete];
 }
 
-+(void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
++ (void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     
@@ -128,7 +135,8 @@
     } completion:complete];
 }
 
-+(void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
++ (void)flowModalSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     
@@ -156,7 +164,8 @@
     } completion:complete];
 }
 
-+(void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete {
++ (void)flowModalSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     
@@ -184,7 +193,8 @@
     } completion:complete];
 }
 
-+(void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     [UIView animateWithDuration:duration animations: ^{
@@ -193,7 +203,8 @@
     } completion:complete];
 }
 
-+(void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     UIView *fromView = srcController.view;
     UIView *toView = destController.view;
     [UIView animateWithDuration:duration animations: ^{
@@ -203,7 +214,8 @@
     } completion:complete];
 }
 
-+(void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     [destController.view setFrame:CGRectOffset(bounds, 0, bounds.size.height)];
@@ -214,7 +226,8 @@
     } completion:complete];
 }
 
-+(void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     [destController.view setFrame:CGRectOffset(bounds, 0, -bounds.size.height)];
@@ -225,7 +238,8 @@
     } completion:complete];
 }
 
-+(void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     [destController.view setFrame:CGRectOffset(bounds, bounds.size.width, 0)];
@@ -236,7 +250,8 @@
     } completion:complete];
 }
 
-+(void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowSlideRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     [destController.view setFrame:CGRectOffset(bounds, -bounds.size.width, 0)];
@@ -247,7 +262,8 @@
     } completion:complete];
 }
 
-+(void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowFlipUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     // Start building the transform - 3D so need perspective
@@ -266,7 +282,8 @@
     } completion:complete];
 }
 
-+(void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowFlipDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     // Start building the transform - 3D so need perspective
@@ -285,7 +302,8 @@
     } completion:complete];
 }
 
-+(void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowFlipLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     // Start building the transform - 3D so need perspective
@@ -304,7 +322,8 @@
     } completion:complete];
 }
 
-+(void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete {
++ (void)flowFlipRightFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
     CGRect bounds = containerView.bounds;
     srcController.view.frame = bounds;
     // Start building the transform - 3D so need perspective
@@ -323,7 +342,8 @@
     } completion:complete];
 }
 
-+(kCGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(kCGFlowAnimationType)animation {
++ (CGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(CGFlowAnimationType)animation
+{
     if (animation == kCGFlowModalPresent || animation == kCGFlowModalDismiss) {
         return animation;
     }
