@@ -7,7 +7,7 @@
 
 #import "CGFlowController.h"
 
-@interface CGFlowAnimations()
+@interface CGFlowAnimations ()
 
 + (void)flowModalSlideUp:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
 + (void)flowModalSlideDown:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration andScale:(CGPoint)scale completion:(Completion)complete;
