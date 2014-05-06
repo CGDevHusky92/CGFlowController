@@ -49,6 +49,9 @@ typedef enum CGFlowAnimationType {
     kCGFlowModalPresentSlideRight,
     kCGFlowModalDismissDisappearCenter,
     kCGFlowModalDismissDisappearPoint,
+    kCGFlowModalPanelSlideRight,
+    kCGFlowModalPanelSlideLeft,
+    kCGFlowModalPanelReturn,
     kCGFlowAnimationNone
 } CGFlowAnimationType;
 
@@ -76,6 +79,10 @@ typedef void(^Completion)(BOOL finished);
 /* Flow Modal Presentation */
 - (void)flowModalViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andScale:(CGPoint)scale completion:(Completion)completion;
 - (void)flowDismissModalViewControllerWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion;
+
+/* Flow Panel Presentation */
+- (void)flowWithBackPanel:(UIViewController *)panelController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
+- (void)flowDismissPanelWithCompletion:(Completion)completion;
 
 /* Modal Tap Out Gesture Recognizer */
 - (void)flowModalTapOutWithAnimation:(CGFlowAnimationType)animation withCompletion:(Completion)completion;

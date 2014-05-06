@@ -398,6 +398,18 @@
     }
 }
 
+#pragma mark - Panel Adaptation for Model Transition
+
+- (void)flowWithBackPanel:(UIViewController *)panelController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion
+{
+    [self flowModalViewController:panelController withAnimation:animation andScale:CGPointMake(1.0, 1.0) completion:completion];
+}
+
+- (void)flowDismissPanelWithCompletion:(Completion)completion
+{
+    [self flowDismissModalViewControllerWithAnimation:kCGFlowModalPanelReturn andCompletion:completion];
+}
+
 #pragma mark - Modal Tap Out Recognizers
 
 - (void)flowModalTapOutWithAnimation:(CGFlowAnimationType)animation withCompletion:(Completion)completion
@@ -405,7 +417,6 @@
     if (_modalController) {
         _modalTapDismissAnimation = animation;
         _modalTapCompletion = completion;
-        
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
         [_tapGesture setNumberOfTapsRequired:1];
         [_tapGesture setCancelsTouchesInView:NO];
@@ -629,9 +640,9 @@
                     [self.flowController cancelTransition:toVC];
                 }
             } else {
-                if (self.animationType == kCGFlowModalPresentSlideUp) {
+                if (self.animationType == kCGFlowModalPresentSlideUp || self.animationType == kCGFlowModalPanelSlideRight) {
                     [self.flowController finishTransitionModal:toVC appearing:YES];
-                } else if (self.animationType == kCGFlowModalDismissDisappearCenter) {
+                } else if (self.animationType == kCGFlowModalDismissDisappearCenter || self.animationType == kCGFlowModalPanelReturn) {
                     [self.flowController finishTransitionModal:toVC appearing:NO];
                 } else {
                     [self.flowController finishTransition:toVC];

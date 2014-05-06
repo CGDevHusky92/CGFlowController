@@ -17,6 +17,11 @@
 + (void)flowModalDismissCenterDisappear:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 + (void)flowModalDismissDisappearAtPoint:(CGPoint)point withSrc:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 
++ (void)flowPanelSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
++ (void)flowPanelSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
+
++ (void)flowPanelDismiss:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
+
 + (void)flowSlideUpFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 + (void)flowSlideDownFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
 + (void)flowSlideLeftFromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete;
@@ -70,6 +75,12 @@
         [self flowModalDismissCenterDisappear:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
     } else if (correctedType == kCGFlowModalDismissDisappearPoint) {
         [self flowModalDismissDisappearAtPoint:scale withSrc:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
+    } else if (correctedType == kCGFlowModalPanelSlideLeft) {
+        [self flowPanelSlideLeft:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
+    } else if (correctedType == kCGFlowModalPanelSlideRight) {
+        [self flowPanelSlideRight:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
+    } else if (correctedType == kCGFlowModalPanelReturn) {
+        [self flowPanelDismiss:srcController toDestination:destController withContainer:containerView andDuration:duration completion:complete];
     }
 }
 
@@ -211,6 +222,49 @@
         [fromView setCenter:point];
         fromView.transform = CGAffineTransformMakeScale(0.0, 0.0);
         toView.alpha = 1.0;
+    } completion:complete];
+}
+
++ (void)flowPanelSlideLeft:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    
+    CGRect bounds = containerView.bounds;
+    srcController.view.frame = bounds;
+    [destController.view setFrame:bounds];
+    [containerView addSubview:toView];
+    
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = bounds;
+        fromView.frame = CGRectOffset(bounds, -(bounds.size.width * 0.8), 0);
+        fromView.alpha = 0.5;
+    } completion:complete];
+}
+
++ (void)flowPanelSlideRight:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
+    UIView *fromView = srcController.view;
+    UIView *toView = destController.view;
+    
+    CGRect bounds = containerView.bounds;
+    srcController.view.frame = bounds;
+    [destController.view setFrame:bounds];
+    [containerView addSubview:toView];
+    [containerView bringSubviewToFront:fromView];
+    
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = bounds;
+        fromView.frame = CGRectOffset(bounds, (bounds.size.width * 0.8), 0);
+    } completion:complete];
+}
+
++ (void)flowPanelDismiss:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration completion:(Completion)complete
+{
+    UIView *toView = destController.view;
+    CGRect bounds = containerView.bounds;
+    [UIView animateWithDuration:duration animations: ^{
+        toView.frame = bounds;
     } completion:complete];
 }
 
