@@ -52,10 +52,7 @@
     self.interactor = [CGFlowInteractor new];
     [self.interactor setFlowController:self];
     
-    NSLog(@"Not loading stuff");
-    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        NSLog(@"Reaching deveice");
         self.flowedController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
     } else {
         self.flowedController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
@@ -77,6 +74,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     if (!_started) {
         self.flowedController.transitioning = YES;
         [self.flowedController beginAppearanceTransition:YES animated:NO];
