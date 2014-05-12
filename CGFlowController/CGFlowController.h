@@ -34,6 +34,16 @@ typedef enum {
     kCGFlowInteractionNone
 } CGFlowInteractionType;
 
+typedef enum CGFlowAnimationCategory {
+    kCGFlowCategory2DAnimation,
+    kCGFlowCategory3DAnimation,
+    kCGFlowCategoryModalPresent,
+    kCGFlowCategoryModalDismiss,
+    kCGFlowCategoryPanelPresent,
+    kCGFlowCategoryPanelDismiss,
+    kCGFlowCategoryNone
+} CGFlowAnimationCategory;
+
 typedef enum CGFlowAnimationType {
     kCGFlowAnimationSlideUp,
     kCGFlowAnimationSlideDown,
@@ -49,9 +59,10 @@ typedef enum CGFlowAnimationType {
     kCGFlowModalPresentSlideRight,
     kCGFlowModalDismissDisappearCenter,
     kCGFlowModalDismissDisappearPoint,
-    kCGFlowModalPanelSlideRight,
-    kCGFlowModalPanelSlideLeft,
-    kCGFlowModalPanelReturn,
+    kCGFlowPanelSlideRight,
+    kCGFlowPanelSlideLeft,
+    kCGFlowPanelLeftReturn,
+    kCGFlowPanelRightReturn,
     kCGFlowAnimationNone
 } CGFlowAnimationType;
 
@@ -81,8 +92,10 @@ typedef void(^Completion)(BOOL finished);
 - (void)flowDismissModalViewControllerWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion;
 
 /* Flow Panel Presentation */
-- (void)flowWithBackPanel:(UIViewController *)panelController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
-- (void)flowDismissPanelWithCompletion:(Completion)completion;
+- (void)flowPanel:(UIViewController *)panelController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
+- (void)flowPanelInteractively:(UIViewController *)panelController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
+- (void)flowDismissPanelWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion;
+- (void)flowDismissPanelInteractivelyWithAnimation:(CGFlowAnimationType)animation andCompletion:(Completion)completion;
 
 /* Modal Tap Out Gesture Recognizer */
 - (void)flowModalTapOutWithAnimation:(CGFlowAnimationType)animation withCompletion:(Completion)completion;
@@ -96,12 +109,14 @@ typedef void(^Completion)(BOOL finished);
 - (void)flowRemoveLiveMemoryForIdentifier:(NSString *)identifier;
 - (void)flowClearLiveMemoryControllers;
 
+@property (assign) CGPoint modalScale;
+
 @end
 
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, weak) CGFlowController *flowController;
-@property (weak) UIViewController *presentedController;
+@property (nonatomic, weak) UIViewController *presentedController;
 @property (nonatomic, assign) CGFlowAnimationType animationType;
 @property (nonatomic, assign) BOOL interactive;
 @property (assign) CGFloat duration;
@@ -114,11 +129,18 @@ typedef void(^Completion)(BOOL finished);
 
 @end
 
+#pragma mark - CGFlowAnimations Interface
+
+@class CGFlowObject;
+
 @interface CGFlowAnimations : NSObject
 
-+ (void)flowAnimation:(CGFlowAnimationType)animationType fromSource:(UIViewController *)srcController toDestination:(UIViewController *)destController withContainer:(UIView *)containerView andDuration:(CGFloat)duration interactively:(BOOL)interactive withScale:(CGPoint)scale completion:(Completion)complete;
++ (void)flowAnimationWithObject:(CGFlowObject *)flowObj withCompletion:(void(^)(BOOL))complete;
++ (CGFlowAnimationCategory)animationCategoryForType:(CGFlowAnimationType)animationType;
 
 @end
+
+#pragma mark - CGFlowInteractions Interface
 
 @interface CGFlowInteractions : NSObject
 
@@ -139,6 +161,51 @@ typedef void(^Completion)(BOOL finished);
 + (CGFlowInteractionType)determinePanType:(UIPanGestureRecognizer *)panGesture;
 + (CGFlowInteractionType)determinePinchType:(UIPinchGestureRecognizer *)pinchGesture;
 + (CGFlowInteractionType)determineRotateType:(UIRotationGestureRecognizer *)rotateGesture;
+
+@end
+
+#pragma mark - CGFlowObject
+
+@class CGFlowView;
+
+@interface CGFlowObject : NSObject
+
+@property (strong, nonatomic) UIView *containerView;
+@property (strong, nonatomic) CGFlowView *source;
+@property (strong, nonatomic) CGFlowView *destination;
+@property (weak, nonatomic) CGFlowController *flowController;
+
+@property (assign) CGFlowAnimationType animationType;
+@property (assign) CGFloat duration;
+
+@property (assign) BOOL interactive;
+@property (assign) BOOL threeDimensionalAnimation;
+@property (assign) BOOL affeineTransform;
+
+@end
+
+#pragma mark - CGFlowView
+
+@interface CGFlowView : NSObject
+
+@property (weak, nonatomic) CGFlowObject *parent;
+@property (strong, nonatomic) UIViewController *viewController;
+
+@property (assign, readonly) CGRect startPosition;
+@property (assign, readonly) CGRect endPosition;
+
+@property (assign) CGFloat alpha;
+@property (assign) BOOL eliminate;
+@property (assign) CGPoint size;
+
+@property (assign) CATransform3D preAnimationTransform;
+@property (assign) CATransform3D stageOneTransform;
+@property (assign) CATransform3D stageTwoTransform;
+
+- (instancetype)initWithParent:(CGFlowObject *)parent;
+
+- (void)setStartPos:(CGPoint)startPos;
+- (void)setEndPos:(CGPoint)endPos;
 
 @end
 
