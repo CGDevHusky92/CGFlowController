@@ -23,8 +23,8 @@
 @property (nonatomic, strong) CGFlowInteractor *interactor;
 @property (nonatomic, assign) CGFlowAnimationType animationType;
 @property (nonatomic, assign) CGFlowAnimationType modalTapDismissAnimation;
-@property (nonatomic, assign) Completion modalTapCompletion;
-@property (nonatomic, assign) Completion currentCompletion;
+@property (nonatomic, strong) Completion modalTapCompletion;
+@property (nonatomic, strong) Completion currentCompletion;
 
 //@property (assign) CGPoint modalScale;
 @property (assign) CGFloat duration;
