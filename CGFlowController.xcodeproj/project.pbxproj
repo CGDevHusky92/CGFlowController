@@ -6,13 +6,27 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2E565193192162E000228CFD /* CGFlowControllerUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2E565194192162E000228CFD /* Build configuration list for PBXAggregateTarget "CGFlowControllerUniversal" */;
+			buildPhases = (
+				2E5651971921632000228CFD /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CGFlowControllerUniversal;
+			productName = CGFlowController;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2E45783418E60AAA00AE0E96 /* CGFlowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC760B918E6039900FCEBBC /* CGFlowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EC7609318E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
 		2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A018E6021D00FCEBBC /* XCTest.framework */; };
 		2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
 		2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A318E6021D00FCEBBC /* UIKit.framework */; };
-		2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */; };
+		2EC760A718E6021D00FCEBBC /* libCGFlowControllerOld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7608F18E6021D00FCEBBC /* libCGFlowControllerOld.a */; };
 		2EC760AD18E6021D00FCEBBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */; };
 		2EC760AF18E6021D00FCEBBC /* CGFlowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */; };
 		2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */; };
@@ -44,7 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EC7608F18E6021D00FCEBBC /* libCGFlowControllerOld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowControllerOld.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC7609218E6021D00FCEBBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2EC7609618E6021D00FCEBBC /* CGFlowController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGFlowController-Prefix.pch"; sourceTree = "<group>"; };
 		2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGFlowControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */,
-				2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */,
+				2EC760A718E6021D00FCEBBC /* libCGFlowControllerOld.a in Frameworks */,
 				2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */,
 				2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */,
 			);
@@ -97,7 +111,7 @@
 		2EC7609018E6021D00FCEBBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */,
+				2EC7608F18E6021D00FCEBBC /* libCGFlowControllerOld.a */,
 				2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */,
 			);
 			name = Products;
@@ -166,9 +180,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2EC7608E18E6021D00FCEBBC /* CGFlowController */ = {
+		2EC7608E18E6021D00FCEBBC /* CGFlowControllerOld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */;
+			buildConfigurationList = 2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerOld" */;
 			buildPhases = (
 				2EC7608B18E6021D00FCEBBC /* Sources */,
 				2EC7608C18E6021D00FCEBBC /* Frameworks */,
@@ -179,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = CGFlowController;
+			name = CGFlowControllerOld;
 			productName = CGFlowController;
-			productReference = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */;
+			productReference = 2EC7608F18E6021D00FCEBBC /* libCGFlowControllerOld.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */ = {
@@ -223,8 +237,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EC7608E18E6021D00FCEBBC /* CGFlowController */,
+				2EC7608E18E6021D00FCEBBC /* CGFlowControllerOld */,
 				2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */,
+				2E565193192162E000228CFD /* CGFlowControllerUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -240,13 +255,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E5651971921632000228CFD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIB_TARGET_NAME=\"CGFlowController\"\n\nif [ \"${ACTION}\" = \"clean\" ]\nthen\necho \"Cleaning Libraries...\"\ncd \"${PROJECT_DIR}\"\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphoneos clean\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphonesimulator clean\nfi\n\nif [ \"${ACTION}\" = \"build\" ]\nthen\necho \"Building Libraries\"\ncd \"${PROJECT_DIR}\"\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphoneos\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphonesimulator\n\n# Check that this is what your static libraries are called\nARM_FILES=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneos/lib${LIB_TARGET_NAME}.a\"\nI386_FILES=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphonesimulator/lib${LIB_TARGET_NAME}.a\"\n\nmkdir -p \"${PROJECT_DIR}/build/Universal\"\n\necho \"Creating library...\"\nlipo -create \"$ARM_FILES\" \"$I386_FILES\" -o \"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneos/lib${PRODUCT_NAME}.a\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EC7608B18E6021D00FCEBBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */,
 				2EC760BD18E6039900FCEBBC /* CGFlowController.m in Sources */,
+				2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */,
 				2EC760BE18E6039900FCEBBC /* CGFlowInteractions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +295,7 @@
 /* Begin PBXTargetDependency section */
 		2EC760A618E6021D00FCEBBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2EC7608E18E6021D00FCEBBC /* CGFlowController */;
+			target = 2EC7608E18E6021D00FCEBBC /* CGFlowControllerOld */;
 			targetProxy = 2EC760A518E6021D00FCEBBC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -281,6 +312,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2E565195192162E000228CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = CGFlowController;
+			};
+			name = Debug;
+		};
+		2E565196192162E000228CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = CGFlowController;
+			};
+			name = Release;
+		};
 		2EC760B018E6021D00FCEBBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -312,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -343,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -356,10 +401,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -374,6 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -416,6 +464,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E565194192162E000228CFD /* Build configuration list for PBXAggregateTarget "CGFlowControllerUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E565195192162E000228CFD /* Debug */,
+				2E565196192162E000228CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2EC7608A18E6021D00FCEBBC /* Build configuration list for PBXProject "CGFlowController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -425,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */ = {
+		2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerOld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EC760B318E6021D00FCEBBC /* Debug */,

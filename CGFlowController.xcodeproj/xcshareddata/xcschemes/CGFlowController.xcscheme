@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2EC7608E18E6021D00FCEBBC"
-               BuildableName = "libCGFlowController.a"
-               BlueprintName = "CGFlowController"
+               BuildableName = "libCGFlowControllerOld.a"
+               BlueprintName = "CGFlowControllerOld"
                ReferencedContainer = "container:CGFlowController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
