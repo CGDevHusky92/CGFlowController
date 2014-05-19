@@ -251,7 +251,7 @@
     }
     
     tempController.transitioningDelegate = self;
-    tempController.modalPresentationStyle = UIModalPresentationFullScreen;
+    tempController.modalPresentationStyle = UIModalPresentationCustom;
     _animationType = animation;
     _currentCompletion = completion;
     [self.flowedController presentViewController:tempController animated:animated completion:^{}];
@@ -376,13 +376,21 @@
         [_modalController viewWillDisappear:YES];
         _modalController.transitioning = NO;
         
+        _flowedController.transitioning = YES;
+        [_flowedController viewWillAppear:YES];
+        _flowedController.transitioning = NO;
+        
         _modalController.transitioningDelegate = self;
         _modalController.modalPresentationStyle = UIModalPresentationCustom;
         _animationType = animation;
         _interactive = interactive;
         
         _currentCompletion = completion;
-        [self dismissViewControllerAnimated:YES completion:^{}];
+        [self dismissViewControllerAnimated:YES completion:^{
+            _flowedController.transitioning = YES;
+            [_flowedController viewDidAppear:YES];
+            _flowedController.transitioning = NO;
+        }];
     }
 }
 
