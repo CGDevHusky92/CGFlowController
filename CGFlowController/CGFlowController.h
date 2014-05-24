@@ -260,6 +260,5 @@ typedef void(^Completion)(BOOL finished);
 @interface UIViewController(CGFlowController) <CGFlowInteractiveDelegate>
 
 @property (nonatomic, weak) CGFlowController *flowController;
-@property (nonatomic, assign) BOOL transitioning;
 
 @end

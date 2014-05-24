@@ -178,8 +178,7 @@
         }
         case kCGFlowCategoryPanelPresent: {
             [fromView setFrame:flow.source.startPosition];
-            [flow.containerView addSubview:toView];
-            [flow.containerView bringSubviewToFront:fromView];
+            [flow.containerView insertSubview:toView belowSubview:fromView];
             [UIView animateWithDuration:flow.duration animations: ^{
                 [toView setFrame:flow.destination.endPosition];
                 [fromView setFrame:flow.source.endPosition];
