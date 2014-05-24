@@ -78,10 +78,10 @@ typedef void(^Completion)(BOOL finished);
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
 
 /* Modal Appearence calls? */
-- (void)flowModalViewWillAppear:(BOOL)animated;
-- (void)flowModalViewDidAppear:(BOOL)animated;
-- (void)flowModalViewWillDisappear:(BOOL)animated;
-- (void)flowModalViewDidDisappear:(BOOL)animated;
+//- (void)flowModalViewWillAppear:(BOOL)animated;
+//- (void)flowModalViewDidAppear:(BOOL)animated;
+//- (void)flowModalViewWillDisappear:(BOOL)animated;
+//- (void)flowModalViewDidDisappear:(BOOL)animated;
 
 /* Standard Dynamic Flow Interactively or Not */
 - (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
@@ -113,6 +113,42 @@ typedef void(^Completion)(BOOL finished);
 
 @end
 
+#pragma mark - CGPercentDrivenInteractiveTransition Interface
+
+@interface CGPercentDrivenInteractiveTransition : NSObject <UIViewControllerInteractiveTransitioning>
+
+@property (nonatomic, weak) id<UIViewControllerAnimatedTransitioning> animator;
+
+@property (readonly) CGFloat percentComplete;
+@property (readonly, nonatomic) CGFloat duration;
+@property (readonly, nonatomic) CGFloat completionSpeed;
+@property (readonly, nonatomic) BOOL isInteracting;
+
+@property (readonly, nonatomic) UIViewAnimationCurve animationCurve;
+@property (assign, nonatomic) UIViewAnimationCurve completionCurve;
+
+- (instancetype)initWithAnimator:(id<UIViewControllerAnimatedTransitioning>)animator;
+
+- (void)updateInteractiveTransition:(CGFloat)percentComplete;
+- (void)cancelInteractiveTransition;
+- (void)finishInteractiveTransition;
+
+@end
+
+#pragma mark - CGTransitioningContext Interface
+
+@interface CGTransitionContext : NSObject <UIViewControllerContextTransitioning>
+
+- (instancetype)initWithFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController;
+
+@property (nonatomic, copy) void (^completionBlock)(BOOL didComplete);
+@property (nonatomic, assign, getter=isAnimated) BOOL animated;
+@property (nonatomic, assign, getter=isInteractive) BOOL interactive;
+
+@end
+
+#pragma mark - CGFlowAnimation Interface
+
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, weak) CGFlowController *flowController;
@@ -123,7 +159,9 @@ typedef void(^Completion)(BOOL finished);
 
 @end
 
-@interface CGFlowInteractor : UIPercentDrivenInteractiveTransition
+#pragma mark - CGFlowAnimation Interface
+
+@interface CGFlowInteractor : CGPercentDrivenInteractiveTransition
 
 @property (nonatomic, weak) CGFlowController *flowController;
 

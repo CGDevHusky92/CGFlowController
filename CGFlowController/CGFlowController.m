@@ -17,6 +17,8 @@
 @property (nonatomic, weak) UIViewController *statusController;
 @property (nonatomic, weak) UIViewController *modalController;
 
+@property (nonatomic, strong) UIView *containerView;
+
 @property (nonatomic, strong) NSMutableDictionary *liveControllerDic;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
@@ -35,6 +37,27 @@
 
 @implementation CGFlowController
 
+- (void)loadView
+{
+    UIView *rootView = [[UIView alloc] init];
+	rootView.backgroundColor = [UIColor blackColor];
+	rootView.opaque = YES;
+	
+	self.containerView = [[UIView alloc] init];
+	self.containerView.backgroundColor = [UIColor blackColor];
+	self.containerView.opaque = YES;
+	
+	[self.containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+	[rootView addSubview:self.containerView];
+	
+	// Container view fills out entire root view.
+	[rootView addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:rootView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
+	[rootView addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:rootView attribute:NSLayoutAttributeHeight multiplier:1 constant:0]];
+	[rootView addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:rootView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
+	[rootView addConstraint:[NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:rootView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
+	self.view = rootView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,19 +75,21 @@
     self.interactor = [CGFlowInteractor new];
     [self.interactor setFlowController:self];
     
+    UIViewController *initController;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.flowedController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
+        initController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
     } else {
-        self.flowedController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
+        initController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
     }
     
-    if (_flowedController) {
-        [self addChildViewController:_flowedController];
-        _flowedController.view.frame = self.view.bounds;
-        [self.view addSubview:_flowedController.view];
-        [self.flowedController didMoveToParentViewController:self];
-        _flowedController.flowController = self;
-        _statusController = _flowedController;
+    if (initController) {
+        [self addChildViewController:initController];
+        initController.view.frame = self.view.bounds;
+        [self.view addSubview:initController.view];
+        [initController didMoveToParentViewController:self];
+        initController.flowController = self;
+        _statusController = initController;
+        _flowedController = initController;
         [self setNeedsStatusBarAppearanceUpdate];
     }
 }
@@ -123,88 +148,6 @@
     [super viewDidDisappear:animated];
 }
 
-- (void)flowModalViewWillAppear:(BOOL)animated
-{
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewWillAppear:animated];
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
-        }
-    }
-}
-
-- (void)flowModalViewDidAppear:(BOOL)animated
-{
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewDidAppear:animated];
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
-        }
-    }
-}
-
-- (void)flowModalViewWillDisappear:(BOOL)animated
-{
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewWillDisappear:animated];
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
-        }
-    }
-}
-
-- (void)flowModalViewDidDisappear:(BOOL)animated
-{
-    if (_modalController) {
-        if ([_modalController isKindOfClass:[UINavigationController class]]) {
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:YES];
-            [((UINavigationController *)self.modalController).topViewController viewDidDisappear:animated];
-            [((UINavigationController *)self.modalController).topViewController setTransitioning:NO];
-        }
-    }
-}
-
-#pragma mark - Flow To Base Controller Transitions
-
-- (void)viewWillAppearCall:(UIViewController *)controller animated:(BOOL)animated
-{
-    if ([controller isKindOfClass:[UINavigationController class]]) {
-        [((UINavigationController *)controller).topViewController viewWillAppear:animated];
-    } else {
-        [controller viewWillAppear:animated];
-    }
-}
-
-- (void)viewWillDisappearCall:(UIViewController *)controller animated:(BOOL)animated
-{
-    if ([controller isKindOfClass:[UINavigationController class]]) {
-        [((UINavigationController *)controller).topViewController viewWillDisappear:animated];
-    } else {
-        [controller viewWillDisappear:animated];
-    }
-}
-
-- (void)viewDidAppearCall:(UIViewController *)controller animated:(BOOL)animated
-{
-    if ([controller isKindOfClass:[UINavigationController class]]) {
-        [((UINavigationController *)controller).topViewController viewDidAppear:animated];
-    } else {
-        [controller viewDidAppear:animated];
-    }
-}
-
-- (void)viewDidDisappearCall:(UIViewController *)controller animated:(BOOL)animated
-{
-    if ([controller isKindOfClass:[UINavigationController class]]) {
-        [((UINavigationController *)controller).topViewController viewDidDisappear:animated];
-    } else {
-        [controller viewDidDisappear:animated];
-    }
-}
-
 - (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion
 {
     [self flowViewController:viewController withAnimation:animation andDuration:duration interactively:NO completion:completion];
@@ -218,7 +161,6 @@
 - (void)flowViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration interactively:(BOOL)interactive completion:(Completion)completion
 {
     if (animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
-    BOOL animated = !(animation == kCGFlowAnimationNone);
     
     _statusController = viewController;
     UIViewController *tempController = viewController;
@@ -229,23 +171,8 @@
     }
     
     if (interactive) {
-        tempController.transitioning = YES;
-        [tempController viewWillAppear:animated];
-        tempController.transitioning = NO;
-        
-        self.flowedController.transitioning = YES;
-        [self.flowedController viewWillDisappear:animated];
-        self.flowedController.transitioning = NO;
         self.interactive = YES;
     } else {
-        tempController.transitioning = YES;
-        [self viewWillAppearCall:tempController animated:animated];
-        tempController.transitioning = NO;
-        
-        self.flowedController.transitioning = YES;
-        [self viewWillDisappearCall:self.flowedController animated:animated];
-        self.flowedController.transitioning = NO;
-        
         _duration = duration;
         self.interactive = NO;
     }
@@ -254,68 +181,75 @@
     tempController.modalPresentationStyle = UIModalPresentationCustom;
     _animationType = animation;
     _currentCompletion = completion;
-    [self.flowedController presentViewController:tempController animated:animated completion:^{}];
-}
-
-- (void)startTransition:(UIViewController *)vc
-{
-    [self.flowedController willMoveToParentViewController:nil];
-}
-
-- (void)cancelTransition:(UIViewController *)vc
-{
-    _statusController = _flowedController;
-    [self prefersStatusBarHidden];
-    [self setNeedsStatusBarAppearanceUpdate];
     
-    self.interactive = NO;
-    [vc setTransitioningDelegate:nil];
-    [self.flowedController dismissViewControllerAnimated:NO completion:^{
-        [vc.view removeFromSuperview];
-        [vc removeFromParentViewController];
-        _currentCompletion(NO);
-    }];
+    [self startTransition:tempController];
+    
 }
 
-- (void)finishTransition:(UIViewController *)vc
+- (void)startTransition:(UIViewController *)toViewController
 {
-    vc.transitioning = YES;
-    [self viewDidAppearCall:vc animated:YES];
-    vc.transitioning = NO;
+	if (toViewController == _flowedController || ![self isViewLoaded]) return;
+	
+	UIView *toView = toViewController.view;
+	[toView setTranslatesAutoresizingMaskIntoConstraints:YES];
+	toView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	toView.frame = self.containerView.bounds;
+	
+	[_flowedController willMoveToParentViewController:nil];
+	[self addChildViewController:toViewController];
     
-    self.interactive = NO;
-    __weak __block UIViewController *tempVc;
-    if ([vc isKindOfClass:[UISplitHackController class]]) {
-        tempVc = ((UISplitHackController *)vc).splitController;
+    CGTransitionContext *context = [[CGTransitionContext alloc] initWithFromViewController:_flowedController toViewController:toViewController];
+    CGFlowAnimation *animator = [CGFlowAnimation new];
+    animator.animationType = _animationType;
+    animator.interactive = _interactive;
+    [animator setFlowController:self];
+    animator.duration = _duration;
+    
+    if (self.interactive) {
+        self.interactor.animator = animator;
+        [self.interactor startInteractiveTransition:context];
     } else {
-        tempVc = vc;
+        animator.duration = _duration;
+        if (_duration != 0.4) {
+            _duration = 0.4;
+        }
+        [animator animateTransition:context];
+    }
+}
+
+- (void)cancelTransition:(UIViewController *)toViewController
+{
+    self.interactive = NO;
+    _statusController = _flowedController;
+    [toViewController.view removeFromSuperview];
+    [toViewController setTransitioningDelegate:nil];
+    [toViewController removeFromParentViewController];
+    
+    [self.flowedController setNeedsStatusBarAppearanceUpdate];
+    [self.flowedController.view setBounds:self.view.bounds];
+    [self.flowedController.view setFrame:self.view.bounds];
+}
+
+- (void)finishTransition:(UIViewController *)toViewController
+{
+    self.interactive = NO;
+    UIViewController *tempVc;
+    if ([toViewController isKindOfClass:[UISplitHackController class]]) {
+        tempVc = ((UISplitHackController *)toViewController).splitController;
+    } else {
+        tempVc = toViewController;
     }
     
-    __weak __block CGFlowController *safeSelf = self;
-    [self.flowedController dismissViewControllerAnimated:NO completion:^{
-        [safeSelf addChildViewController:tempVc];
-        [safeSelf.view addSubview:tempVc.view];
-        
-        [safeSelf.flowedController setTransitioningDelegate:nil];
-        [safeSelf.flowedController.view removeFromSuperview];
-        
-        safeSelf.flowedController.transitioning = YES;
-        [safeSelf viewDidDisappearCall:safeSelf.flowedController animated:YES];
-        safeSelf.flowedController.transitioning = NO;
-        
-        [safeSelf.flowedController removeFromParentViewController];
-        safeSelf.flowedController = tempVc;
-        safeSelf.flowedController.flowController = safeSelf;
-        [safeSelf.flowedController didMoveToParentViewController:safeSelf];
-        
-        // Important to reset all the bounds and frame after completion
-        [UIView animateWithDuration:0.0 animations:^{
-            [safeSelf.view setBounds:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
-            [safeSelf.flowedController.view setBounds:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
-            [safeSelf.view setFrame:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
-            [safeSelf.flowedController.view setFrame:CGRectMake(0, 0, safeSelf.view.window.bounds.size.width, safeSelf.view.window.bounds.size.height)];
-        } completion:_currentCompletion];
-    }];
+    [_flowedController setTransitioningDelegate:nil];
+    [_flowedController.view removeFromSuperview];
+    [_flowedController removeFromParentViewController];
+    [tempVc didMoveToParentViewController:self];
+    
+    _flowedController = tempVc;
+    _flowedController.flowController = self;
+    [self.flowedController setNeedsStatusBarAppearanceUpdate];
+    [self.flowedController.view setBounds:self.view.bounds];
+    [self.flowedController.view setFrame:self.view.bounds];
 }
 
 #pragma mark - Flow To Panel and Modal Transitions
@@ -339,9 +273,6 @@
 - (void)flowGenericModel:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andScale:(CGPoint)scale interactively:(BOOL)interactive completion:(Completion)completion
 {
     if (animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
-    viewController.transitioning = YES;
-    [viewController viewWillAppear:YES];
-    viewController.transitioning = NO;
     
     viewController.transitioningDelegate = self;
     viewController.modalPresentationStyle = UIModalPresentationCustom;
@@ -372,14 +303,6 @@
 {
     if (animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
     if (self.modalController) {
-        _modalController.transitioning = YES;
-        [_modalController viewWillDisappear:YES];
-        _modalController.transitioning = NO;
-        
-        _flowedController.transitioning = YES;
-        [_flowedController viewWillAppear:YES];
-        _flowedController.transitioning = NO;
-        
         _modalController.transitioningDelegate = self;
         _modalController.modalPresentationStyle = UIModalPresentationCustom;
         _animationType = animation;
@@ -387,9 +310,7 @@
         
         _currentCompletion = completion;
         [self dismissViewControllerAnimated:YES completion:^{
-            _flowedController.transitioning = YES;
-            [_flowedController viewDidAppear:YES];
-            _flowedController.transitioning = NO;
+            
         }];
     }
 }
@@ -412,10 +333,6 @@
         [safeSelf.modalController setTransitioningDelegate:nil];
         [safeSelf.modalController.view removeFromSuperview];
         
-        safeSelf.modalController.transitioning = YES;
-        [safeSelf viewDidDisappearCall:safeSelf.modalController animated:YES];
-        safeSelf.modalController.transitioning = NO;
-        
         [safeSelf.modalController removeFromParentViewController];
         safeSelf.modalController = tempVc;
         safeSelf.modalController.flowController = safeSelf;
@@ -437,9 +354,6 @@
         self.interactive = NO;
         self.modalController = vc;
         self.modalController.flowController = self;
-        self.modalController.transitioning = YES;
-        [self.modalController viewDidAppear:YES];
-        self.modalController.transitioning = NO;
         [self.modalController didMoveToParentViewController:self];
         _currentCompletion(YES);
     } else {
@@ -570,13 +484,6 @@
     _flowedController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 }
 
-#pragma mark - Appearence Callback Forwarding ??? Doesn't seem to work
-
-- (BOOL)shouldAutomaticallyForwardAppearanceMethods
-{
-    return YES;
-}
-
 #pragma mark - UIStatusBar
 
 - (UIViewController *)childViewControllerForStatusBarHidden
@@ -586,47 +493,49 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    CGFlowAnimation *animator = [CGFlowAnimation new];
-    animator.animationType = _animationType;
-    animator.duration = _duration;
-    if (_duration != 0.4) {
-        _duration = 0.4;
-    }
-    animator.interactive = _interactive;
-    [animator setFlowController:self];
-    return animator;
-}
-
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    CGFlowAnimation *animator = [CGFlowAnimation new];
-    animator.animationType = _animationType;
-    animator.interactive = _interactive;
-    animator.duration = _duration;
-    if (_duration != 0.4) {
-        _duration = 0.4;
-    }
-    [animator setFlowController:self];
-    return animator;
-}
-
-- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
-{
-    if (_interactive) {
-        return self.interactor;
-    }
-    return nil;
-}
-
-- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
-{
-    if (_interactive) {
-        return self.interactor;
-    }
-    return nil;
-}
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+//{
+//    CGFlowAnimation *animator = [CGFlowAnimation new];
+//    animator.animationType = _animationType;
+//    animator.duration = _duration;
+//    if (_duration != 0.4) {
+//        _duration = 0.4;
+//    }
+//    animator.interactive = _interactive;
+//    [animator setFlowController:self];
+//    return animator;
+//}
+//
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+//{
+//    CGFlowAnimation *animator = [CGFlowAnimation new];
+//    animator.animationType = _animationType;
+//    animator.interactive = _interactive;
+//    animator.duration = _duration;
+//    if (_duration != 0.4) {
+//        _duration = 0.4;
+//    }
+//    [animator setFlowController:self];
+//    return animator;
+//}
+//
+//- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator
+//{
+//    if (_interactive) {
+//        self.interactor.animator = animator;
+//        return self.interactor;
+//    }
+//    return nil;
+//}
+//
+//- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
+//{
+//    if (_interactive) {
+//        self.interactor.animator = animator;
+//        return self.interactor;
+//    }
+//    return nil;
+//}
 
 #pragma mark - Memory Methods
 
@@ -636,6 +545,62 @@
 }
 
 @end
+
+#pragma mark - CGTransitionContext Implementation
+
+@interface CGTransitionContext ()
+
+@property (nonatomic, strong) NSDictionary *privateViewControllers;
+@property (nonatomic, weak) UIView *containerView;
+@property (nonatomic, assign) UIModalPresentationStyle presentationStyle;
+@property (nonatomic, assign) BOOL transitionWasCancelled;
+
+@end
+
+@implementation CGTransitionContext
+
+- (instancetype)initWithFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController
+{
+	NSAssert ([fromViewController isViewLoaded] && fromViewController.view.superview, @"The fromViewController view must reside in the container view upon initializing the transition context.");
+    self = [super init];
+	if (self) {
+		self.presentationStyle = UIModalPresentationCustom;
+		self.containerView = fromViewController.view.superview;
+        _transitionWasCancelled = NO;
+		self.privateViewControllers = @{ UITransitionContextFromViewControllerKey : fromViewController, UITransitionContextToViewControllerKey : toViewController };
+	}
+	return self;
+}
+
+- (CGRect)initialFrameForViewController:(UIViewController *)viewController
+{
+	return CGRectZero;
+}
+
+- (CGRect)finalFrameForViewController:(UIViewController *)viewController
+{
+	return CGRectZero;
+}
+
+- (UIViewController *)viewControllerForKey:(NSString *)key
+{
+	return self.privateViewControllers[key];
+}
+
+- (void)completeTransition:(BOOL)didComplete
+{
+	if (self.completionBlock) {
+		self.completionBlock (didComplete);
+	}
+}
+
+- (void)updateInteractiveTransition:(CGFloat)percentComplete {}
+- (void)finishInteractiveTransition { self.transitionWasCancelled = NO; }
+- (void)cancelInteractiveTransition { self.transitionWasCancelled = YES; }
+
+@end
+
+#pragma mark - CGFlowAnimation Implementation
 
 @interface CGFlowAnimation ()
 
@@ -675,40 +640,174 @@
     CGFlowAnimationCategory cat = [CGFlowAnimations animationCategoryForType:self.animationType];
     [CGFlowAnimations flowAnimationWithObject:animation withCompletion:^(BOOL finished) {
         if (finished) {
-            [transitionContext completeTransition:YES];
-            if ([transitionContext transitionWasCancelled]) {
-                
-//                NSLog(@"Cancelled");
-                if (cat == kCGFlowCategory2DAnimation || cat == kCGFlowCategory3DAnimation) {
-//
-//                    [transitionContext completeTransition:YES];
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+            if (cat == kCGFlowCategory2DAnimation || cat == kCGFlowCategory3DAnimation) {
+                if ([transitionContext transitionWasCancelled]) {
                     [self.flowController cancelTransition:destination.viewController];
-//                    
-                } else {
-                    
-//                    [transitionContext completeTransition:NO];
-//                    [self.flowController cancelTransition:destination.viewController];
-                    [self.flowController cancelPanelTransition:source.viewController];
-                    
-                }
-            
-            } else {
-                
-//                [transitionContext completeTransition:YES];
-                if (cat == kCGFlowCategoryModalPresent || cat == kCGFlowCategoryPanelPresent) {
-                    [self.flowController finishTransitionModal:destination.viewController appearing:YES];
-                } else if (cat == kCGFlowCategoryModalDismiss || cat == kCGFlowCategoryPanelDismiss) {
-                    [self.flowController finishTransitionModal:destination.viewController appearing:NO];
                 } else {
                     [self.flowController finishTransition:destination.viewController];
                 }
-                
             }
+//            [transitionContext completeTransition:YES];
+//            if ([transitionContext transitionWasCancelled]) {
+//
+////                NSLog(@"Cancelled");
+//                if (cat == kCGFlowCategory2DAnimation || cat == kCGFlowCategory3DAnimation) {
+//
+////                    [transitionContext completeTransition:YES];
+//                    [self.flowController cancelTransition:destination.viewController];
+//                    
+//                } else {
+//
+////                    [transitionContext completeTransition:NO];
+////                    [self.flowController cancelTransition:destination.viewController];
+//                    [self.flowController cancelPanelTransition:source.viewController];
+//
+//                }
+//
+//            } else {
+//
+////                [transitionContext completeTransition:YES];
+//                if (cat == kCGFlowCategoryModalPresent || cat == kCGFlowCategoryPanelPresent) {
+//                    [self.flowController finishTransitionModal:destination.viewController appearing:YES];
+//                } else if (cat == kCGFlowCategoryModalDismiss || cat == kCGFlowCategoryPanelDismiss) {
+//                    [self.flowController finishTransitionModal:destination.viewController appearing:NO];
+//                } else {
+//                    [self.flowController finishTransition:destination.viewController];
+//                }
+//                
+//            }
         }
     }];
 }
 
 @end
+
+#pragma mark - CGPercentDrivenInteractiveTransition Implementation
+
+@interface CGPercentDrivenInteractiveTransition ()
+
+@property (strong, nonatomic) CADisplayLink *displayLink;
+@property (weak, nonatomic) id<UIViewControllerContextTransitioning> transitionContext;
+@property (readwrite, nonatomic) BOOL isInteracting;
+
+@end
+
+@implementation CGPercentDrivenInteractiveTransition
+
+- (instancetype)initWithAnimator:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    self = [super init];
+    if (self) {
+        [self genericInit];
+        _animator = animator;
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self genericInit];
+    }
+    return self;
+}
+
+- (void)genericInit
+{
+    _completionSpeed = 1.0;
+}
+
+#pragma mark - Class and Getter Protocol
+
+- (void)updateInteractiveTransition:(CGFloat)percentComplete
+{
+    self.percentComplete = fmaxf(fminf(percentComplete, 1), 0);
+}
+
+- (void)cancelInteractiveTransition
+{
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(cancelAnimation)];
+    [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    [_transitionContext cancelInteractiveTransition];
+}
+
+- (void)finishInteractiveTransition
+{
+    CALayer *layer = [_transitionContext containerView].layer;
+    layer.speed = [self completionSpeed];
+    
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
+    
+    [_transitionContext finishInteractiveTransition];
+}
+
+- (CGFloat)duration
+{
+    return [_animator transitionDuration:_transitionContext];
+}
+
+- (void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    NSAssert(_animator, @"No animator set for percent driven protocol.");
+    _transitionContext = transitionContext;
+    [_transitionContext containerView].layer.speed = 0;
+    [_animator animateTransition:_transitionContext];
+}
+
+- (UIViewAnimationCurve)completionCurve
+{
+    return UIViewAnimationCurveLinear;
+}
+
+- (BOOL)isInteracting
+{
+    return _isInteracting;
+}
+
+#pragma mark - Internal
+
+- (void)setPercentComplete:(CGFloat)percentComplete
+{
+    _percentComplete = percentComplete;
+    [self setTimeOffset:percentComplete * [self duration]];
+    [_transitionContext updateInteractiveTransition:percentComplete];
+}
+
+- (void)setTimeOffset:(NSTimeInterval)timeOffset
+{
+    [_transitionContext containerView].layer.timeOffset = timeOffset;
+}
+
+- (void)cancelAnimation
+{
+    NSTimeInterval timeOffset = [self timeOffset] - [_displayLink duration];
+    if (timeOffset < 0)
+        [self finalizeCanceling];
+    else
+        [self setTimeOffset:timeOffset];
+}
+
+- (CFTimeInterval)timeOffset
+{
+    return [_transitionContext containerView].layer.timeOffset;
+}
+
+- (void)finalizeCanceling
+{
+    [_displayLink invalidate];
+    [_transitionContext containerView].layer.speed = 1;
+}
+
+@end
+
+#pragma mark - CGFlowInteractor Implementation
 
 @interface CGFlowInteractor() <UIGestureRecognizerDelegate>
 
@@ -763,10 +862,11 @@
             case UIGestureRecognizerStateCancelled:
                 _interactorType = kCGFlowInteractionNone;
                 if (percentage < 0.5) {
-                    self.completionSpeed = 0.5f;
+#warning test completion speed
+//                    self.completionSpeed = 0.5f;
                     [self cancelInteractiveTransition];
                 } else {
-                    self.completionSpeed = 1.0f;
+//                    self.completionSpeed = 1.0f;
                     [self finishInteractiveTransition];
                 }
             default:
@@ -794,10 +894,11 @@
             case UIGestureRecognizerStateCancelled:
                 _interactorType = kCGFlowInteractionNone;
                 if (percentage < 0.5) {
-                    self.completionSpeed = 0.5f;
+#warning test completion speed
+//                    self.completionSpeed = 0.5f;
                     [self cancelInteractiveTransition];
                 } else {
-                    self.completionSpeed = 1.0f;
+//                    self.completionSpeed = 1.0f;
                     [self finishInteractiveTransition];
                 }
             default:
