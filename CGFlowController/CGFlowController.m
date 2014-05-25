@@ -40,11 +40,11 @@
 - (void)loadView
 {
     UIView *rootView = [[UIView alloc] init];
-	rootView.backgroundColor = [UIColor blackColor];
+	rootView.backgroundColor = [UIColor clearColor];
 	rootView.opaque = YES;
 	
 	self.containerView = [[UIView alloc] init];
-	self.containerView.backgroundColor = [UIColor blackColor];
+	self.containerView.backgroundColor = [UIColor clearColor];
 	self.containerView.opaque = YES;
 	
 	[self.containerView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -916,12 +916,12 @@
 
 @end
 
-#pragma mark - UIViewController(CGFlowAnimation) Category
+#pragma mark - UIViewController (CGFlowController) Category
 
 static char flowKey;
 static char lowestLevelKey;
 
-@interface UIViewController()
+@interface UIViewController ()
 {
     CGFlowController *flowController;
     BOOL lowestLevel;
@@ -932,7 +932,7 @@ static char lowestLevelKey;
 
 @end
 
-@implementation UIViewController (CGFlowInteractor)
+@implementation UIViewController (CGFlowController)
 
 - (void)proceedToNextViewControllerWithTransition:(CGFlowInteractionType)type
 {
