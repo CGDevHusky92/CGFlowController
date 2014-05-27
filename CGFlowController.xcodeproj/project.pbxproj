@@ -6,188 +6,160 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		2E565193192162E000228CFD /* CGFlowControllerUniversal */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2E565194192162E000228CFD /* Build configuration list for PBXAggregateTarget "CGFlowControllerUniversal" */;
-			buildPhases = (
-				2E5651971921632000228CFD /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = CGFlowControllerUniversal;
-			productName = CGFlowController;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		2E7EDD9C192A708D007BCDF9 /* CGFlowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC760B918E6039900FCEBBC /* CGFlowController.h */; };
-		2EC7609318E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
-		2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A018E6021D00FCEBBC /* XCTest.framework */; };
-		2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7609218E6021D00FCEBBC /* Foundation.framework */; };
-		2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760A318E6021D00FCEBBC /* UIKit.framework */; };
-		2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */; };
-		2EC760AD18E6021D00FCEBBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */; };
-		2EC760AF18E6021D00FCEBBC /* CGFlowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */; };
-		2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */; };
-		2EC760BD18E6039900FCEBBC /* CGFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760BA18E6039900FCEBBC /* CGFlowController.m */; };
-		2EC760BE18E6039900FCEBBC /* CGFlowInteractions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */; };
-		2EC760C018E604EF00FCEBBC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */; };
+		2EDEFC7419354A5E00D71C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC7319354A5E00D71C5B /* Foundation.framework */; };
+		2EDEFC7919354A5E00D71C5B /* CGFlowController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EDEFC7819354A5E00D71C5B /* CGFlowController.h */; };
+		2EDEFC7B19354A5E00D71C5B /* CGFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC7A19354A5E00D71C5B /* CGFlowController.m */; };
+		2EDEFC8219354A5F00D71C5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC8119354A5F00D71C5B /* XCTest.framework */; };
+		2EDEFC8319354A5F00D71C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC7319354A5E00D71C5B /* Foundation.framework */; };
+		2EDEFC8519354A5F00D71C5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC8419354A5F00D71C5B /* UIKit.framework */; };
+		2EDEFC8819354A5F00D71C5B /* libCGFlowController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */; };
+		2EDEFC8E19354A5F00D71C5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8C19354A5F00D71C5B /* InfoPlist.strings */; };
+		2EDEFC9019354A5F00D71C5B /* CGFlowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */; };
+		2EDEFC9B19354ACA00D71C5B /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */; };
+		2EDEFC9C19354ACA00D71C5B /* CGFlowInteractions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2EC760A518E6021D00FCEBBC /* PBXContainerItemProxy */ = {
+		2EDEFC8619354A5F00D71C5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2EC7608718E6021D00FCEBBC /* Project object */;
+			containerPortal = 2EDEFC6819354A5E00D71C5B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2EC7608E18E6021D00FCEBBC;
+			remoteGlobalIDString = 2EDEFC6F19354A5E00D71C5B;
 			remoteInfo = CGFlowController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2EC7608D18E6021D00FCEBBC /* CopyFiles */ = {
+		2EDEFC6E19354A5E00D71C5B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				2EDEFC7919354A5E00D71C5B /* CGFlowController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC7609218E6021D00FCEBBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2EC7609618E6021D00FCEBBC /* CGFlowController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGFlowController-Prefix.pch"; sourceTree = "<group>"; };
-		2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGFlowControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EC760A018E6021D00FCEBBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2EC760A318E6021D00FCEBBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		2EC760AA18E6021D00FCEBBC /* CGFlowControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGFlowControllerTests-Info.plist"; sourceTree = "<group>"; };
-		2EC760AC18E6021D00FCEBBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowControllerTests.m; sourceTree = "<group>"; };
-		2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimations.m; sourceTree = "<group>"; };
-		2EC760B918E6039900FCEBBC /* CGFlowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFlowController.h; sourceTree = "<group>"; };
-		2EC760BA18E6039900FCEBBC /* CGFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowController.m; sourceTree = "<group>"; };
-		2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowInteractions.m; sourceTree = "<group>"; };
-		2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDEFC7319354A5E00D71C5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EDEFC7719354A5E00D71C5B /* CGFlowController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGFlowController-Prefix.pch"; sourceTree = "<group>"; };
+		2EDEFC7819354A5E00D71C5B /* CGFlowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGFlowController.h; sourceTree = "<group>"; };
+		2EDEFC7A19354A5E00D71C5B /* CGFlowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowController.m; sourceTree = "<group>"; };
+		2EDEFC8019354A5F00D71C5B /* CGFlowControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGFlowControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDEFC8119354A5F00D71C5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2EDEFC8419354A5F00D71C5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2EDEFC8B19354A5F00D71C5B /* CGFlowControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGFlowControllerTests-Info.plist"; sourceTree = "<group>"; };
+		2EDEFC8D19354A5F00D71C5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowControllerTests.m; sourceTree = "<group>"; };
+		2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimations.m; sourceTree = "<group>"; };
+		2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowInteractions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2EC7608C18E6021D00FCEBBC /* Frameworks */ = {
+		2EDEFC6D19354A5E00D71C5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760C018E604EF00FCEBBC /* QuartzCore.framework in Frameworks */,
-				2EC7609318E6021D00FCEBBC /* Foundation.framework in Frameworks */,
+				2EDEFC7419354A5E00D71C5B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EC7609C18E6021D00FCEBBC /* Frameworks */ = {
+		2EDEFC7D19354A5F00D71C5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760A118E6021D00FCEBBC /* XCTest.framework in Frameworks */,
-				2EC760A718E6021D00FCEBBC /* libCGFlowController.a in Frameworks */,
-				2EC760A418E6021D00FCEBBC /* UIKit.framework in Frameworks */,
-				2EC760A218E6021D00FCEBBC /* Foundation.framework in Frameworks */,
+				2EDEFC8219354A5F00D71C5B /* XCTest.framework in Frameworks */,
+				2EDEFC8819354A5F00D71C5B /* libCGFlowController.a in Frameworks */,
+				2EDEFC8519354A5F00D71C5B /* UIKit.framework in Frameworks */,
+				2EDEFC8319354A5F00D71C5B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2EC7608618E6021D00FCEBBC = {
+		2EDEFC6719354A5E00D71C5B = {
 			isa = PBXGroup;
 			children = (
-				2EC7609418E6021D00FCEBBC /* CGFlowController */,
-				2EC760A818E6021D00FCEBBC /* CGFlowControllerTests */,
-				2EC7609118E6021D00FCEBBC /* Frameworks */,
-				2EC7609018E6021D00FCEBBC /* Products */,
+				2EDEFC7519354A5E00D71C5B /* CGFlowController */,
+				2EDEFC8919354A5F00D71C5B /* CGFlowControllerTests */,
+				2EDEFC7219354A5E00D71C5B /* Frameworks */,
+				2EDEFC7119354A5E00D71C5B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2EC7609018E6021D00FCEBBC /* Products */ = {
+		2EDEFC7119354A5E00D71C5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */,
-				2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */,
+				2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */,
+				2EDEFC8019354A5F00D71C5B /* CGFlowControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2EC7609118E6021D00FCEBBC /* Frameworks */ = {
+		2EDEFC7219354A5E00D71C5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2EC760BF18E604EF00FCEBBC /* QuartzCore.framework */,
-				2EC7609218E6021D00FCEBBC /* Foundation.framework */,
-				2EC760A018E6021D00FCEBBC /* XCTest.framework */,
-				2EC760A318E6021D00FCEBBC /* UIKit.framework */,
+				2EDEFC7319354A5E00D71C5B /* Foundation.framework */,
+				2EDEFC8119354A5F00D71C5B /* XCTest.framework */,
+				2EDEFC8419354A5F00D71C5B /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2EC7609418E6021D00FCEBBC /* CGFlowController */ = {
+		2EDEFC7519354A5E00D71C5B /* CGFlowController */ = {
 			isa = PBXGroup;
 			children = (
-				2EC760B918E6039900FCEBBC /* CGFlowController.h */,
-				2EC760BA18E6039900FCEBBC /* CGFlowController.m */,
-				2EC760B818E6039900FCEBBC /* CGFlowAnimations.m */,
-				2EC760BB18E6039900FCEBBC /* CGFlowInteractions.m */,
-				2EC7609518E6021D00FCEBBC /* Supporting Files */,
+				2EDEFC7819354A5E00D71C5B /* CGFlowController.h */,
+				2EDEFC7A19354A5E00D71C5B /* CGFlowController.m */,
+				2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */,
+				2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */,
+				2EDEFC7619354A5E00D71C5B /* Supporting Files */,
 			);
 			path = CGFlowController;
 			sourceTree = "<group>";
 		};
-		2EC7609518E6021D00FCEBBC /* Supporting Files */ = {
+		2EDEFC7619354A5E00D71C5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2EC7609618E6021D00FCEBBC /* CGFlowController-Prefix.pch */,
+				2EDEFC7719354A5E00D71C5B /* CGFlowController-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2EC760A818E6021D00FCEBBC /* CGFlowControllerTests */ = {
+		2EDEFC8919354A5F00D71C5B /* CGFlowControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2EC760AE18E6021D00FCEBBC /* CGFlowControllerTests.m */,
-				2EC760A918E6021D00FCEBBC /* Supporting Files */,
+				2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */,
+				2EDEFC8A19354A5F00D71C5B /* Supporting Files */,
 			);
 			path = CGFlowControllerTests;
 			sourceTree = "<group>";
 		};
-		2EC760A918E6021D00FCEBBC /* Supporting Files */ = {
+		2EDEFC8A19354A5F00D71C5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2EC760AA18E6021D00FCEBBC /* CGFlowControllerTests-Info.plist */,
-				2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */,
+				2EDEFC8B19354A5F00D71C5B /* CGFlowControllerTests-Info.plist */,
+				2EDEFC8C19354A5F00D71C5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		2E45783318E60AA800AE0E96 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E7EDD9C192A708D007BCDF9 /* CGFlowController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		2EC7608E18E6021D00FCEBBC /* CGFlowController */ = {
+		2EDEFC6F19354A5E00D71C5B /* CGFlowController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */;
+			buildConfigurationList = 2EDEFC9319354A5F00D71C5B /* Build configuration list for PBXNativeTarget "CGFlowController" */;
 			buildPhases = (
-				2EC7608B18E6021D00FCEBBC /* Sources */,
-				2EC7608C18E6021D00FCEBBC /* Frameworks */,
-				2EC7608D18E6021D00FCEBBC /* CopyFiles */,
-				2E45783318E60AA800AE0E96 /* Headers */,
+				2EDEFC6C19354A5E00D71C5B /* Sources */,
+				2EDEFC6D19354A5E00D71C5B /* Frameworks */,
+				2EDEFC6E19354A5E00D71C5B /* CopyFiles */,
+				2EDEFC9D19354AD600D71C5B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -195,68 +167,67 @@
 			);
 			name = CGFlowController;
 			productName = CGFlowController;
-			productReference = 2EC7608F18E6021D00FCEBBC /* libCGFlowController.a */;
+			productReference = 2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */ = {
+		2EDEFC7F19354A5F00D71C5B /* CGFlowControllerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EC760B518E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */;
+			buildConfigurationList = 2EDEFC9619354A5F00D71C5B /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */;
 			buildPhases = (
-				2EC7609B18E6021D00FCEBBC /* Sources */,
-				2EC7609C18E6021D00FCEBBC /* Frameworks */,
-				2EC7609D18E6021D00FCEBBC /* Resources */,
+				2EDEFC7C19354A5F00D71C5B /* Sources */,
+				2EDEFC7D19354A5F00D71C5B /* Frameworks */,
+				2EDEFC7E19354A5F00D71C5B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2EC760A618E6021D00FCEBBC /* PBXTargetDependency */,
+				2EDEFC8719354A5F00D71C5B /* PBXTargetDependency */,
 			);
 			name = CGFlowControllerTests;
 			productName = CGFlowControllerTests;
-			productReference = 2EC7609F18E6021D00FCEBBC /* CGFlowControllerTests.xctest */;
+			productReference = 2EDEFC8019354A5F00D71C5B /* CGFlowControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2EC7608718E6021D00FCEBBC /* Project object */ = {
+		2EDEFC6819354A5E00D71C5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Revision Works, LLC";
 			};
-			buildConfigurationList = 2EC7608A18E6021D00FCEBBC /* Build configuration list for PBXProject "CGFlowController" */;
+			buildConfigurationList = 2EDEFC6B19354A5E00D71C5B /* Build configuration list for PBXProject "CGFlowController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2EC7608618E6021D00FCEBBC;
-			productRefGroup = 2EC7609018E6021D00FCEBBC /* Products */;
+			mainGroup = 2EDEFC6719354A5E00D71C5B;
+			productRefGroup = 2EDEFC7119354A5E00D71C5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EC7608E18E6021D00FCEBBC /* CGFlowController */,
-				2EC7609E18E6021D00FCEBBC /* CGFlowControllerTests */,
-				2E565193192162E000228CFD /* CGFlowControllerUniversal */,
+				2EDEFC6F19354A5E00D71C5B /* CGFlowController */,
+				2EDEFC7F19354A5F00D71C5B /* CGFlowControllerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2EC7609D18E6021D00FCEBBC /* Resources */ = {
+		2EDEFC7E19354A5F00D71C5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760AD18E6021D00FCEBBC /* InfoPlist.strings in Resources */,
+				2EDEFC8E19354A5F00D71C5B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E5651971921632000228CFD /* ShellScript */ = {
+		2EDEFC9D19354AD600D71C5B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,44 +238,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "LIB_TARGET_NAME=\"CGFlowController\"\n\nif [ \"${ACTION}\" = \"clean\" ]\nthen\necho \"Cleaning Libraries...\"\ncd \"${PROJECT_DIR}\"\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphoneos clean\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphonesimulator clean\nfi\n\nif [ \"${ACTION}\" = \"build\" ]\nthen\necho \"Building Libraries\"\ncd \"${PROJECT_DIR}\"\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphoneos\nxcodebuild -target \"$LIB_TARGET_NAME\" -configuration ${CONFIGURATION} -sdk iphonesimulator\n\n# Check that this is what your static libraries are called\nARM_FILES=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneos/lib${LIB_TARGET_NAME}.a\"\nI386_FILES=\"${PROJECT_DIR}/build/${CONFIGURATION}-iphonesimulator/lib${LIB_TARGET_NAME}.a\"\n\nmkdir -p \"${PROJECT_DIR}/build/Universal\"\n\necho \"Creating library...\"\nlipo -create \"$ARM_FILES\" \"$I386_FILES\" -o \"${PROJECT_DIR}/build/${CONFIGURATION}-iphoneos/lib${PRODUCT_NAME}.a\"\nfi";
+			shellScript = "# Version 2.0 (updated for Xcode 4, with some fixes)\n# Changes:\n#    - Works with xcode 4, even when running xcode 3 projects (Workarounds for apple bugs)\n#    - Faster / better: only runs lipo once, instead of once per recursion\n#    - Added some debugging statemetns that can be switched on/off by changing the DEBUG_THIS_SCRIPT variable to \"true\"\n#    - Fixed some typos\n#\n# Purpose:\n#   Create a static library for iPhone from within XCode\n#   Because Apple staff DELIBERATELY broke Xcode to make this impossible from the GUI (Xcode 3.2.3 specifically states this in the Release notes!)\n#   ...no, I don't understand why they did this!\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n# More info: see this Stack Overflow question: http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\n# Next decide on workspace build\n# This overwrites the binary in the device folder so that it is automatically found by the compiler\nWORKSPACE=\"true\"\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\"\nxcodebuild -configuration \"${CONFIGURATION}\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\n# * needs to be outside the double quotes?\ncp \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include/\"* \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\nfi\n\nif [ \"true\" == ${WORKSPACE} ]\nthen\necho \"Copying to device folder for workspace projects\"CURRENTCONFIG_DEVICE_DIR\nrm -rf \"${CURRENTCONFIG_DEVICE_DIR}\"\nmkdir \"${CURRENTCONFIG_DEVICE_DIR}\"\ncp \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/\"\nfi\nfi";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EC7608B18E6021D00FCEBBC /* Sources */ = {
+		2EDEFC6C19354A5E00D71C5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760BD18E6039900FCEBBC /* CGFlowController.m in Sources */,
-				2EC760BC18E6039900FCEBBC /* CGFlowAnimations.m in Sources */,
-				2EC760BE18E6039900FCEBBC /* CGFlowInteractions.m in Sources */,
+				2EDEFC9B19354ACA00D71C5B /* CGFlowAnimations.m in Sources */,
+				2EDEFC7B19354A5E00D71C5B /* CGFlowController.m in Sources */,
+				2EDEFC9C19354ACA00D71C5B /* CGFlowInteractions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2EC7609B18E6021D00FCEBBC /* Sources */ = {
+		2EDEFC7C19354A5F00D71C5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC760AF18E6021D00FCEBBC /* CGFlowControllerTests.m in Sources */,
+				2EDEFC9019354A5F00D71C5B /* CGFlowControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2EC760A618E6021D00FCEBBC /* PBXTargetDependency */ = {
+		2EDEFC8719354A5F00D71C5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2EC7608E18E6021D00FCEBBC /* CGFlowController */;
-			targetProxy = 2EC760A518E6021D00FCEBBC /* PBXContainerItemProxy */;
+			target = 2EDEFC6F19354A5E00D71C5B /* CGFlowController */;
+			targetProxy = 2EDEFC8619354A5F00D71C5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2EC760AB18E6021D00FCEBBC /* InfoPlist.strings */ = {
+		2EDEFC8C19354A5F00D71C5B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2EC760AC18E6021D00FCEBBC /* en */,
+				2EDEFC8D19354A5F00D71C5B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -312,21 +284,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2E565195192162E000228CFD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = CGFlowController;
-			};
-			name = Debug;
-		};
-		2E565196192162E000228CFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = CGFlowController;
-			};
-			name = Release;
-		};
-		2EC760B018E6021D00FCEBBC /* Debug */ = {
+		2EDEFC9119354A5F00D71C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,13 +316,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		2EC760B118E6021D00FCEBBC /* Release */ = {
+		2EDEFC9219354A5F00D71C5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -390,44 +347,37 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		2EC760B318E6021D00FCEBBC /* Debug */ = {
+		2EDEFC9419354A5F00D71C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/CGFlowController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Debug;
 		};
-		2EC760B418E6021D00FCEBBC /* Release */ = {
+		2EDEFC9519354A5F00D71C5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/CGFlowController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CGFlowController/CGFlowController-Prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Release;
 		};
-		2EC760B618E6021D00FCEBBC /* Debug */ = {
+		2EDEFC9719354A5F00D71C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -447,7 +397,7 @@
 			};
 			name = Debug;
 		};
-		2EC760B718E6021D00FCEBBC /* Release */ = {
+		2EDEFC9819354A5F00D71C5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -466,43 +416,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E565194192162E000228CFD /* Build configuration list for PBXAggregateTarget "CGFlowControllerUniversal" */ = {
+		2EDEFC6B19354A5E00D71C5B /* Build configuration list for PBXProject "CGFlowController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E565195192162E000228CFD /* Debug */,
-				2E565196192162E000228CFD /* Release */,
+				2EDEFC9119354A5F00D71C5B /* Debug */,
+				2EDEFC9219354A5F00D71C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EC7608A18E6021D00FCEBBC /* Build configuration list for PBXProject "CGFlowController" */ = {
+		2EDEFC9319354A5F00D71C5B /* Build configuration list for PBXNativeTarget "CGFlowController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EC760B018E6021D00FCEBBC /* Debug */,
-				2EC760B118E6021D00FCEBBC /* Release */,
+				2EDEFC9419354A5F00D71C5B /* Debug */,
+				2EDEFC9519354A5F00D71C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		2EC760B218E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowController" */ = {
+		2EDEFC9619354A5F00D71C5B /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2EC760B318E6021D00FCEBBC /* Debug */,
-				2EC760B418E6021D00FCEBBC /* Release */,
+				2EDEFC9719354A5F00D71C5B /* Debug */,
+				2EDEFC9819354A5F00D71C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2EC760B518E6021D00FCEBBC /* Build configuration list for PBXNativeTarget "CGFlowControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2EC760B618E6021D00FCEBBC /* Debug */,
-				2EC760B718E6021D00FCEBBC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2EC7608718E6021D00FCEBBC /* Project object */;
+	rootObject = 2EDEFC6819354A5E00D71C5B /* Project object */;
 }
