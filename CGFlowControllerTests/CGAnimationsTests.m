@@ -1,18 +1,18 @@
 //
-//  CGFlowControllerTests.m
-//  CGFlowControllerTests
+//  CGAnimationsTests.m
+//  CGFlowController
 //
-//  Created by Chase Gorectke on 5/27/14.
+//  Created by Chase Gorectke on 5/28/14.
 //  Copyright (c) 2014 Revision Works, LLC. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface CGFlowControllerTests : XCTestCase
+@interface CGAnimationsTests : XCTestCase
 
 @end
 
-@implementation CGFlowControllerTests
+@implementation CGAnimationsTests
 
 - (void)setUp
 {

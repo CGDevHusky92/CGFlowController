@@ -7,9 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define kCGFlowModalPresent     (kCGFlowModalPresentSlideUp || kCGFlowModalPresentSlideDown || kCGFlowModalPresentSlideLeft || kCGFlowModalPresentSlideRight)
-#define kCGFlowModalDismiss     (kCGFlowModalDismissDisappearCenter || kCGFlowModalDismissDisappearPoint)
-
 typedef enum {
     kCGFlowInteractionSwipeUp,
     kCGFlowInteractionSwipeDown,
@@ -77,12 +74,6 @@ typedef void(^Completion)(BOOL finished);
 @interface CGFlowController : UIViewController <UIViewControllerTransitioningDelegate>
 @property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
 
-/* Modal Appearence calls? */
-//- (void)flowModalViewWillAppear:(BOOL)animated;
-//- (void)flowModalViewDidAppear:(BOOL)animated;
-//- (void)flowModalViewWillDisappear:(BOOL)animated;
-//- (void)flowModalViewDidDisappear:(BOOL)animated;
-
 /* Standard Dynamic Flow Interactively or Not */
 - (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
 - (void)flowInteractivelyToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation completion:(Completion)completion;
@@ -113,6 +104,18 @@ typedef void(^Completion)(BOOL finished);
 
 @end
 
+#pragma mark - CGTransitioningContext Interface
+
+@interface CGTransitionContext : NSObject <UIViewControllerContextTransitioning>
+
+- (instancetype)initWithFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController;
+
+@property (nonatomic, copy) void (^completionBlock)(BOOL didComplete);
+@property (nonatomic, assign, getter=isAnimated) BOOL animated;
+@property (nonatomic, assign, getter=isInteractive) BOOL interactive;
+
+@end
+
 #pragma mark - CGPercentDrivenInteractiveTransition Interface
 
 @interface CGPercentDrivenInteractiveTransition : NSObject <UIViewControllerInteractiveTransitioning>
@@ -132,18 +135,6 @@ typedef void(^Completion)(BOOL finished);
 - (void)updateInteractiveTransition:(CGFloat)percentComplete;
 - (void)cancelInteractiveTransition;
 - (void)finishInteractiveTransition;
-
-@end
-
-#pragma mark - CGTransitioningContext Interface
-
-@interface CGTransitionContext : NSObject <UIViewControllerContextTransitioning>
-
-- (instancetype)initWithFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController;
-
-@property (nonatomic, copy) void (^completionBlock)(BOOL didComplete);
-@property (nonatomic, assign, getter=isAnimated) BOOL animated;
-@property (nonatomic, assign, getter=isInteractive) BOOL interactive;
 
 @end
 

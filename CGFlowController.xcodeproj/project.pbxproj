@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E03C66819369615005DC84A /* CGPercentTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C66719369615005DC84A /* CGPercentTransitionTests.m */; };
+		2E03C66A1936962A005DC84A /* CGTransitionContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C6691936962A005DC84A /* CGTransitionContextTests.m */; };
+		2E03C66C1936964C005DC84A /* CGAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C66B1936964C005DC84A /* CGAnimationTests.m */; };
+		2E03C66E19369657005DC84A /* CGInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C66D19369657005DC84A /* CGInteractorTests.m */; };
+		2E03C67019369661005DC84A /* CGAnimationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C66F19369661005DC84A /* CGAnimationsTests.m */; };
+		2E03C6721936966B005DC84A /* CGInteractionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C6711936966B005DC84A /* CGInteractionsTests.m */; };
+		2E03C67419369676005DC84A /* CGFlowObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C67319369676005DC84A /* CGFlowObjectTests.m */; };
+		2E03C6761936967F005DC84A /* CGFlowViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03C6751936967F005DC84A /* CGFlowViewTests.m */; };
 		2EDEFC7419354A5E00D71C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC7319354A5E00D71C5B /* Foundation.framework */; };
 		2EDEFC7919354A5E00D71C5B /* CGFlowController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EDEFC7819354A5E00D71C5B /* CGFlowController.h */; };
 		2EDEFC7B19354A5E00D71C5B /* CGFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC7A19354A5E00D71C5B /* CGFlowController.m */; };
@@ -15,7 +23,7 @@
 		2EDEFC8519354A5F00D71C5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC8419354A5F00D71C5B /* UIKit.framework */; };
 		2EDEFC8819354A5F00D71C5B /* libCGFlowController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */; };
 		2EDEFC8E19354A5F00D71C5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8C19354A5F00D71C5B /* InfoPlist.strings */; };
-		2EDEFC9019354A5F00D71C5B /* CGFlowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */; };
+		2EDEFC9019354A5F00D71C5B /* CGFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8F19354A5F00D71C5B /* CGFlowTests.m */; };
 		2EDEFC9B19354ACA00D71C5B /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */; };
 		2EDEFC9C19354ACA00D71C5B /* CGFlowInteractions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */; };
 /* End PBXBuildFile section */
@@ -44,6 +52,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E03C66719369615005DC84A /* CGPercentTransitionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPercentTransitionTests.m; sourceTree = "<group>"; };
+		2E03C6691936962A005DC84A /* CGTransitionContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGTransitionContextTests.m; sourceTree = "<group>"; };
+		2E03C66B1936964C005DC84A /* CGAnimationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGAnimationTests.m; sourceTree = "<group>"; };
+		2E03C66D19369657005DC84A /* CGInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGInteractorTests.m; sourceTree = "<group>"; };
+		2E03C66F19369661005DC84A /* CGAnimationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGAnimationsTests.m; sourceTree = "<group>"; };
+		2E03C6711936966B005DC84A /* CGInteractionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGInteractionsTests.m; sourceTree = "<group>"; };
+		2E03C67319369676005DC84A /* CGFlowObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowObjectTests.m; sourceTree = "<group>"; };
+		2E03C6751936967F005DC84A /* CGFlowViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowViewTests.m; sourceTree = "<group>"; };
 		2EDEFC7019354A5E00D71C5B /* libCGFlowController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCGFlowController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEFC7319354A5E00D71C5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2EDEFC7719354A5E00D71C5B /* CGFlowController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGFlowController-Prefix.pch"; sourceTree = "<group>"; };
@@ -54,7 +70,7 @@
 		2EDEFC8419354A5F00D71C5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2EDEFC8B19354A5F00D71C5B /* CGFlowControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGFlowControllerTests-Info.plist"; sourceTree = "<group>"; };
 		2EDEFC8D19354A5F00D71C5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowControllerTests.m; sourceTree = "<group>"; };
+		2EDEFC8F19354A5F00D71C5B /* CGFlowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowTests.m; sourceTree = "<group>"; };
 		2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimations.m; sourceTree = "<group>"; };
 		2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowInteractions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +150,15 @@
 		2EDEFC8919354A5F00D71C5B /* CGFlowControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2EDEFC8F19354A5F00D71C5B /* CGFlowControllerTests.m */,
+				2EDEFC8F19354A5F00D71C5B /* CGFlowTests.m */,
+				2E03C6691936962A005DC84A /* CGTransitionContextTests.m */,
+				2E03C66719369615005DC84A /* CGPercentTransitionTests.m */,
+				2E03C66B1936964C005DC84A /* CGAnimationTests.m */,
+				2E03C66D19369657005DC84A /* CGInteractorTests.m */,
+				2E03C66F19369661005DC84A /* CGAnimationsTests.m */,
+				2E03C6711936966B005DC84A /* CGInteractionsTests.m */,
+				2E03C67319369676005DC84A /* CGFlowObjectTests.m */,
+				2E03C6751936967F005DC84A /* CGFlowViewTests.m */,
 				2EDEFC8A19354A5F00D71C5B /* Supporting Files */,
 			);
 			path = CGFlowControllerTests;
@@ -258,7 +282,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EDEFC9019354A5F00D71C5B /* CGFlowControllerTests.m in Sources */,
+				2E03C66819369615005DC84A /* CGPercentTransitionTests.m in Sources */,
+				2EDEFC9019354A5F00D71C5B /* CGFlowTests.m in Sources */,
+				2E03C67419369676005DC84A /* CGFlowObjectTests.m in Sources */,
+				2E03C67019369661005DC84A /* CGAnimationsTests.m in Sources */,
+				2E03C66E19369657005DC84A /* CGInteractorTests.m in Sources */,
+				2E03C6761936967F005DC84A /* CGFlowViewTests.m in Sources */,
+				2E03C66C1936964C005DC84A /* CGAnimationTests.m in Sources */,
+				2E03C66A1936962A005DC84A /* CGTransitionContextTests.m in Sources */,
+				2E03C6721936966B005DC84A /* CGInteractionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

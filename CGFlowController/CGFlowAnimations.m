@@ -360,9 +360,9 @@
 
 + (CGFlowAnimationType)correctForOrientation:(UIInterfaceOrientation)orientation withAnimation:(CGFlowAnimationType)animation
 {
-    if (animation == kCGFlowModalPresent || animation == kCGFlowModalDismiss) {
+//    if (animation == kCGFlowModalPresent || animation == kCGFlowModalDismiss) {
         return animation;
-    }
+//    }
     
     if (UIInterfaceOrientationPortrait == orientation) {
         return animation;
