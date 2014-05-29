@@ -72,7 +72,9 @@ typedef void(^Completion)(BOOL finished);
 @end
 
 @interface CGFlowController : UIViewController <UIViewControllerTransitioningDelegate>
-@property (nonatomic, weak) UIViewController<CGFlowInteractiveDelegate> *flowedController;
+
+@property (weak, nonatomic) UIViewController<CGFlowInteractiveDelegate> *flowedController;
+@property (assign) CGPoint modalScale;
 
 /* Standard Dynamic Flow Interactively or Not */
 - (void)flowToViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration completion:(Completion)completion;
@@ -100,8 +102,6 @@ typedef void(^Completion)(BOOL finished);
 - (void)flowRemoveLiveMemoryForIdentifier:(NSString *)identifier;
 - (void)flowClearLiveMemoryControllers;
 
-@property (assign) CGPoint modalScale;
-
 @end
 
 #pragma mark - CGTransitioningContext Interface
@@ -110,9 +110,9 @@ typedef void(^Completion)(BOOL finished);
 
 - (instancetype)initWithFromViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController;
 
-@property (nonatomic, copy) void (^completionBlock)(BOOL didComplete);
-@property (nonatomic, assign, getter=isAnimated) BOOL animated;
-@property (nonatomic, assign, getter=isInteractive) BOOL interactive;
+@property (copy, nonatomic) void (^completionBlock)(BOOL didComplete);
+@property (assign, nonatomic, getter=isAnimated) BOOL animated;
+@property (assign, nonatomic, getter=isInteractive) BOOL interactive;
 
 @end
 
@@ -120,7 +120,7 @@ typedef void(^Completion)(BOOL finished);
 
 @interface CGPercentDrivenInteractiveTransition : NSObject <UIViewControllerInteractiveTransitioning>
 
-@property (nonatomic, weak) id<UIViewControllerAnimatedTransitioning> animator;
+@property (weak, nonatomic) id<UIViewControllerAnimatedTransitioning> animator;
 
 @property (readonly) CGFloat percentComplete;
 @property (readonly, nonatomic) CGFloat duration;
@@ -142,10 +142,10 @@ typedef void(^Completion)(BOOL finished);
 
 @interface CGFlowAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (nonatomic, weak) CGFlowController *flowController;
-@property (nonatomic, weak) UIViewController *presentedController;
-@property (nonatomic, assign) CGFlowAnimationType animationType;
-@property (nonatomic, assign) BOOL interactive;
+@property (weak, nonatomic) CGFlowController *flowController;
+@property (weak, nonatomic) UIViewController *presentedController;
+@property (assign, nonatomic) CGFlowAnimationType animationType;
+@property (assign, nonatomic) BOOL interactive;
 @property (assign) CGFloat duration;
 
 @end
@@ -154,7 +154,7 @@ typedef void(^Completion)(BOOL finished);
 
 @interface CGFlowInteractor : CGPercentDrivenInteractiveTransition
 
-@property (nonatomic, weak) CGFlowController *flowController;
+@property (weak, nonatomic) CGFlowController *flowController;
 
 @end
 
@@ -242,7 +242,7 @@ typedef void(^Completion)(BOOL finished);
 
 @interface UISplitHackController : UIViewController
 
-@property (nonatomic, strong) UISplitViewController *splitController;
+@property (strong, nonatomic) UISplitViewController *splitController;
 
 @end
 
@@ -250,6 +250,6 @@ typedef void(^Completion)(BOOL finished);
 
 @interface UIViewController(CGFlowController) <CGFlowInteractiveDelegate>
 
-@property (nonatomic, weak) CGFlowController *flowController;
+@property (weak, nonatomic) CGFlowController *flowController;
 
 @end
