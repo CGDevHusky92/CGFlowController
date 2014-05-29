@@ -75,13 +75,7 @@
     self.interactor = [CGFlowInteractor new];
     [self.interactor setFlowController:self];
     
-    UIViewController *initController;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        initController = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
-    } else {
-        initController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
-    }
-    
+    UIViewController *initController = [self.storyboard instantiateViewControllerWithIdentifier:@"CGFlowInitialScene"];
     if (initController) {
         [self addChildViewController:initController];
         initController.view.frame = self.view.bounds;
