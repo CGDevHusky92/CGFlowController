@@ -295,6 +295,7 @@
         [_modalController.view removeFromSuperview];
         [_modalController removeFromParentViewController];
         [_flowedController viewDidAppear:YES];
+        [_flowedController.view setUserInteractionEnabled:YES];
     }
     _currentCompletion(YES);
 }
