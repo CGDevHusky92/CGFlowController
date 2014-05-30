@@ -3,11 +3,11 @@
  *  CGFlowController
  *
  *  Created by Charles Gorectke on 11/25/13.
- *  Copyright (c) 2014 Charles Gorectke. All rights reserved.
+ *  Copyright (c) 2014 Revision Works, LLC. All rights reserved.
  *
  *  The MIT License (MIT)
  *
- *  Copyright (c) 2014 Charles Gorectke
+ *  Copyright (c) 2014 Revision Works, LLC
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
