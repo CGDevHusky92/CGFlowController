@@ -34,8 +34,8 @@
 
 #import <UIKit/UIKit.h>
 
-NSString *const kCGFlowAnimationStartedNotification = @"kCGFlowAnimationStartedNotification";
-NSString *const kCGFlowAnimationStoppedNotification = @"kCGFlowAnimationStoppedNotification";
+extern NSString *const kCGFlowAnimationStartedNotification;
+extern NSString *const kCGFlowAnimationStoppedNotification;
 
 typedef enum {
     kCGFlowInteractionSwipeUp,

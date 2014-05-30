@@ -34,8 +34,8 @@
 #import "CGFlowController.h"
 #import "objc/runtime.h"
 
-#define willDidMove
-#define appearanceTransition
+NSString *const kCGFlowAnimationStartedNotification = @"kCGFlowAnimationStartedNotification";
+NSString *const kCGFlowAnimationStoppedNotification = @"kCGFlowAnimationStoppedNotification";
 
 @interface CGFlowController ()
 
