@@ -26,6 +26,7 @@
 		2EDEFC9019354A5F00D71C5B /* CGFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC8F19354A5F00D71C5B /* CGFlowTests.m */; };
 		2EDEFC9B19354ACA00D71C5B /* CGFlowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */; };
 		2EDEFC9C19354ACA00D71C5B /* CGFlowInteractions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */; };
+		2EF88AF31938E697005E66F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF88AF21938E697005E66F8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		2EDEFC8F19354A5F00D71C5B /* CGFlowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGFlowTests.m; sourceTree = "<group>"; };
 		2EDEFC9919354ACA00D71C5B /* CGFlowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowAnimations.m; sourceTree = "<group>"; };
 		2EDEFC9A19354ACA00D71C5B /* CGFlowInteractions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFlowInteractions.m; sourceTree = "<group>"; };
+		2EF88AF21938E697005E66F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF88AF31938E697005E66F8 /* QuartzCore.framework in Frameworks */,
 				2EDEFC7419354A5E00D71C5B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +123,7 @@
 		2EDEFC7219354A5E00D71C5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EF88AF21938E697005E66F8 /* QuartzCore.framework */,
 				2EDEFC7319354A5E00D71C5B /* Foundation.framework */,
 				2EDEFC8119354A5F00D71C5B /* XCTest.framework */,
 				2EDEFC8419354A5F00D71C5B /* UIKit.framework */,
