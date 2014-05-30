@@ -128,6 +128,7 @@
 - (void)flowViewController:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andDuration:(CGFloat)duration interactively:(BOOL)interactive completion:(Completion)completion
 {
     if (animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStartedNotification object:nil];
     
     _statusController = viewController;
     UIViewController *tempController = viewController;
@@ -173,6 +174,7 @@
 - (void)flowGenericModel:(UIViewController *)viewController withAnimation:(CGFlowAnimationType)animation andScale:(CGPoint)scale interactively:(BOOL)interactive completion:(Completion)completion
 {
     if (animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStartedNotification object:nil];
     
     UIViewController *tempController = viewController;
     if ([viewController isKindOfClass:[UISplitViewController class]]) {
@@ -211,6 +213,7 @@
 - (void)flowGenericModelDismiss:(CGFlowAnimationType)animation interactively:(BOOL)interactive andCompletion:(Completion)completion
 {
     if (!_modalController || animation < kCGFlowAnimationSlideUp || animation >= kCGFlowAnimationNone) return;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStartedNotification object:nil];
     
     UIViewController *tempController = _modalController;
     if ([_modalController isKindOfClass:[UISplitViewController class]]) {
@@ -247,7 +250,7 @@
 - (void)genericStartTransition:(UIViewController *)toViewController withModalDismissing:(BOOL)dismiss
 {
     if (toViewController == _flowedController || ![self isViewLoaded]) return;
-	
+    
     if (!dismiss) {
         UIView *toView = toViewController.view;
         [toView setTranslatesAutoresizingMaskIntoConstraints:YES];
@@ -300,6 +303,7 @@
     [self.flowedController.view setBounds:self.view.bounds];
     [self.flowedController.view setFrame:self.view.bounds];
     _currentCompletion(YES);
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStoppedNotification object:nil];
 }
 
 - (void)finishModalTransition:(UIViewController *)toViewController appearing:(BOOL)appeared
@@ -317,6 +321,7 @@
         [_flowedController.view setUserInteractionEnabled:YES];
     }
     _currentCompletion(YES);
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStoppedNotification object:nil];
 }
 
 - (void)genericFinishTransition:(UIViewController *)toViewController
@@ -336,7 +341,6 @@
     [self.flowedController.view setBounds:self.view.bounds];
     [self.flowedController.view setFrame:self.view.bounds];
     [self.flowedController setNeedsStatusBarAppearanceUpdate];
-    _currentCompletion(NO);
 }
 
 - (void)cancelModalTransition:(CGFlowView *)flowView appearing:(BOOL)appeared
@@ -345,6 +349,7 @@
         [_flowedController viewWillAppear:YES];
         [self cancelTransition:flowView.viewController];
         [_flowedController viewDidAppear:YES];
+        _currentCompletion(NO);
     } else {
         self.interactive = NO;
         [_flowedController viewWillDisappear:YES];
@@ -353,6 +358,7 @@
         [_flowedController viewDidDisappear:YES];
         _currentCompletion(NO);
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCGFlowAnimationStoppedNotification object:nil];
 }
 
 #pragma mark - Modal Tap Out Recognizers
@@ -800,11 +806,10 @@
             case UIGestureRecognizerStateCancelled:
                 _interactorType = kCGFlowInteractionNone;
                 if (percentage < 0.5) {
-#warning test completion speed
-//                    self.completionSpeed = 0.5f;
+                    self.completionSpeed = 0.5f;
                     [self cancelInteractiveTransition];
                 } else {
-//                    self.completionSpeed = 1.0f;
+                    self.completionSpeed = 1.0f;
                     [self finishInteractiveTransition];
                 }
             default:
@@ -832,11 +837,10 @@
             case UIGestureRecognizerStateCancelled:
                 _interactorType = kCGFlowInteractionNone;
                 if (percentage < 0.5) {
-#warning test completion speed
-//                    self.completionSpeed = 0.5f;
+                    self.completionSpeed = 0.5f;
                     [self cancelInteractiveTransition];
                 } else {
-//                    self.completionSpeed = 1.0f;
+                    self.completionSpeed = 1.0f;
                     [self finishInteractiveTransition];
                 }
             default:

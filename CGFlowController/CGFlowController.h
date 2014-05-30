@@ -34,6 +34,9 @@
 
 #import <UIKit/UIKit.h>
 
+NSString *const kCGFlowAnimationStartedNotification = @"kCGFlowAnimationStartedNotification";
+NSString *const kCGFlowAnimationStoppedNotification = @"kCGFlowAnimationStoppedNotification";
+
 typedef enum {
     kCGFlowInteractionSwipeUp,
     kCGFlowInteractionSwipeDown,
@@ -151,8 +154,8 @@ typedef void(^Completion)(BOOL finished);
 
 @property (readonly) CGFloat percentComplete;
 @property (readonly, nonatomic) CGFloat duration;
-@property (readonly, nonatomic) CGFloat completionSpeed;
 @property (readonly, nonatomic) BOOL isInteracting;
+@property (nonatomic) CGFloat completionSpeed;
 
 @property (readonly, nonatomic) UIViewAnimationCurve animationCurve;
 @property (assign, nonatomic) UIViewAnimationCurve completionCurve;
