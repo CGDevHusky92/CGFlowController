@@ -13,7 +13,7 @@ I started by creating a custom container which is CGFlowController itself so tha
   s.source           = { :git => "https://github.com/CGDevHusky92/CGFlowController.git", :tag => "4.0.0" }
 
   s.platform     = :ios, '7.0'
-  s.ios.deployment_target = '7.1'
+  s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
   s.source_files = 'Classes/'
